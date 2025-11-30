@@ -165,29 +165,38 @@ export const Dashboard: React.FC<DashboardProps> = ({ onIpoSelect, watchlist, on
     <div className="space-y-10">
       <section className="grid gap-6 lg:grid-cols-[1.8fr,1fr]">
         <article className="rounded-3xl bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-500 p-6 sm:p-8 text-white shadow-xl">
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <div>
-              <p className="text-xs uppercase tracking-[0.4em] text-white/70">Market sentiment</p>
-              <h2 className="mt-2 text-3xl font-bold tracking-tight">Bullish Mainboard Flows</h2>
+          <div className="flex items-start gap-4">
+            <div className="rounded-2xl bg-white/15 p-3">
+              <Sparkles className="w-6 h-6 text-white" />
             </div>
-            <button className="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-1 text-xs font-semibold text-white/90">
-              View analytics
-              <ArrowUpRight className="w-3.5 h-3.5" />
+            <div className="flex-1">
+              <p className="text-xs uppercase tracking-[0.4em] text-white/70">End-to-End Automation</p>
+              <h2 className="mt-2 text-3xl font-bold tracking-tight leading-tight">Operationalizing the future of finance.</h2>
+            </div>
+          </div>
+
+          <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm p-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/80">Strategy</p>
+              <p className="mt-2 text-sm text-white/90 leading-relaxed">
+                Uncover hidden opportunities for automation within your PE, VC, Fintech or Finance ecosystem.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm p-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/80">Execution</p>
+              <p className="mt-2 text-sm text-white/90 leading-relaxed">
+                Leverage Agentic AI to transform manual workflows into autonomous engines.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <button className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-indigo-600 transition hover:bg-white/95 shadow-lg">
+              Start the Conversation
+              <ArrowUpRight className="w-4 h-4" />
             </button>
-          </div>
-
-          <div className="mt-8 grid gap-4 sm:grid-cols-3">
-            <HeroStat label="Live GMP" value={`₹${closedAverageGmp}`} helper="Avg across last 10 listings" />
-            <HeroStat label="Funds raised" value={`₹${currentCollection.toLocaleString()} Cr`} helper="Active books" />
-            <HeroStat label="Fresh filings" value={`${filings}`} helper="Awaiting SEBI nod" />
-          </div>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            {['Tech & SaaS focus', 'Power & Energy revival', 'Anchor demand strong'].map((chip) => (
-              <span key={chip} className="rounded-full bg-white/15 px-4 py-1 text-xs font-semibold">
-                {chip}
-              </span>
-            ))}
+            <span className="text-xs text-white/70">Concept to deployment</span>
           </div>
         </article>
 
