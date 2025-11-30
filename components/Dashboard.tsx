@@ -164,39 +164,38 @@ export const Dashboard: React.FC<DashboardProps> = ({ onIpoSelect, watchlist, on
   return (
     <div className="space-y-10">
       <section className="grid gap-6 lg:grid-cols-[1.8fr,1fr]">
-        <article className="rounded-3xl bg-[#1E293B] p-6 sm:p-8 text-white shadow-xl">
+        <article className="rounded-3xl bg-slate-950 px-6 py-6 sm:px-10 sm:py-10 text-white shadow-xl">
           <div className="flex items-start gap-4">
             <div className="rounded-2xl bg-white/15 p-3">
               <Sparkles className="w-6 h-6 text-white" />
             </div>
             <div className="flex-1">
-              <p className="text-xs uppercase tracking-[0.4em] text-white/70">End-to-End Automation</p>
-              <h2 className="mt-2 text-3xl font-bold tracking-tight leading-tight">Operationalizing the future of finance.</h2>
+              <p className="text-xs uppercase tracking-[0.5em] text-blue-300">End-to-End Automation</p>
+              <h2 className="mt-3 text-2xl font-semibold tracking-tight">Operationalizing the future of finance.</h2>
             </div>
           </div>
 
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
             <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/80">Strategy</p>
-              <p className="mt-2 text-sm text-white/90 leading-relaxed">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-300">Strategy</p>
+              <p className="mt-2 text-sm text-blue-100 leading-relaxed">
                 Uncover hidden opportunities for automation within your PE, VC, Fintech or Finance ecosystem.
               </p>
             </div>
 
             <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/80">Execution</p>
-              <p className="mt-2 text-sm text-white/90 leading-relaxed">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-300">Execution</p>
+              <p className="mt-2 text-sm text-blue-100 leading-relaxed">
                 Leverage Agentic AI to transform manual workflows into autonomous engines.
               </p>
             </div>
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <button className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#2563EB] transition hover:bg-white/95 shadow-lg">
+            <button className="inline-flex items-center gap-2 rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-lg shadow-white/20 transition hover:bg-white/95">
               Start the Conversation
               <ArrowUpRight className="w-4 h-4" />
             </button>
-            <span className="text-xs text-white/70">Concept to deployment</span>
           </div>
         </article>
 
