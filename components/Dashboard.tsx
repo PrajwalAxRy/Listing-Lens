@@ -164,7 +164,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onIpoSelect, watchlist, on
   return (
     <div className="space-y-10">
       <section className="grid gap-6 lg:grid-cols-[1.8fr,1fr]">
-        <article className="rounded-3xl bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-500 p-6 sm:p-8 text-white shadow-xl">
+        <article className="rounded-3xl bg-[#1E293B] p-6 sm:p-8 text-white shadow-xl">
           <div className="flex items-start gap-4">
             <div className="rounded-2xl bg-white/15 p-3">
               <Sparkles className="w-6 h-6 text-white" />
@@ -192,7 +192,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onIpoSelect, watchlist, on
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <button className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-indigo-600 transition hover:bg-white/95 shadow-lg">
+            <button className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#2563EB] transition hover:bg-white/95 shadow-lg">
               Start the Conversation
               <ArrowUpRight className="w-4 h-4" />
             </button>
@@ -204,7 +204,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onIpoSelect, watchlist, on
           <p className="text-xs font-semibold uppercase tracking-[0.4em] text-slate-400">Snapshot</p>
           <div className="mt-5 space-y-4">
             <MetricBlock
-              icon={<Sparkles className="w-4 h-4 text-indigo-500" />}
+              icon={<Sparkles className="w-4 h-4 text-[#2563EB]" />}
               label="Live subscriptions"
               value={`${liveCount} IPOs`}
               delta="+2 vs last week"
@@ -245,7 +245,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onIpoSelect, watchlist, on
               onClick={() => setActiveTab(tab.key)}
               className={`rounded-2xl border px-4 py-2 text-sm font-semibold transition ${
                 activeTab === tab.key
-                  ? 'border-indigo-500 bg-indigo-50 text-indigo-600 shadow-sm'
+                  ? 'border-[#2563EB] bg-blue-50 text-[#2563EB] shadow-sm'
                   : 'border-slate-200 text-slate-500 hover:border-slate-300'
               }`}
             >
@@ -324,7 +324,7 @@ const IPOCard: React.FC<IPOCardProps> = ({ ipo, onSelect, onToggleWatchlist, isW
       return 'text-rose-600 bg-rose-100';
     }
     if (ipo.gmp >= 60) return 'text-emerald-600 bg-emerald-100';
-    if (ipo.gmp >= 20) return 'text-indigo-600 bg-indigo-100';
+    if (ipo.gmp >= 20) return 'text-[#2563EB] bg-blue-100';
     return 'text-slate-500 bg-slate-100';
   };
 
@@ -358,7 +358,7 @@ const IPOCard: React.FC<IPOCardProps> = ({ ipo, onSelect, onToggleWatchlist, isW
       <div className="mt-4 grid gap-3 text-sm text-slate-500">
         <div className="flex items-center justify-between">
           <span className="flex items-center gap-2 text-xs text-slate-500">
-            <Calendar className="w-4 h-4 text-indigo-500" />
+            <Calendar className="w-4 h-4 text-[#2563EB]" />
             Opens
           </span>
           <span className="font-semibold text-slate-800">{ipo.openDate}</span>

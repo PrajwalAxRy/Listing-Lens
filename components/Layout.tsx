@@ -32,7 +32,7 @@ const primaryNav = [
 
 const insightChips = [
   { label: 'Live subscriptions', value: '12', tone: 'text-emerald-500 bg-emerald-500/10' },
-  { label: 'Avg GMP ₹68', value: '', tone: 'text-indigo-500 bg-indigo-500/10' },
+  { label: 'Avg GMP ₹68', value: '', tone: 'text-[#2563EB] bg-blue-600/10' },
   { label: 'Fresh filings 4', value: '', tone: 'text-amber-500 bg-amber-500/10' }
 ];
 
@@ -64,10 +64,10 @@ export const Layout: React.FC<LayoutProps> = ({ children, onHomeClick }) => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 flex">
+    <div className="min-h-screen bg-[#F8FAFC] text-slate-900 flex">
       {/* Sidebar */}
       <aside
-        className={`fixed inset-y-0 left-0 z-40 w-72 bg-slate-950 text-white flex h-screen flex-col gap-8 overflow-y-auto px-5 py-6 shadow-2xl transition-transform duration-300 lg:sticky lg:top-0 lg:h-screen lg:w-72 lg:translate-x-0 lg:overflow-y-auto ${
+        className={`fixed inset-y-0 left-0 z-40 w-72 bg-[#0B1120] text-white flex h-screen flex-col gap-8 overflow-y-auto px-5 py-6 shadow-2xl transition-transform duration-300 lg:sticky lg:top-0 lg:h-screen lg:w-72 lg:translate-x-0 lg:overflow-y-auto ${
           menuOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -79,12 +79,12 @@ export const Layout: React.FC<LayoutProps> = ({ children, onHomeClick }) => {
             }}
             className="flex items-center gap-3"
           >
-            <div className="p-2 rounded-2xl bg-indigo-500 shadow-lg shadow-indigo-500/40">
+            <div className="p-2 rounded-2xl bg-[#2563EB] shadow-lg shadow-blue-600/40">
               <PieChart className="w-5 h-5" />
             </div>
             <div className="text-left">
               <p className="text-lg font-semibold tracking-tight">Listing Lens</p>
-              <p className="text-[11px] uppercase tracking-[0.3em] text-indigo-200">Mainboard</p>
+              <p className="text-[11px] uppercase tracking-[0.3em] text-blue-200">Mainboard</p>
             </div>
           </button>
           <button
@@ -103,7 +103,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, onHomeClick }) => {
               onClick={() => handleNav(item)}
               className={`flex items-center justify-between rounded-xl px-3 py-2.5 text-sm font-semibold transition-all ${
                 item.label === 'Dashboard'
-                  ? 'bg-white/10 text-white shadow-lg shadow-indigo-600/20'
+                  ? 'bg-white/10 text-white shadow-lg shadow-blue-600/20'
                   : 'text-slate-300 hover:text-white hover:bg-white/5'
               }`}
             >
@@ -134,7 +134,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, onHomeClick }) => {
           <p className="text-xs font-semibold text-slate-400">Radar</p>
           {sidebarHighlights.map((item) => (
             <div key={item.title} className="flex items-start gap-3">
-              <div className="p-2 rounded-xl bg-white/10 text-indigo-200">{item.icon}</div>
+              <div className="p-2 rounded-xl bg-white/10 text-blue-200">{item.icon}</div>
               <div>
                 <p className="text-sm font-semibold text-white">{item.title}</p>
                 <p className="text-xs text-slate-400">{item.desc}</p>
@@ -143,7 +143,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, onHomeClick }) => {
           ))}
         </div>
 
-        <button className="mt-auto flex items-center justify-between rounded-2xl bg-indigo-500 px-4 py-3 text-sm font-semibold shadow-lg shadow-indigo-600/50">
+        <button className="mt-auto flex items-center justify-between rounded-2xl bg-[#2563EB] px-4 py-3 text-sm font-semibold shadow-lg shadow-blue-600/50">
           <span className="flex items-center gap-2">
             <Sparkles className="w-4 h-4" />
             Upgrade to Prime
@@ -172,16 +172,16 @@ export const Layout: React.FC<LayoutProps> = ({ children, onHomeClick }) => {
                 <input
                   type="text"
                   placeholder="Search IPO, symbol, lead manager"
-                  className="w-full rounded-2xl border border-transparent bg-white py-2.5 pl-9 pr-4 text-sm text-slate-700 shadow-sm outline-none transition focus:border-indigo-200 focus:ring-4 focus:ring-indigo-100"
+                  className="w-full rounded-2xl border border-transparent bg-white py-2.5 pl-9 pr-4 text-sm text-slate-700 shadow-sm outline-none transition focus:border-blue-200 focus:ring-4 focus:ring-blue-100"
                 />
               </div>
             </div>
 
             <div className="hidden md:flex items-center gap-4">
-              <div className="rounded-2xl bg-white px-4 py-2 text-xs font-semibold text-indigo-600">
+              <div className="rounded-2xl bg-white px-4 py-2 text-xs font-semibold text-[#2563EB]">
                 Market Open
               </div>
-              <button className="relative rounded-2xl border border-slate-200 p-2 text-slate-500 hover:text-indigo-600">
+              <button className="relative rounded-2xl border border-slate-200 p-2 text-slate-500 hover:text-[#2563EB]">
                 <Bell className="w-5 h-5" />
                 <span className="absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full bg-rose-500"></span>
               </button>
@@ -202,9 +202,9 @@ export const Layout: React.FC<LayoutProps> = ({ children, onHomeClick }) => {
             <section className="rounded-3xl bg-slate-950 text-white px-6 py-6 sm:px-10 sm:py-10">
               <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.5em] text-indigo-300">Coming soon</p>
+                  <p className="text-xs uppercase tracking-[0.5em] text-blue-300">Coming soon</p>
                   <h3 className="mt-3 text-2xl font-semibold tracking-tight">SME IPO intelligence arrives Q1</h3>
-                  <p className="mt-2 text-sm text-indigo-100">
+                  <p className="mt-2 text-sm text-blue-100">
                     Dedicated heatmaps, SME-specific GMP, and registrar level status tracking. Stay ahead of the next wave.
                   </p>
                 </div>
