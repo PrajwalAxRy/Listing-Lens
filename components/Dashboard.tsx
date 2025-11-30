@@ -170,21 +170,21 @@ export const Dashboard: React.FC<DashboardProps> = ({ onIpoSelect, watchlist, on
               <Sparkles className="w-6 h-6 text-white" />
             </div>
             <div className="flex-1">
-              <p className="text-xs uppercase tracking-[0.5em] text-blue-300">End-to-End Automation</p>
+              <p className="text-xs uppercase tracking-[0.5em] text-teal-300">End-to-End Automation</p>
               <h2 className="mt-3 text-2xl font-semibold tracking-tight">Operationalizing the future of finance.</h2>
             </div>
           </div>
 
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
             <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-300">Strategy</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-teal-300">Strategy</p>
               <p className="mt-2 text-sm text-blue-100 leading-relaxed">
                 Uncover hidden opportunities for automation within your PE, VC, Fintech or Finance ecosystem.
               </p>
             </div>
 
             <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-300">Execution</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-teal-300">Execution</p>
               <p className="mt-2 text-sm text-blue-100 leading-relaxed">
                 Leverage Agentic AI to transform manual workflows into autonomous engines.
               </p>
