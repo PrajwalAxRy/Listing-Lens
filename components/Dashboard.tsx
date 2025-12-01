@@ -84,15 +84,55 @@ const matchesSearch = (ipo: IPO, normalizedQuery: string) => {
   return haystack.includes(normalizedQuery);
 };
 
+/**
+ * Determines IPO status based on calendar dates (time-independent comparison).
+ * Logic:
+ * - 'Upcoming': Current date is before openDate
+ * - 'Active': Current date is between openDate (inclusive) and listingDate (exclusive)
+ * - 'Closed': Current date is on or after listingDate
+ * 
+ * Falls back to ipo.status when dates are missing/invalid (defaults to 'Active').
+ * Note: The ipo.status field should only be used for manual overrides and testing.
+ */
+const getIPOStatus = (ipo: IPO): IPOStatus => {
+  // Parse dates and strip time components for calendar-only comparison
+  const parseCalendarDate = (dateStr: string): Date | null => {
+    if (!dateStr) return null;
+    const parsed = new Date(dateStr);
+    if (isNaN(parsed.getTime())) return null;
+    // Normalize to calendar date (midnight UTC)
+    return new Date(parsed.getFullYear(), parsed.getMonth(), parsed.getDate());
+  };
+
+  const openDate = parseCalendarDate(ipo.openDate);
+  const listingDate = parseCalendarDate(ipo.listingDate);
+  
+  // Fallback to status field if dates are invalid/missing
+  if (!openDate || !listingDate) {
+    return ipo.status || 'Active';
+  }
+
+  const today = new Date();
+  const todayCalendar = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+
+  if (todayCalendar < openDate) {
+    return 'Upcoming';
+  } else if (todayCalendar >= listingDate) {
+    return 'Closed';
+  } else {
+    return 'Active';
+  }
+};
+
 export const Dashboard: React.FC<DashboardProps> = ({ onIpoSelect, watchlist, onToggleWatchlist }) => {
   const [activeTab, setActiveTab] = useState<TabKey>('Active');
   const [searchQueries, setSearchQueries] = useState<Record<TabKey, string>>(initialSearchQueries);
 
   const grouped = useMemo(() => {
     return {
-      Active: MOCK_IPOS.filter((ipo) => ipo.status === 'Active'),
-      Upcoming: MOCK_IPOS.filter((ipo) => ipo.status === 'Upcoming'),
-      Closed: MOCK_IPOS.filter((ipo) => ipo.status === 'Closed'),
+      Active: MOCK_IPOS.filter((ipo) => getIPOStatus(ipo) === 'Active'),
+      Upcoming: MOCK_IPOS.filter((ipo) => getIPOStatus(ipo) === 'Upcoming'),
+      Closed: MOCK_IPOS.filter((ipo) => getIPOStatus(ipo) === 'Closed'),
       Watchlist: MOCK_IPOS.filter((ipo) => watchlist.includes(ipo.id))
     };
   }, [watchlist]);
@@ -164,7 +204,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onIpoSelect, watchlist, on
   return (
     <div className="space-y-10">
       <section className="grid gap-6 lg:grid-cols-[1.8fr,1fr]">
-        <article className="rounded-3xl bg-slate-950 px-6 py-6 sm:px-10 sm:py-10 text-white shadow-xl">
+        <article className="hero-card-animated rounded-3xl bg-slate-950 px-6 py-6 sm:px-10 sm:py-10 text-white shadow-xl">
           <div className="flex items-start gap-4">
             <div className="rounded-2xl bg-white/15 p-3">
               <Sparkles className="w-6 h-6 text-white" />
@@ -313,7 +353,8 @@ interface IPOCardProps {
 const IPOCard: React.FC<IPOCardProps> = ({ ipo, onSelect, onToggleWatchlist, isWatchlisted }) => {
   const issuePrice = getIssuePrice(ipo.priceBand);
   const gmpPct = issuePrice > 0 ? Math.round((ipo.gmp / issuePrice) * 1000) / 10 : null;
-  const showPercent = ipo.status === 'Active' || ipo.status === 'Upcoming';
+  const ipoStatus = getIPOStatus(ipo);
+  const showPercent = ipoStatus === 'Active' || ipoStatus === 'Upcoming';
   const gmpDisplay = showPercent && gmpPct !== null ? `${gmpPct >= 0 ? '+' : ''}${gmpPct}%` : `₹${ipo.gmp}`;
   const getBadgeTone = () => {
     if (showPercent && gmpPct !== null) {
@@ -327,7 +368,7 @@ const IPOCard: React.FC<IPOCardProps> = ({ ipo, onSelect, onToggleWatchlist, isW
     return 'text-slate-500 bg-slate-100';
   };
 
-  const showMarketStats = ipo.status !== 'Upcoming';
+  const showMarketStats = ipoStatus !== 'Upcoming';
 
   return (
     <article

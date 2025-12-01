@@ -199,7 +199,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, onHomeClick }) => {
         <main className="flex-1 px-4 py-6 sm:px-6 lg:px-8 xl:px-10 2xl:px-16">
           <div className="mx-auto w-full max-w-6xl space-y-10 xl:mx-0 xl:max-w-none">
             {children}
-            <section className="rounded-3xl bg-slate-950 text-white px-6 py-6 sm:px-10 sm:py-10">
+            <section className="hero-card-animated rounded-3xl bg-slate-950 text-white px-6 py-6 sm:px-10 sm:py-10">
               <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
                 <div>
                   <p className="text-xs uppercase tracking-[0.5em] text-blue-300">Coming soon</p>

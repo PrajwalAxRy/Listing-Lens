@@ -1,14 +1,15 @@
 import { IPO } from './types';
 
 export const MOCK_IPOS: IPO[] = [
+  // Active IPOs (openDate <= today < listingDate)
   {
     id: '1',
     name: 'TechNova Solutions Ltd',
     symbol: 'TECHNOVA',
     status: 'Active',
-    openDate: '2023-10-25',
-    closeDate: '2023-10-28',
-    listingDate: '2023-11-04',
+    openDate: '2025-11-27',
+    closeDate: '2025-11-30',
+    listingDate: '2025-12-06',
     priceBand: '₹450 - ₹480',
     lotSize: 30,
     issueSize: '850 Cr',
@@ -41,9 +42,9 @@ export const MOCK_IPOS: IPO[] = [
     name: 'GreenEarth Energy',
     symbol: 'GREENERGY',
     status: 'Active',
-    openDate: '2023-10-26',
-    closeDate: '2023-10-29',
-    listingDate: '2023-11-06',
+    openDate: '2025-11-28',
+    closeDate: '2025-12-05',
+    listingDate: '2025-12-07',
     priceBand: '₹110 - ₹125',
     lotSize: 120,
     issueSize: '2,400 Cr',
@@ -74,20 +75,20 @@ export const MOCK_IPOS: IPO[] = [
     id: '3',
     name: 'Urban Logistics',
     symbol: 'URBANLOG',
-    status: 'Upcoming',
-    openDate: '2023-11-01',
-    closeDate: '2023-11-03',
-    listingDate: '2023-11-10',
+    status: 'Active',
+    openDate: '2025-11-26',
+    closeDate: '2025-11-29',
+    listingDate: '2025-12-05',
     priceBand: '₹200 - ₹215',
     lotSize: 65,
     issueSize: '600 Cr',
     gmp: 45,
     gmpUpdateDate: 'Yesterday',
     subscription: {
-      qib: 0,
-      nii: 0,
-      retail: 0,
-      total: 0,
+      qib: 8.5,
+      nii: 12.3,
+      retail: 5.7,
+      total: 9.2,
     },
     description: 'Urban Logistics provides last-mile delivery solutions for e-commerce giants.',
     strengths: ['Asset-light model', 'Pan-India presence'],
@@ -98,6 +99,148 @@ export const MOCK_IPOS: IPO[] = [
       margin: '5.6%',
     }
   },
+  // Upcoming IPOs (today < openDate)
+  {
+    id: '1001',
+    name: 'Stellar Pharmaceuticals',
+    symbol: 'STARPHARMA',
+    status: 'Upcoming',
+    openDate: '2025-12-05',
+    closeDate: '2025-12-08',
+    listingDate: '2025-12-14',
+    priceBand: '₹550 - ₹580',
+    lotSize: 25,
+    issueSize: '1,100 Cr',
+    gmp: 95,
+    gmpUpdateDate: 'Today, 11:00 AM',
+    subscription: {
+      qib: 0,
+      nii: 0,
+      retail: 0,
+      total: 0,
+    },
+    description: 'Stellar Pharmaceuticals develops and manufactures specialty oncology drugs and APIs for global markets.',
+    strengths: [
+      'USFDA approved manufacturing facilities',
+      'Strong product pipeline',
+      'Export-oriented business model'
+    ],
+    risks: [
+      'Regulatory compliance challenges',
+      'Patent expiry risks'
+    ],
+    financials: {
+      revenue: '₹950 Cr',
+      profit: '₹165 Cr',
+      margin: '17.4%',
+    }
+  },
+  {
+    id: '1002',
+    name: 'NexGen Digital Solutions',
+    symbol: 'NEXDIGITAL',
+    status: 'Upcoming',
+    openDate: '2025-12-10',
+    closeDate: '2025-12-13',
+    listingDate: '2025-12-19',
+    priceBand: '₹280 - ₹310',
+    lotSize: 45,
+    issueSize: '650 Cr',
+    gmp: 55,
+    gmpUpdateDate: 'Today, 02:15 PM',
+    subscription: {
+      qib: 0,
+      nii: 0,
+      retail: 0,
+      total: 0,
+    },
+    description: 'NexGen provides digital transformation services and cloud migration solutions to enterprises across APAC region.',
+    strengths: [
+      'Recurring revenue model',
+      'Strong client retention rate of 92%',
+      'Strategic partnerships with AWS and Azure'
+    ],
+    risks: [
+      'Intense competition',
+      'Talent acquisition and retention challenges'
+    ],
+    financials: {
+      revenue: '₹580 Cr',
+      profit: '₹87 Cr',
+      margin: '15.0%',
+    }
+  },
+  {
+    id: '1003',
+    name: 'Premier Hotels & Resorts',
+    symbol: 'PREMHOTELS',
+    status: 'Upcoming',
+    openDate: '2025-12-12',
+    closeDate: '2025-12-15',
+    listingDate: '2025-12-21',
+    priceBand: '₹180 - ₹200',
+    lotSize: 75,
+    issueSize: '890 Cr',
+    gmp: 30,
+    gmpUpdateDate: '1 day ago',
+    subscription: {
+      qib: 0,
+      nii: 0,
+      retail: 0,
+      total: 0,
+    },
+    description: 'Premier operates luxury hotels and resorts across major tourist destinations in India with focus on experiential hospitality.',
+    strengths: [
+      'Prime locations in metro cities',
+      'Diversified revenue streams',
+      'Strong brand recognition'
+    ],
+    risks: [
+      'High fixed costs',
+      'Seasonal demand fluctuations'
+    ],
+    financials: {
+      revenue: '₹1,450 Cr',
+      profit: '₹125 Cr',
+      margin: '8.6%',
+    }
+  },
+  {
+    id: '1004',
+    name: 'MicroChip Technologies',
+    symbol: 'MICROCHIP',
+    status: 'Upcoming',
+    openDate: '2025-12-18',
+    closeDate: '2025-12-21',
+    listingDate: '2025-12-27',
+    priceBand: '₹720 - ₹750',
+    lotSize: 20,
+    issueSize: '1,850 Cr',
+    gmp: 140,
+    gmpUpdateDate: 'Today, 08:45 AM',
+    subscription: {
+      qib: 0,
+      nii: 0,
+      retail: 0,
+      total: 0,
+    },
+    description: 'MicroChip designs and manufactures semiconductor components for automotive and IoT applications.',
+    strengths: [
+      'Cutting-edge R&D capabilities',
+      'Long-term contracts with auto OEMs',
+      'Government incentives under PLI scheme'
+    ],
+    risks: [
+      'Capital intensive operations',
+      'Global chip market volatility'
+    ],
+    financials: {
+      revenue: '₹2,100 Cr',
+      profit: '₹315 Cr',
+      margin: '15.0%',
+    }
+  },
+  // Closed IPOs (already listed)
   {
     id: '4',
     name: 'BlueSky Finance',
@@ -132,7 +275,7 @@ export const MOCK_IPOS: IPO[] = [
     id: '5',
     name: 'Quantum Biotech',
     symbol: 'QBIO',
-    status: 'Upcoming',
+    status: 'Closed',
     openDate: '2023-11-05',
     closeDate: '2023-11-08',
     listingDate: '2023-11-15',

@@ -90,8 +90,7 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
            
            {[
              { label: 'IPO Open', date: ipo.openDate, done: true },
-             { label: 'IPO Close', date: ipo.closeDate, done: ipo.status === 'Closed' || ipo.status === 'Active' },
-             { label: 'Allotment', date: 'TBA', done: false },
+             { label: 'IPO Close', date: ipo.closeDate, done: ipo.status === 'Closed' },
              { label: 'Listing', date: ipo.listingDate, done: false },
            ].map((step, idx) => (
              <div key={idx} className="relative z-10 bg-white px-2 flex flex-col items-center">
