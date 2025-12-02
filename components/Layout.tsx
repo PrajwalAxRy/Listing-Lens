@@ -1,4 +1,5 @@
 import React, { ReactNode, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Bell,
   ChevronRight,
@@ -27,13 +28,9 @@ const primaryNav = [
   { label: 'Dashboard', icon: <LayoutDashboard className="w-5 h-5" />, action: 'home' },
   { label: 'All IPOs', icon: <Layers className="w-5 h-5" /> },
   { label: 'Market News', icon: <LineChart className="w-5 h-5" /> },
-  { label: 'Allotment Status', icon: <ClipboardCheck className="w-5 h-5" /> }
-];
-
-const insightChips = [
-  { label: 'Live subscriptions', value: '12', tone: 'text-emerald-500 bg-emerald-500/10' },
-  { label: 'Avg GMP ₹68', value: '', tone: 'text-[#2563EB] bg-blue-600/10' },
-  { label: 'Fresh filings 4', value: '', tone: 'text-amber-500 bg-amber-500/10' }
+  { label: 'Allotment Status', icon: <ClipboardCheck className="w-5 h-5" />, path: '/guides/check-allotment-status' },
+  { label: 'Apply for IPO', path: '/guides/how-to-apply-ipo' },
+  { label: 'Open DEMAT account', path: '/guides/open-demat-account' }
 ];
 
 const sidebarHighlights = [
@@ -43,6 +40,7 @@ const sidebarHighlights = [
 
 export const Layout: React.FC<LayoutProps> = ({ children, onHomeClick }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => {
@@ -59,6 +57,9 @@ export const Layout: React.FC<LayoutProps> = ({ children, onHomeClick }) => {
   const handleNav = (item: (typeof primaryNav)[number]) => {
     if (item.action === 'home') {
       onHomeClick();
+    } else if (item.path) {
+      navigate(item.path);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     closeMenu();
   };
@@ -116,20 +117,6 @@ export const Layout: React.FC<LayoutProps> = ({ children, onHomeClick }) => {
           ))}
         </nav>
 
-        <div className="space-y-3 rounded-2xl bg-white/5 p-4">
-          <p className="text-xs uppercase tracking-[0.3em] text-slate-400">Today</p>
-          <div className="flex flex-wrap gap-2">
-            {insightChips.map((chip) => (
-              <span
-                key={chip.label}
-                className={`px-3 py-1 rounded-full text-[11px] font-semibold ${chip.tone}`}
-              >
-                {chip.label}
-              </span>
-            ))}
-          </div>
-        </div>
-
         <div className="space-y-4 rounded-2xl border border-white/10 p-4">
           <p className="text-xs font-semibold text-slate-400">Radar</p>
           {sidebarHighlights.map((item) => (
@@ -145,7 +132,6 @@ export const Layout: React.FC<LayoutProps> = ({ children, onHomeClick }) => {
 
         <button className="mt-auto flex items-center justify-between rounded-2xl bg-[#2563EB] px-4 py-3 text-sm font-semibold shadow-lg shadow-blue-600/50">
           <span className="flex items-center gap-2">
-            <Sparkles className="w-4 h-4" />
             Upgrade to Prime
           </span>
           <ChevronRight className="w-4 h-4" />
