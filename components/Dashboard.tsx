@@ -273,7 +273,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onIpoSelect, watchlist, on
               </div>
               <Link
                 to="/ask-ai"
-                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#2563EB] px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-blue-500/30 transition hover:bg-[#1d4ed8]"
+                className=" bg-slate-950 inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-2.5 text-sm font-semibold text-white"
               >
                 Ask AI
               </Link>
