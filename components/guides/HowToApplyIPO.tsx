@@ -50,6 +50,10 @@ export const HowToApplyIPO: React.FC<{ onBack: () => void }> = ({ onBack }) => {
           Back to Dashboard
         </button>
 
+        <div className="mb-6 rounded-2xl border border-dashed border-amber-300 bg-amber-50 p-4 text-center text-xs font-semibold tracking-[0.3em] text-amber-700">
+          THIS IS A DUMMY PAGE, TO REDESIGN LATER
+        </div>
+
         <article className="rounded-3xl bg-white p-8 shadow-sm">
           <header className="flex flex-col gap-4 border-b border-slate-100 pb-6">
             <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-600">
@@ -123,8 +127,8 @@ export const HowToApplyIPO: React.FC<{ onBack: () => void }> = ({ onBack }) => {
 
             <div className="rounded-2xl border border-slate-200 p-5">
               <h3 className="text-lg font-semibold text-slate-900">2. Enter bid details with intention</h3>
-              <ul className="mt-3 space-y-2 text-sm text-slate-600">
-                <li><strong>Investor type:</strong> Retail (≤ ₹2L), S-HNI (₹2L-₹10L), B-HNI (> ₹10L). Pick the right bucket.</li>
+                <ul className="mt-3 space-y-2 text-sm text-slate-600">
+                  <li><strong>Investor type:</strong> Retail (≤ ₹2L), S-HNI (₹2L-₹10L), B-HNI (&gt; ₹10L). Pick the right bucket.</li>
                 <li><strong>Lots:</strong> Start with one lot. Add more only if you are comfortable with the amount being blocked.</li>
                 <li><strong>Price:</strong> Select cut-off so your application stays valid even if the final price shifts.</li>
               </ul>

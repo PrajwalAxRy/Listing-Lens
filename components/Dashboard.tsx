@@ -206,7 +206,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onIpoSelect, watchlist, on
 
   return (
     <div className="space-y-10">
-      <section className="grid gap-6 lg:grid-cols-[1.8fr,1fr]">
+      <section className="grid gap-6 lg:grid-cols-[1.5fr,1fr]">
         <article className="hero-card-animated rounded-3xl bg-slate-950 px-6 py-6 sm:px-10 sm:py-10 text-white shadow-xl">
           <div className="flex items-start gap-4">
             <div className="rounded-2xl bg-white/15 p-3">
@@ -236,13 +236,13 @@ export const Dashboard: React.FC<DashboardProps> = ({ onIpoSelect, watchlist, on
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <button className="inline-flex items-center gap-2 rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-lg shadow-white/20 transition hover:bg-white/95">
-              Start the Conversation
+              Let's Talk.
               <ArrowUpRight className="w-4 h-4" />
             </button>
           </div>
         </article>
 
-        <article className="rounded-3xl bg-white p-6 shadow-sm">
+        <article className="flex h-full flex-col rounded-3xl bg-white p-6 shadow-sm">
           <div className="flex items-center gap-2 mb-1">
             <CircleHelp className="w-4 h-4 text-slate-400" />
             <p className="text-xs font-semibold uppercase tracking-[0.4em] text-slate-400">Help Center</p>
@@ -263,6 +263,21 @@ export const Dashboard: React.FC<DashboardProps> = ({ onIpoSelect, watchlist, on
               answer="Choose a SEBI-registered broker (like Zerodha, Groww, Upstox), submit your PAN, Aadhaar, and bank details online to open an account instantly."
               guideLink="/guides/open-demat-account"
             />
+          </div>
+          <div className="mt-auto pt-6">
+            <div className="flex flex-col gap-4 rounded-2xl border border-slate-100 bg-slate-50/80 p-4 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">Need Answers?</p>
+                <p className="text-sm font-semibold text-slate-900">Have questions on IPO or Finance?</p>
+                <p className="text-xs text-slate-500">Tap into our AI guide for instant clarity.</p>
+              </div>
+              <Link
+                to="/ask-ai"
+                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#2563EB] px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-blue-500/30 transition hover:bg-[#1d4ed8]"
+              >
+                Ask AI
+              </Link>
+            </div>
           </div>
         </article>
       </section>

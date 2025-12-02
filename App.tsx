@@ -6,6 +6,7 @@ import { IPODetail } from './components/IPODetail';
 import { HowToApplyIPO } from './components/guides/HowToApplyIPO';
 import { CheckAllotmentStatus } from './components/guides/CheckAllotmentStatus';
 import { OpenDematAccount } from './components/guides/OpenDematAccount';
+import { AskAIChat } from './components/AskAIChat';
 import { MOCK_IPOS } from './constants';
 import { ViewState } from './types';
 
@@ -26,6 +27,7 @@ const App: React.FC = () => {
     setView('dashboard');
     setSelectedIpoId(null);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    navigate('/');
   };
 
   const toggleWatchlist = (ipoId: string) => {
@@ -85,6 +87,14 @@ const App: React.FC = () => {
       <Route path="/guides/how-to-apply-ipo" element={<HowToApplyIPO onBack={handleGuideBack} />} />
       <Route path="/guides/check-allotment-status" element={<CheckAllotmentStatus onBack={handleGuideBack} />} />
       <Route path="/guides/open-demat-account" element={<OpenDematAccount onBack={handleGuideBack} />} />
+      <Route
+        path="/ask-ai"
+        element={
+          <Layout onHomeClick={handleHomeClick}>
+            <AskAIChat />
+          </Layout>
+        }
+      />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );

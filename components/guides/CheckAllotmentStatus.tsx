@@ -51,6 +51,10 @@ export const CheckAllotmentStatus: React.FC<{ onBack: () => void }> = ({ onBack 
           Back to Dashboard
         </button>
 
+        <div className="mb-6 rounded-2xl border border-dashed border-amber-300 bg-amber-50 p-4 text-center text-xs font-semibold tracking-[0.3em] text-amber-700">
+          THIS IS A DUMMY PAGE, TO REDESIGN LATER
+        </div>
+
         <article className="rounded-3xl bg-white p-8 shadow-sm">
           <header className="border-b border-slate-100 pb-6">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-600">Post-IPO rituals</p>
