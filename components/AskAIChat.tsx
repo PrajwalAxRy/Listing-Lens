@@ -1,5 +1,7 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
+  ArrowLeft,
   Brain,
   Clock,
   MessageCircle,
@@ -49,8 +51,23 @@ const guardrails = [
 ];
 
 export const AskAIChat: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleBackClick = () => {
+    navigate('/');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="space-y-6">
+      <button
+        type="button"
+        onClick={handleBackClick}
+        className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 transition hover:text-slate-900"
+      >
+        <ArrowLeft className="h-4 w-4" /> Back to Dashboard
+      </button>
+
       <header className="rounded-3xl bg-slate-900 px-6 py-6 text-white shadow-xl">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>

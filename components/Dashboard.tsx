@@ -209,11 +209,11 @@ export const Dashboard: React.FC<DashboardProps> = ({ onIpoSelect, watchlist, on
       <section className="grid gap-6 lg:grid-cols-[1.5fr,1fr]">
         <article className="hero-card-animated rounded-3xl bg-slate-950 px-6 py-6 sm:px-10 sm:py-10 text-white shadow-xl">
           <div className="flex items-start gap-4">
-            <div className="rounded-2xl bg-white/15 p-3">
-              <Sparkles className="w-6 h-6 text-white" />
-            </div>
+            {/* <div className="flex h-12 w-5 items-center justify-center text-2xl text-teal-300">
+              / /
+            </div> */}
             <div className="flex-1">
-              <p className="text-xs uppercase tracking-[0.5em] text-teal-300">End-to-End Automation</p>
+              <p className="text-xs uppercase tracking-[0.5em] text-teal-300"> // End-to-End Automation</p>
               <h2 className="mt-3 text-2xl font-semibold tracking-tight">Operationalizing the future of finance.</h2>
             </div>
           </div>
