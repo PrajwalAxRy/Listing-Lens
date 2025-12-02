@@ -88,20 +88,45 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
            {/* Connecting Line */}
            <div className="absolute top-1/2 left-0 w-full h-0.5 bg-slate-100 -z-0"></div>
            
-           {[
-             { label: 'IPO Open', date: ipo.openDate, done: true },
-             { label: 'IPO Close', date: ipo.closeDate, done: ipo.status === 'Closed' },
-             { label: 'Listing', date: ipo.listingDate, done: false },
-           ].map((step, idx) => (
-             <div key={idx} className="relative z-10 bg-white px-2 flex flex-col items-center">
-               <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center border-2 
-                  ${step.done ? 'bg-emerald-500 border-emerald-500 text-white' : 'bg-white border-slate-300 text-slate-300'}`}>
-                  {step.done ? <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5" /> : <Clock className="w-4 h-4 sm:w-5 sm:h-5" />}
+           {(() => {
+             const isUpcoming = ipo.status === 'Upcoming';
+             const isActive = ipo.status === 'Active';
+             const isClosed = ipo.status === 'Closed';
+             
+             // Check if listing date has passed
+             const today = new Date();
+             const listingDate = new Date(ipo.listingDate);
+             const hasListed = isClosed && listingDate <= today;
+             
+             return [
+               { 
+                 label: 'IPO Open', 
+                 date: ipo.openDate, 
+                 status: isUpcoming ? 'yellow' : 'green'
+               },
+               { 
+                 label: 'IPO Close', 
+                 date: ipo.closeDate, 
+                 status: isUpcoming ? 'gray' : isActive ? 'yellow' : 'green'
+               },
+               { 
+                 label: 'Listing', 
+                 date: ipo.listingDate, 
+                 status: hasListed ? 'green' : (isClosed ? 'yellow' : 'gray')
+               },
+             ].map((step, idx) => (
+               <div key={idx} className="relative z-10 bg-white px-2 flex flex-col items-center">
+                 <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center border-2 
+                    ${step.status === 'green' ? 'bg-emerald-500 border-emerald-500 text-white' : 
+                      step.status === 'yellow' ? 'bg-amber-400 border-amber-400 text-white' : 
+                      'bg-white border-slate-300 text-slate-300'}`}>
+                    {step.status === 'green' ? <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5" /> : <Clock className="w-4 h-4 sm:w-5 sm:h-5" />}
+                 </div>
+                 <p className={`mt-2 text-xs sm:text-sm font-medium ${step.status !== 'gray' ? 'text-slate-900' : 'text-slate-400'}`}>{step.label}</p>
+                 <p className="text-xs text-slate-500">{step.date}</p>
                </div>
-               <p className={`mt-2 text-xs sm:text-sm font-medium ${step.done ? 'text-slate-900' : 'text-slate-400'}`}>{step.label}</p>
-               <p className="text-xs text-slate-500">{step.date}</p>
-             </div>
-           ))}
+             ));
+           })()}
         </div>
       </div>
 

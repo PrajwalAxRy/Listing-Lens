@@ -1,7 +1,10 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   ArrowUpRight,
   Calendar,
+  ChevronDown,
+  CircleHelp,
   Clock,
   Flag,
   Heart,
@@ -240,25 +243,25 @@ export const Dashboard: React.FC<DashboardProps> = ({ onIpoSelect, watchlist, on
         </article>
 
         <article className="rounded-3xl bg-white p-6 shadow-sm">
-          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-slate-400">Snapshot</p>
-          <div className="mt-5 space-y-4">
-            <MetricBlock
-              icon={<Sparkles className="w-4 h-4 text-[#2563EB]" />}
-              label="Live subscriptions"
-              value={`${liveCount} IPOs`}
-              delta="+2 vs last week"
+          <div className="flex items-center gap-2 mb-1">
+            <CircleHelp className="w-4 h-4 text-slate-400" />
+            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-slate-400">Help Center</p>
+          </div>
+          <div className="mt-2">
+            <FAQItem
+              question="How do I apply for an IPO?"
+              answer="You can apply via your broker's app using UPI or through your bank's net banking portal using the ASBA facility."
+              guideLink="/guides/how-to-apply-ipo"
             />
-            <MetricBlock
-              icon={<Layers className="w-4 h-4 text-emerald-500" />}
-              label="Average oversubscription"
-              value="21.4x"
-              delta="HNI book leading"
+            <FAQItem
+              question="How to check my allotment status?"
+              answer="Visit the registrar's website (e.g., Link Intime, KFintech) or your broker app after the allotment date."
+              guideLink="/guides/check-allotment-status"
             />
-            <MetricBlock
-              icon={<LineChart className="w-4 h-4 text-rose-500" />}
-              label="Volatility guard"
-              value="Low"
-              delta="India VIX 13.4 (-4.2%)"
+            <FAQItem
+              question="How to open a Demat account?"
+              answer="Choose a SEBI-registered broker (like Zerodha, Groww, Upstox), submit your PAN, Aadhaar, and bank details online to open an account instantly."
+              guideLink="/guides/open-demat-account"
             />
           </div>
         </article>
@@ -322,26 +325,36 @@ const HeroStat = ({ label, value, helper }: { label: string; value: string; help
   </div>
 );
 
-const MetricBlock = ({
-  icon,
-  label,
-  value,
-  delta
-}: {
-  icon: React.ReactNode;
-  label: string;
-  value: string;
-  delta: string;
-}) => (
-  <div className="flex items-center gap-3 rounded-2xl border border-slate-100 px-4 py-3">
-    <div className="rounded-2xl bg-slate-100 p-2">{icon}</div>
-    <div>
-      <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">{label}</p>
-      <p className="text-lg font-semibold text-slate-900">{value}</p>
-      <p className="text-xs text-slate-500">{delta}</p>
+const FAQItem = ({ question, answer, guideLink }: { question: string; answer: string; guideLink?: string }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="border-b border-slate-100 last:border-0">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex w-full items-center justify-between py-4 text-left text-sm font-medium text-slate-900 transition hover:text-[#2563EB]"
+      >
+        {question}
+        <ChevronDown className={`h-4 w-4 text-slate-400 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+      {isOpen && (
+        <div className="pb-4">
+          <p className="text-sm text-slate-500 leading-relaxed">{answer}</p>
+          {guideLink && (
+            <Link
+              to={guideLink}
+              className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#2563EB] hover:underline"
+              onClick={(e) => e.stopPropagation()}
+            >
+              Detailed steps
+              <ArrowUpRight className="w-3 h-3" />
+            </Link>
+          )}
+        </div>
+      )}
     </div>
-  </div>
-);
+  );
+};
 
 interface IPOCardProps {
   ipo: IPO;
