@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { IPO } from '../types';
 import { 
-  ArrowLeft, Calendar, FileText, Activity, ShieldCheck, 
+  ArrowLeft, Calendar, FileText, ShieldCheck, 
   AlertTriangle, DollarSign, PieChart as PieChartIcon, 
-  TrendingUp, CheckCircle2, Clock
+  TrendingUp, CheckCircle2, Clock, BookOpen, Calculator
 } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
 
@@ -12,8 +13,37 @@ interface IPODetailProps {
   onBack: () => void;
 }
 
+// Helper function to format amount in Indian currency format (₹1,23,456)
+const formatIndianCurrency = (amount: number): string => {
+  const formatted = amount.toLocaleString('en-IN');
+  return `₹${formatted}`;
+};
+
+// Generate application details dynamically based on lot size and price
+const generateApplicationDetails = (lotSize: number, maxPrice: number) => {
+  if (!lotSize || !maxPrice) return null;
+  
+  const categories = [
+    { category: 'Retail (Min)', lots: 1 },
+    { category: 'Retail (Max)', lots: 13 },
+    { category: 'S-HNI (Min)', lots: 14 },
+    { category: 'S-HNI (Max)', lots: 66 },
+    { category: 'B-HNI (Min)', lots: 67 },
+  ];
+  
+  return categories.map(({ category, lots }) => {
+    const shares = lots * lotSize;
+    const amount = shares * maxPrice;
+    return { category, lots, shares, amount };
+  });
+};
+
 export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('Overview');
+  const upperPriceBand = ipo.priceBand.max;
+  const gmpPercent = upperPriceBand > 0 ? (ipo.gmp / upperPriceBand) * 100 : null;
+  const companySummary = ipo.summary ?? ipo.description;
 
   const subscriptionData = [
     { name: 'QIB', value: ipo.subscription.qib },
@@ -62,7 +92,7 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
                <div className="flex items-center gap-2 text-xs sm:text-sm bg-slate-50 px-2 sm:px-3 py-1.5 rounded-lg border border-slate-200">
                   <DollarSign className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-400 flex-shrink-0" />
                   <span className="text-slate-500">Price Band:</span>
-                  <span className="font-semibold text-slate-900">{ipo.priceBand}</span>
+                  <span className="font-semibold text-slate-900">₹{ipo.priceBand.min} - ₹{ipo.priceBand.max}</span>
                </div>
             </div>
           </div>
@@ -71,7 +101,15 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
             <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 border border-indigo-200 p-3 sm:p-4 rounded-xl text-center">
               <p className="text-xs sm:text-sm text-indigo-600 font-medium mb-1">Expected GMP</p>
               <div className="text-2xl sm:text-3xl font-bold text-indigo-900 flex items-center justify-center gap-2">
-                 ₹{ipo.gmp} <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
+                 <span className="flex items-center gap-2">
+                   ₹{ipo.gmp}
+                   {typeof gmpPercent === 'number' && (
+                     <span className="text-sm sm:text-base font-semibold text-emerald-600">
+                       ({gmpPercent >= 0 ? '+' : ''}{gmpPercent.toFixed(1)}%)
+                     </span>
+                   )}
+                 </span>
+                 <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
               </div>
               <p className="text-xs text-indigo-400 mt-1">Updated: {ipo.gmpUpdateDate}</p>
             </div>
@@ -89,30 +127,39 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
            <div className="absolute top-1/2 left-0 w-full h-0.5 bg-slate-100 -z-0"></div>
            
            {(() => {
-             const isUpcoming = ipo.status === 'Upcoming';
-             const isActive = ipo.status === 'Active';
-             const isClosed = ipo.status === 'Closed';
-             
-             // Check if listing date has passed
+             // Determine timeline statuses strictly from the IPO calendar dates
+             const normalizeDate = (value: string) => {
+               const date = new Date(value);
+               date.setHours(0, 0, 0, 0);
+               return date;
+             };
+
              const today = new Date();
-             const listingDate = new Date(ipo.listingDate);
-             const hasListed = isClosed && listingDate <= today;
-             
+             today.setHours(0, 0, 0, 0);
+
+             const openDate = normalizeDate(ipo.openDate);
+             const closeDate = normalizeDate(ipo.closeDate);
+             const listingDate = normalizeDate(ipo.listingDate);
+
+             const hasOpened = today >= openDate;
+             const hasClosed = today >= closeDate;
+             const hasListed = today >= listingDate;
+
              return [
-               { 
-                 label: 'IPO Open', 
-                 date: ipo.openDate, 
-                 status: isUpcoming ? 'yellow' : 'green'
+               {
+                 label: 'IPO Open',
+                 date: ipo.openDate,
+                 status: hasOpened ? 'green' : 'yellow'
                },
-               { 
-                 label: 'IPO Close', 
-                 date: ipo.closeDate, 
-                 status: isUpcoming ? 'gray' : isActive ? 'yellow' : 'green'
+               {
+                 label: 'IPO Close',
+                 date: ipo.closeDate,
+                 status: hasClosed ? 'green' : hasOpened ? 'yellow' : 'gray'
                },
-               { 
-                 label: 'Listing', 
-                 date: ipo.listingDate, 
-                 status: hasListed ? 'green' : (isClosed ? 'yellow' : 'gray')
+               {
+                 label: 'Listing',
+                 date: ipo.listingDate,
+                 status: hasListed ? 'green' : hasClosed ? 'yellow' : 'gray'
                },
              ].map((step, idx) => (
                <div key={idx} className="relative z-10 bg-white px-2 flex flex-col items-center">
@@ -134,7 +181,7 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
       <div className="flex flex-col lg:flex-row gap-4 sm:gap-6">
         {/* Left Side: Tabs */}
         <div className="flex-1 space-y-4 sm:space-y-6">
-          <div className="bg-white border-b border-slate-200">
+          <div className="bg-white rounded-lg border-b border-slate-200 pl-4 pr-2 sm:pr-4">
              <div className="flex overflow-x-auto gap-4 sm:gap-6 px-1 hide-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">
                {['Overview', 'Subscription', 'Analysis'].map(tab => (
                  <button
@@ -152,23 +199,69 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
           <div className="min-h-[350px] sm:min-h-[400px]">
             {activeTab === 'Overview' && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 animate-fade-in">
+                 
+                <div className="sm:col-span-2">
+                  <DetailCard title="Summary" icon={<BookOpen className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-500" />}>
+                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{companySummary}</p>
+                  </DetailCard>
+                </div>
+                 
                  <DetailCard title="Issue Details" icon={<FileText className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500" />}>
-                    <DetailRow label="Listing At" value="BSE, NSE" />
                     <DetailRow label="Issue Size" value={ipo.issueSize} />
-                    <DetailRow label="Fresh Issue" value="60%" />
-                    <DetailRow label="Offer for Sale" value="40%" />
-                    <DetailRow label="Face Value" value="₹10 per share" />
-                    <DetailRow label="Lot Size" value={`${ipo.lotSize} Shares`} />
+                    <DetailRow label="Fresh Issue" value={ipo.issueDetails.freshIssue} />
+                    <DetailRow label="Offer for Sale" value={ipo.issueDetails.offerForSale} />
+                    <DetailRow label="Face Value" value={ipo.issueDetails.faceValue} />
+                    <DetailRow label="Issue Price Band" value={`₹${ipo.priceBand.min} - ₹${ipo.priceBand.max}`} />
                  </DetailCard>
 
-                 <DetailCard title="Financial Snapshot" icon={<Activity className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-500" />}>
-                    <DetailRow label="Revenue (FY23)" value={ipo.financials.revenue} />
-                    <DetailRow label="Net Profit (FY23)" value={ipo.financials.profit} />
-                    <DetailRow label="Net Margin" value={ipo.financials.margin} />
-                    <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-slate-100">
-                       <p className="text-xs text-slate-400">Financial figures are indicative based on RHP.</p>
-                    </div>
+                 {/* Ask AI Card - Mobile Only */}
+                 <div className="sm:col-span-2 lg:hidden bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-4 border border-slate-300">
+                   <p className="font-bold text-slate-900 text-sm mb-2">Have a question?</p>
+                   <p className="text-xs text-slate-600 mb-1">"What does GMP indicate?"</p>
+                   <p className="text-xs text-slate-600 mb-1">"Analyze RHP for competition risk"</p>
+                   <p className="text-xs text-slate-600 mb-1">"Who are the anchor investors?"</p>
+                   <p className="text-xs text-slate-600 mb-3">"Is this IPO overvalued?"</p>
+                   <button
+                     onClick={() => { navigate('/ask-ai'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                     className="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-2 px-4 rounded-xl transition-colors text-xs"
+                   >
+                     Ask Listing Lens AI →
+                   </button>
+                 </div>
+
+                 <DetailCard title="Application Details" icon={<Calculator className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-500" />}>
+                    {(() => {
+                      const details = generateApplicationDetails(ipo.lotSize, ipo.priceBand.max);
+                      if (!details) {
+                        return <p className="text-xs sm:text-sm text-slate-500">Application details not available for this IPO.</p>;
+                      }
+                      return (
+                        <div className="overflow-x-auto -mx-1">
+                          <table className="w-full text-xs sm:text-sm">
+                            <thead>
+                              <tr className="border-b border-slate-100">
+                                <th className="text-left py-2 px-1 text-slate-500 font-medium">Application</th>
+                                <th className="text-right py-2 px-1 text-slate-500 font-medium">Lots</th>
+                                <th className="text-right py-2 px-1 text-slate-500 font-medium">Shares</th>
+                                <th className="text-right py-2 px-1 text-slate-500 font-medium">Amount</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {details.map((row, idx) => (
+                                <tr key={idx} className={idx < details.length - 1 ? 'border-b border-slate-50' : ''}>
+                                  <td className="py-2 px-1 text-slate-700">{row.category}</td>
+                                  <td className="py-2 px-1 text-right font-medium text-slate-900">{row.lots}</td>
+                                  <td className="py-2 px-1 text-right font-medium text-slate-900">{row.shares.toLocaleString('en-IN')}</td>
+                                  <td className="py-2 px-1 text-right font-medium text-slate-900">{formatIndianCurrency(row.amount)}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      );
+                    })()}
                  </DetailCard>
+
                  
                  <div className="sm:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     <div className="bg-emerald-50 rounded-xl p-4 sm:p-5 border border-emerald-100">
@@ -257,6 +350,21 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
 
         {/* Right Side: Quick Info (Sticky on Desktop) */}
         <div className="lg:w-80 space-y-4 sm:space-y-6">
+           {/* Ask AI Card - Desktop Only */}
+           <div className="hidden lg:block bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-4 sm:p-5 border border-slate-300">
+             <p className="font-bold text-slate-900 text-sm sm:text-base mb-2">Have a question?</p>
+             <p className="text-xs sm:text-sm text-slate-600 mb-1">"What does GMP indicate?"</p>
+             <p className="text-xs sm:text-sm text-slate-600 mb-1">"Analyze RHP for competition risk"</p>
+             <p className="text-xs sm:text-sm text-slate-600 mb-1">"Who are the anchor investors?"</p>
+             <p className="text-xs sm:text-sm text-slate-600 mb-3">"Is this IPO overvalued?"</p>
+             <button
+               onClick={() => { navigate('/ask-ai'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+               className="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-2 sm:py-2.5 px-4 rounded-xl transition-colors text-xs sm:text-sm"
+             >
+               Ask Listing Lens AI →
+             </button>
+           </div>
+
            <div className="bg-indigo-900 rounded-2xl p-4 sm:p-6 text-white shadow-xl lg:sticky lg:top-24">
              <h3 className="font-bold text-base sm:text-lg mb-4">Investment Calculator</h3>
              <div className="space-y-3 sm:space-y-4">

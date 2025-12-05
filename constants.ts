@@ -10,7 +10,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2025-11-27',
     closeDate: '2025-11-30',
     listingDate: '2025-12-06',
-    priceBand: '₹450 - ₹480',
+    priceBand: { min: 450, max: 480 },
     lotSize: 30,
     issueSize: '850 Cr',
     gmp: 120,
@@ -22,6 +22,7 @@ export const MOCK_IPOS: IPO[] = [
       total: 18.2,
     },
     description: 'TechNova is a leading provider of AI-driven cloud infrastructure services, focusing on enterprise scalability and security solutions.',
+    summary: 'TechNova Solutions Ltd positions its AI-first cloud infrastructure stack as the modernization fabric for compliance heavy enterprises. Layered managed security, automation playbooks, and consumption pricing keep revenue expanding above forty percent without leaning on debt. Reference wins in financial services, manufacturing, and digital native cohorts demonstrate sticky deployments plus multi year expansion paths. IPO proceeds target new hyperscale partnerships, edge nodes, and bolt-on acquisitions that deepen verticalized service catalogs. Execution risks center on concentrated accounts and relentless innovation cycles, yet leadership showcases disciplined delivery governance. Robust GMP interest mirrors improving operating leverage and secular digital infrastructure demand.',
     strengths: [
       'Strong revenue growth of 40% CAGR',
       'Debt-free company',
@@ -35,6 +36,11 @@ export const MOCK_IPOS: IPO[] = [
       revenue: '₹1,200 Cr',
       profit: '₹180 Cr',
       margin: '15%',
+    },
+    issueDetails: {
+      freshIssue: '60%',
+      offerForSale: '40%',
+      faceValue: '₹10 per share',
     }
   },
   {
@@ -45,7 +51,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2025-11-28',
     closeDate: '2025-12-05',
     listingDate: '2025-12-07',
-    priceBand: '₹110 - ₹125',
+    priceBand: { min: 110, max: 125 },
     lotSize: 120,
     issueSize: '2,400 Cr',
     gmp: 15,
@@ -57,6 +63,7 @@ export const MOCK_IPOS: IPO[] = [
       total: 2.4,
     },
     description: 'GreenEarth Energy specializes in renewable solar and wind power generation assets across Western India.',
+    summary: 'GreenEarth Energy positions itself as a diversified renewables platform combining utility scale solar parks, hybrid wind corridors, and storage pilots across western India. Long term PPAs, viability gap funding, and disciplined project execution underpin steady revenue visibility despite a capital intensive footprint. Management plans to deploy IPO proceeds toward land banking, inverter procurement, and downstream analytics that lift plant availability. Subsidy regimes and carbon credit monetization add upside, while regulatory delays in transmission clearances remain the largest execution drag. Subscription traction reflects investors seeking predictable cash flows, measured leverage, and exposure to state backed energy transition programs.',
     strengths: [
       'Government backing and subsidies',
       'Long-term PPA agreements'
@@ -69,6 +76,11 @@ export const MOCK_IPOS: IPO[] = [
       revenue: '₹3,500 Cr',
       profit: '₹220 Cr',
       margin: '6.2%',
+    },
+    issueDetails: {
+      freshIssue: '70%',
+      offerForSale: '30%',
+      faceValue: '₹5 per share',
     }
   },
   {
@@ -78,8 +90,8 @@ export const MOCK_IPOS: IPO[] = [
     status: 'Active',
     openDate: '2025-11-26',
     closeDate: '2025-11-29',
-    listingDate: '2025-12-05',
-    priceBand: '₹200 - ₹215',
+    listingDate: '2025-12-04',
+    priceBand: { min: 200, max: 215 },
     lotSize: 65,
     issueSize: '600 Cr',
     gmp: 45,
@@ -91,12 +103,18 @@ export const MOCK_IPOS: IPO[] = [
       total: 9.2,
     },
     description: 'Urban Logistics provides last-mile delivery solutions for e-commerce giants.',
+    summary: 'Urban Logistics is building a nationwide last mile network that blends asset light fleets, dark stores, and proprietary routing tech for ecommerce majors. Revenue expansion above sector averages stems from integrated warehousing, reverse logistics, and value added cold chain pilots for pharma clients. IPO proceeds will accelerate electric vehicle adoption, automated fulfillment hubs, and regional partner buyouts to deepen density. Key risks include aggressive price wars, driver availability, and diesel volatility, although diversified contracts cushion individual client swings. Consistent GMP prints suggest investors value execution discipline, improving unit economics, and the optionality of future cross border fulfillment corridors.',
     strengths: ['Asset-light model', 'Pan-India presence'],
     risks: ['Low entry barrier', 'Fuel price volatility'],
     financials: {
       revenue: '₹800 Cr',
       profit: '₹45 Cr',
       margin: '5.6%',
+    },
+    issueDetails: {
+      freshIssue: '55%',
+      offerForSale: '45%',
+      faceValue: '₹2 per share',
     }
   },
   // Upcoming IPOs (today < openDate)
@@ -108,7 +126,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2025-12-05',
     closeDate: '2025-12-08',
     listingDate: '2025-12-14',
-    priceBand: '₹550 - ₹580',
+    priceBand: { min: 550, max: 580 },
     lotSize: 25,
     issueSize: '1,100 Cr',
     gmp: 95,
@@ -120,6 +138,7 @@ export const MOCK_IPOS: IPO[] = [
       total: 0,
     },
     description: 'Stellar Pharmaceuticals develops and manufactures specialty oncology drugs and APIs for global markets.',
+    summary: 'Stellar Pharmaceuticals operates vertically integrated oncology formulations and API facilities with global regulatory approvals, making export demand the primary growth vector. The pipeline includes targeted therapies, long acting injectables, and contract development work for biotech innovators, sustaining premium margins. IPO proceeds are allocated toward scaling high potent manufacturing blocks, inventory harmonization, and licensing new molecules for US and Europe filings. Competitive pressures include patent cliffs, price controls, and inspection surprises, yet management touts strong compliance track record and diversified customer mix. Investors eye the listing for exposure to defensible healthcare demand, recurring forex revenues, and disciplined capital allocation.',
     strengths: [
       'USFDA approved manufacturing facilities',
       'Strong product pipeline',
@@ -133,6 +152,11 @@ export const MOCK_IPOS: IPO[] = [
       revenue: '₹950 Cr',
       profit: '₹165 Cr',
       margin: '17.4%',
+    },
+    issueDetails: {
+      freshIssue: '65%',
+      offerForSale: '35%',
+      faceValue: '₹10 per share',
     }
   },
   {
@@ -143,7 +167,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2025-12-10',
     closeDate: '2025-12-13',
     listingDate: '2025-12-19',
-    priceBand: '₹280 - ₹310',
+    priceBand: { min: 280, max: 310 },
     lotSize: 45,
     issueSize: '650 Cr',
     gmp: 55,
@@ -155,6 +179,7 @@ export const MOCK_IPOS: IPO[] = [
       total: 0,
     },
     description: 'NexGen provides digital transformation services and cloud migration solutions to enterprises across APAC region.',
+    summary: 'NexGen Digital Solutions partners with enterprises across APAC to modernize legacy stacks, automate operations, and accelerate cloud migrations on AWS and Azure. Recurring managed services, outcome based contracts, and a 92 percent retention rate provide revenue predictability despite shorter implementation cycles. IPO money will strengthen delivery centers in tier two cities, fund selective acquisitions in cybersecurity, and expand thought leadership around industry specific accelerators. Execution risks include talent attrition, currency swings, and heavy competition from global systems integrators. Nevertheless, rising digital transformation budgets, marquee client references, and improving margins support expectations of steady post listing performance.',
     strengths: [
       'Recurring revenue model',
       'Strong client retention rate of 92%',
@@ -168,6 +193,11 @@ export const MOCK_IPOS: IPO[] = [
       revenue: '₹580 Cr',
       profit: '₹87 Cr',
       margin: '15.0%',
+    },
+    issueDetails: {
+      freshIssue: '80%',
+      offerForSale: '20%',
+      faceValue: '₹5 per share',
     }
   },
   {
@@ -178,7 +208,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2025-12-12',
     closeDate: '2025-12-15',
     listingDate: '2025-12-21',
-    priceBand: '₹180 - ₹200',
+    priceBand: { min: 180, max: 200 },
     lotSize: 75,
     issueSize: '890 Cr',
     gmp: 30,
@@ -190,6 +220,7 @@ export const MOCK_IPOS: IPO[] = [
       total: 0,
     },
     description: 'Premier operates luxury hotels and resorts across major tourist destinations in India with focus on experiential hospitality.',
+    summary: 'Premier Hotels & Resorts curates experiential luxury stays across leisure circuits, business hubs, and pilgrimage micro markets, blending owned properties with management contracts to ring fence margins. Occupancy has recovered beyond pre pandemic peaks, aided by dynamic pricing, weddings, and branded F&B concepts. IPO proceeds will refresh flagship assets, repay high cost leases, and seed resort developments in coastal destinations plus the northeast. Risks include elevated fixed costs, seasonality, and susceptibility to macro shocks, yet loyalty programs and strong brand recall provide demand resilience. Investors view the offer as exposure to premium hospitality growth and operating leverage.',
     strengths: [
       'Prime locations in metro cities',
       'Diversified revenue streams',
@@ -203,6 +234,11 @@ export const MOCK_IPOS: IPO[] = [
       revenue: '₹1,450 Cr',
       profit: '₹125 Cr',
       margin: '8.6%',
+    },
+    issueDetails: {
+      freshIssue: '50%',
+      offerForSale: '50%',
+      faceValue: '₹10 per share',
     }
   },
   {
@@ -213,7 +249,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2025-12-18',
     closeDate: '2025-12-21',
     listingDate: '2025-12-27',
-    priceBand: '₹720 - ₹750',
+    priceBand: { min: 720, max: 750 },
     lotSize: 20,
     issueSize: '1,850 Cr',
     gmp: 140,
@@ -225,6 +261,7 @@ export const MOCK_IPOS: IPO[] = [
       total: 0,
     },
     description: 'MicroChip designs and manufactures semiconductor components for automotive and IoT applications.',
+    summary: 'MicroChip Technologies designs automotive and IoT semiconductors, combining proprietary analog platforms, power modules, and embedded software support under long dated supply agreements with OEMs. Revenue momentum stems from design wins in electric mobility, ADAS, and industrial automation, while PLI incentives bolster domestic fabrication economics. IPO proceeds will fund clean room upgrades, backend testing automation, and strategic equity stakes in substrate partners to de risk supply. Exposure to cyclical global chip demand and capex intensity remain core risks, yet diversified order book and engineering depth provide buffer. Strong GMP premium underlines confidence in sustained silicon shortages and localization tailwinds.',
     strengths: [
       'Cutting-edge R&D capabilities',
       'Long-term contracts with auto OEMs',
@@ -238,6 +275,11 @@ export const MOCK_IPOS: IPO[] = [
       revenue: '₹2,100 Cr',
       profit: '₹315 Cr',
       margin: '15.0%',
+    },
+    issueDetails: {
+      freshIssue: '75%',
+      offerForSale: '25%',
+      faceValue: '₹2 per share',
     }
   },
   // Closed IPOs (already listed)
@@ -249,7 +291,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2023-10-15',
     closeDate: '2023-10-18',
     listingDate: '2023-10-24',
-    priceBand: '₹800 - ₹850',
+    priceBand: { min: 800, max: 850 },
     lotSize: 15,
     issueSize: '1,500 Cr',
     gmp: 350,
@@ -263,12 +305,18 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 1200,
     currentPrice: 1450,
     description: 'A non-banking financial company focused on housing finance in tier-2 cities.',
+    summary: 'BlueSky Finance focuses on affordable housing loans in tier two and tier three corridors, pairing granular underwriting with centralized analytics to keep delinquencies among the lowest in its peer group. The franchise leverages deep builder relationships, co-lending alliances, and technology driven sourcing to maintain rapid disbursal turnaround. IPO funds earlier fueled capital adequacy, digital collections, and branch expansion; now management prioritizes cross sell of insurance and MSME secured lending to widen yields. Key risks include interest rate volatility and localized credit stress, yet diversified pools plus prudential provisioning support resilient spreads beyond the listing pop.',
     strengths: ['High asset quality', 'Robust collection mechanism'],
     risks: ['Interest rate cycles', 'Credit defaults'],
     financials: {
       revenue: '₹4,200 Cr',
       profit: '₹650 Cr',
       margin: '15.5%',
+    },
+    issueDetails: {
+      freshIssue: '40%',
+      offerForSale: '60%',
+      faceValue: '₹10 per share',
     }
   },
   {
@@ -279,7 +327,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2023-11-05',
     closeDate: '2023-11-08',
     listingDate: '2023-11-15',
-    priceBand: '₹320 - ₹340',
+    priceBand: { min: 320, max: 340 },
     lotSize: 40,
     issueSize: '450 Cr',
     gmp: 0,
@@ -291,12 +339,18 @@ export const MOCK_IPOS: IPO[] = [
       total: 0,
     },
     description: 'Research-led biotechnology firm developing specialized generic injectables.',
+    summary: 'Quantum Biotech channels R&D muscle into difficult to manufacture injectables and specialty generics, using USFDA cleared facilities and backward integrated intermediates to protect margins. The company balances regulated market filings with partnerships in Latin America and Southeast Asia, reducing reliance on any single geography. IPO proceeds were earmarked for sterile capacity upgrades, lyophilization lines, and pipeline development for oncology plus critical care therapies. Execution hinges on inspection readiness and pricing power against large incumbents. Despite volatility in US generics, strong scientific talent, IP collaborations, and a growing ANDA backlog underpin expectations for steady scale post listing.',
     strengths: ['Strong R&D capabilities', 'USFDA approved facilities'],
     risks: ['Regulatory audits', 'Pricing pressure in US market'],
     financials: {
       revenue: '₹300 Cr',
       profit: '₹80 Cr',
       margin: '26%',
+    },
+    issueDetails: {
+      freshIssue: '85%',
+      offerForSale: '15%',
+      faceValue: '₹5 per share',
     }
   },
   {
@@ -307,7 +361,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2023-09-10',
     closeDate: '2023-09-13',
     listingDate: '2023-09-21',
-    priceBand: '₹200 - ₹210',
+    priceBand: { min: 200, max: 210 },
     lotSize: 70,
     issueSize: '500 Cr',
     gmp: 50,
@@ -321,12 +375,18 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 260,
     currentPrice: 240,
     description: 'A leading construction firm specializing in highway and bridge infrastructure projects.',
+    summary: 'Apex Construction specializes in EPC contracts for highways, bridges, and urban transit, leveraging pre qualified credentials and mechanized project execution to maintain healthy margins. The order book offers multi year visibility backed by NHAI awards and select HAM concessions, while a disciplined bidding framework protects working capital. IPO proceeds supported equipment fleet refresh, debt reduction, and investments in digital site management. Risks stem from raw material swings, land acquisition delays, and dependence on government spending, yet the company offsets volatility through joint ventures and regional diversification. Post listing performance hinges on translating strong backlog into predictable cash collections.',
     strengths: ['Strong order book', 'Experienced management'],
     risks: ['Raw material price volatility', 'Project delays'],
     financials: {
       revenue: '₹1,500 Cr',
       profit: '₹120 Cr',
       margin: '8.0%',
+    },
+    issueDetails: {
+      freshIssue: '60%',
+      offerForSale: '40%',
+      faceValue: '₹10 per share',
     }
   },
   {
@@ -337,7 +397,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2023-08-05',
     closeDate: '2023-08-08',
     listingDate: '2023-08-17',
-    priceBand: '₹450 - ₹480',
+    priceBand: { min: 450, max: 480 },
     lotSize: 30,
     issueSize: '1,200 Cr',
     gmp: 10,
@@ -351,12 +411,18 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 490,
     currentPrice: 520,
     description: 'Zenith Healthcare operates a chain of multi-specialty hospitals in North India.',
+    summary: 'Zenith Healthcare operates multi specialty hospitals across North India with a focus on high acuity care, branded quaternary centers, and asset light spoke clinics that drive referrals. ARPOB continues to expand through complex procedures, oncology, and transplant programs while payor mix tilts toward private insurance. IPO capital improved bed additions, digital patient journeys, and supply chain efficiencies for pharmaceuticals and implants. Risks include regulatory caps on procedure pricing, intense regional competition, and ongoing talent costs. Nevertheless, strong clinical governance, expanding medical tourism inflows, and ancillary home health services position Zenith for gradual margin accretion post listing.',
     strengths: ['High average revenue per bed', 'Expansion plans'],
     risks: ['High competition', 'Regulatory caps on pricing'],
     financials: {
       revenue: '₹950 Cr',
       profit: '₹85 Cr',
       margin: '9.0%',
+    },
+    issueDetails: {
+      freshIssue: '55%',
+      offerForSale: '45%',
+      faceValue: '₹10 per share',
     }
   },
   {
@@ -367,7 +433,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2023-07-20',
     closeDate: '2023-07-23',
     listingDate: '2023-07-31',
-    priceBand: '₹80 - ₹85',
+    priceBand: { min: 80, max: 85 },
     lotSize: 175,
     issueSize: '300 Cr',
     gmp: 90,
@@ -381,12 +447,18 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 175,
     currentPrice: 160,
     description: 'Tech-enabled logistics company focusing on hyperlocal delivery services.',
+    summary: 'Rapid Delivery Systems marries gig fleets, dark stores, and a proprietary dispatch engine to serve hyperlocal commerce, grocery, and pharmacy clients. Explosive subscription in the IPO reflected confidence in its ability to sustain high growth while nudging unit economics toward profitability. Management channels funds into automation, electric vehicle rollouts, and embedded fintech offerings for merchants, creating stickier relationships. Challenges include heavy cash burn, intense competition, and regulatory scrutiny on gig labor practices. Still, the company benefits from nationwide coverage, cross selling warehousing services, and data driven routing advantages that can support future marketplace partnerships.',
     strengths: ['High growth sector', 'Scalable technology platform'],
     risks: ['Cash burn', 'Intense competition'],
     financials: {
       revenue: '₹400 Cr',
       profit: '-₹25 Cr',
       margin: '-6.2%',
+    },
+    issueDetails: {
+      freshIssue: '100%',
+      offerForSale: '0%',
+      faceValue: '₹1 per share',
     }
   },
   {
@@ -397,7 +469,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2023-06-15',
     closeDate: '2023-06-18',
     listingDate: '2023-06-26',
-    priceBand: '₹120 - ₹130',
+    priceBand: { min: 120, max: 130 },
     lotSize: 115,
     issueSize: '800 Cr',
     gmp: 20,
@@ -411,12 +483,18 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 150,
     currentPrice: 180,
     description: 'SolarWinds Power manufactures solar panels and related components.',
+    summary: 'SolarWinds Power manufactures photovoltaic modules and balance of system components, pairing backward integrated cells with EPC services for utility and rooftop clients. Government incentives and corporate sustainability targets underpin steady demand, while exports add diversification. IPO proceeds earlier funded module capacity expansion, working capital, and R&D into high efficiency TOPCon lines. Risks include dependency on imported wafers, policy shifts, and commoditized pricing, yet operational excellence and service bundling help defend margins. Post listing, the company continues to chase captive industrial projects and hybrid storage microgrids, aiming to convert improving subscription interest into sustainable cash flows.',
     strengths: ['Govt incentives for solar', 'Export potential'],
     risks: ['Dependency on imported raw materials', 'Policy changes'],
     financials: {
       revenue: '₹600 Cr',
       profit: '₹40 Cr',
       margin: '6.7%',
+    },
+    issueDetails: {
+      freshIssue: '70%',
+      offerForSale: '30%',
+      faceValue: '₹5 per share',
     }
   },
   {
@@ -427,7 +505,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2023-05-25',
     closeDate: '2023-05-28',
     listingDate: '2023-06-05',
-    priceBand: '₹500 - ₹520',
+    priceBand: { min: 500, max: 520 },
     lotSize: 28,
     issueSize: '2,000 Cr',
     gmp: 150,
@@ -441,12 +519,18 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 670,
     currentPrice: 800,
     description: 'A digital lending platform connecting borrowers with institutional investors.',
+    summary: 'FinTech Capital connects retail borrowers and small businesses to institutional capital through a data rich marketplace, using proprietary credit scoring to maintain low NPAs. The platform blends supply from banks, NBFCs, and alternate funds, diversifying funding costs while enabling embedded finance partnerships. IPO proceeds accelerated technology investments, geographic expansion, and reserve buffers to support new product launches in secured lending. Regulatory tightening around digital lending and cybersecurity threats remain watchpoints, yet strong compliance frameworks and co-lending tie ups temper downside. Investors continue to track profitability progression as operating leverage improves beyond the blockbuster listing debut.',
     strengths: ['Proprietary credit scoring model', 'Low NPA levels'],
     risks: ['Regulatory tightening', 'Cybersecurity threats'],
     financials: {
       revenue: '₹2,500 Cr',
       profit: '₹450 Cr',
       margin: '18.0%',
+    },
+    issueDetails: {
+      freshIssue: '50%',
+      offerForSale: '50%',
+      faceValue: '₹10 per share',
     }
   },
   {
@@ -457,7 +541,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2023-04-10',
     closeDate: '2023-04-13',
     listingDate: '2023-04-21',
-    priceBand: '₹300 - ₹315',
+    priceBand: { min: 300, max: 315 },
     lotSize: 45,
     issueSize: '3,500 Cr',
     gmp: 5,
@@ -471,12 +555,18 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 320,
     currentPrice: 310,
     description: 'Operator of private ports and terminals on the east coast.',
+    summary: 'Ocean Blue Ports operates strategic terminals along the east coast, handling bulk, container, and coastal cargo through landlord and operating models. Stable long term contracts with steel makers, fertilizer firms, and coastal shipping lines lend visibility yet throughput still tracks global trade cycles. IPO proceeds funded dredging, mechanized handling, and expansion of rail sidings to attract higher value cargo. Environmental approvals, cyclone disruptions, and dependence on marquee customers remain key risks. Management focuses on automation, coastal shipping incentives, and value added logistics parks to lift returns, positioning the company for gradual deleveraging after listing.',
     strengths: ['Strategic location', 'Long-term cargo contracts'],
     risks: ['Dependency on global trade volume', 'Environmental regulations'],
     financials: {
       revenue: '₹5,000 Cr',
       profit: '₹600 Cr',
       margin: '12.0%',
+    },
+    issueDetails: {
+      freshIssue: '30%',
+      offerForSale: '70%',
+      faceValue: '₹10 per share',
     }
   },
   {
@@ -487,7 +577,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2023-03-05',
     closeDate: '2023-03-08',
     listingDate: '2023-03-16',
-    priceBand: '₹600 - ₹650',
+    priceBand: { min: 600, max: 650 },
     lotSize: 20,
     issueSize: '600 Cr',
     gmp: 200,
@@ -501,12 +591,18 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 850,
     currentPrice: 920,
     description: 'Provider of cybersecurity solutions for enterprises and government agencies.',
+    summary: 'CyberSafe Security provides managed cyber defense, incident response, and zero trust architecture consulting to enterprises and government agencies. Recurring subscriptions across SOC services create sticky revenue, while proprietary threat intelligence and partnerships with hyperscalers keep offerings current. IPO proceeds accelerated R&D in OT security, global delivery centers, and targeted acquisitions to fill niche capabilities. Talent shortages, rapid technology shifts, and compliance requirements represent ongoing challenges, yet strong training programs and platform investments mitigate attrition. Heavy oversubscription reflected investor appetite for pure play cybersecurity exposure with expanding operating leverage and cash generation.',
     strengths: ['High demand for security', 'Recurring revenue model'],
     risks: ['Talent shortage', 'Rapid technological obsolescence'],
     financials: {
       revenue: '₹450 Cr',
       profit: '₹90 Cr',
       margin: '20.0%',
+    },
+    issueDetails: {
+      freshIssue: '75%',
+      offerForSale: '25%',
+      faceValue: '₹5 per share',
     }
   },
   {
@@ -517,7 +613,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2023-02-15',
     closeDate: '2023-02-18',
     listingDate: '2023-02-26',
-    priceBand: '₹150 - ₹160',
+    priceBand: { min: 150, max: 160 },
     lotSize: 90,
     issueSize: '400 Cr',
     gmp: 30,
@@ -531,12 +627,18 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 190,
     currentPrice: 210,
     description: 'Manufacturer of agricultural machinery and irrigation systems.',
+    summary: 'AgroTech Industries manufactures farm equipment and irrigation systems, linking design, fabrication, and distribution across India to capture mechanization demand. Dealer networks and financing tie ups help farmers adopt modern implements, while exports to Africa and Southeast Asia diversify revenue. IPO proceeds were directed toward automation, precision agriculture R&D, and expansion of after sales services. Risks include monsoon variability, commodity price swings, and subsidy policy changes, yet the company counters through product mix flexibility and hedging programs. Listing has enabled stronger brand visibility and partnerships with agri startups, supporting gradual improvements in profitability.',
     strengths: ['Rural economy focus', 'Wide distribution network'],
     risks: ['Monsoon dependency', 'Raw material costs'],
     financials: {
       revenue: '₹700 Cr',
       profit: '₹55 Cr',
       margin: '7.8%',
+    },
+    issueDetails: {
+      freshIssue: '65%',
+      offerForSale: '35%',
+      faceValue: '₹10 per share',
     }
   },
   {
@@ -547,7 +649,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2023-01-20',
     closeDate: '2023-01-23',
     listingDate: '2023-02-01',
-    priceBand: '₹90 - ₹95',
+    priceBand: { min: 90, max: 95 },
     lotSize: 150,
     issueSize: '1,000 Cr',
     gmp: -5,
@@ -561,12 +663,18 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 90,
     currentPrice: 85,
     description: 'Value retail chain operating in tier-2 and tier-3 cities.',
+    summary: 'Metro Retail Chains targets aspirational shoppers in tier two and tier three cities with a low cost, wide assortment format emphasizing private labels. Supply chain efficiencies, direct sourcing, and analytics driven merchandising aim to protect wafer thin margins. IPO funds were intended for warehouse automation, new store rollout, and debt reduction, but sluggish subscription highlighted concerns about ecommerce competition and muted profitability. Management now focuses on omni channel pilots, loyalty programs, and shrink reduction to revive growth. Investors monitor inventory turns and working capital discipline to gauge potential rerating after the tepid listing.',
     strengths: ['Cost efficiency', 'Growing middle class'],
     risks: ['E-commerce competition', 'Inventory management'],
     financials: {
       revenue: '₹1,800 Cr',
       profit: '₹20 Cr',
       margin: '1.1%',
+    },
+    issueDetails: {
+      freshIssue: '45%',
+      offerForSale: '55%',
+      faceValue: '₹2 per share',
     }
   },
   {
@@ -577,7 +685,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2022-12-10',
     closeDate: '2022-12-13',
     listingDate: '2022-12-21',
-    priceBand: '₹250 - ₹270',
+    priceBand: { min: 250, max: 270 },
     lotSize: 55,
     issueSize: '900 Cr',
     gmp: 40,
@@ -591,12 +699,18 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 310,
     currentPrice: 350,
     description: 'Luxury hotel chain with properties in major tourist destinations.',
+    summary: 'Elite Hospitality operates upscale hotels in major tourist circuits, drawing demand from leisure travelers, corporate events, and destination weddings. The brand invests in experiential offerings, curated F&B, and loyalty programs to lift RevPAR. IPO proceeds supported refurbishments, debt reduction, and expansion into managed properties to lighten capex. Sensitivities include economic slowdowns, seasonality, and high maintenance costs, but diversified geographic mix and premium positioning aid resilience. Post listing, management pursues asset light growth, digital booking channels, and partnerships with global travel aggregators to sustain occupancy momentum and margin expansion. Shareholders expect gradual deleveraging and stronger free cash generation as average daily rates remain firm.',
     strengths: ['Post-pandemic travel boom', 'Premium brand value'],
     risks: ['Economic downturn', 'High maintenance costs'],
     financials: {
       revenue: '₹1,100 Cr',
       profit: '₹150 Cr',
       margin: '13.6%',
+    },
+    issueDetails: {
+      freshIssue: '55%',
+      offerForSale: '45%',
+      faceValue: '₹10 per share',
     }
   },
   // 10 NEW DUMMY CLOSED IPOS
@@ -608,7 +722,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2022-11-05',
     closeDate: '2022-11-08',
     listingDate: '2022-11-16',
-    priceBand: '₹180 - ₹200',
+    priceBand: { min: 180, max: 200 },
     lotSize: 75,
     issueSize: '550 Cr',
     gmp: 80,
@@ -617,9 +731,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 285,
     currentPrice: 310,
     description: 'Unified communications platform provider for small businesses.',
+    summary: 'OmniComm Systems delivers unified communications for small businesses, combining cloud PBX, video collaboration, and AI assisted contact center modules under a SaaS model. Global reseller networks and freemium onboarding keep acquisition costs efficient while churn reduction remains an ongoing focus. IPO proceeds financed data center expansion, security hardening, and product localization for North America and Europe. Risks include intense competition, data privacy regulation, and currency swings across its worldwide footprint. Still, scale economies, cross sell of analytics, and sticky integrations with CRM stacks support steady cash generation and investor confidence after the strong listing premium.',
     strengths: ['Scalable SaaS model', 'Global client base'],
     risks: ['Data privacy regulations', 'High churn rate'],
-    financials: { revenue: '₹600 Cr', profit: '₹90 Cr', margin: '15.0%' }
+    financials: { revenue: '₹600 Cr', profit: '₹90 Cr', margin: '15.0%' },
+    issueDetails: { freshIssue: '70%', offerForSale: '30%', faceValue: '₹5 per share' }
   },
   {
     id: '17',
@@ -629,7 +745,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2022-10-12',
     closeDate: '2022-10-15',
     listingDate: '2022-10-24',
-    priceBand: '₹550 - ₹580',
+    priceBand: { min: 550, max: 580 },
     lotSize: 25,
     issueSize: '1,100 Cr',
     gmp: 120,
@@ -638,9 +754,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 710,
     currentPrice: 650,
     description: 'Biotechnology firm focused on sustainable agricultural solutions.',
+    summary: 'BioLife Sciences develops biological crop protection and nutrition solutions, leveraging patented microbes and sustainable formulations to help growers reduce chemical dependence. The company exports to multiple continents and collaborates with agri universities, supporting pipeline depth. IPO capital strengthened manufacturing automation, regulatory registrations, and farmer advisory platforms. Risks involve seasonal demand, regulatory approvals, and competition from global majors, yet BioLife counters through localized trials and premium branding. Investors monitor how the company navigates input cost inflation while scaling high margin products to justify earlier oversubscription levels. Recent GMP moderation signals balanced expectations for medium term earnings visibility.',
     strengths: ['Patented technology', 'Growing organic market'],
     risks: ['Regulatory hurdles', 'Seasonality'],
-    financials: { revenue: '₹850 Cr', profit: '₹120 Cr', margin: '14.1%' }
+    financials: { revenue: '₹850 Cr', profit: '₹120 Cr', margin: '14.1%' },
+    issueDetails: { freshIssue: '80%', offerForSale: '20%', faceValue: '₹10 per share' }
   },
   {
     id: '18',
@@ -650,7 +768,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2022-09-20',
     closeDate: '2022-09-23',
     listingDate: '2022-10-01',
-    priceBand: '₹320 - ₹340',
+    priceBand: { min: 320, max: 340 },
     lotSize: 40,
     issueSize: '750 Cr',
     gmp: 25,
@@ -659,9 +777,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 365,
     currentPrice: 420,
     description: 'Manufacturer of precision gears for the automotive industry.',
+    summary: 'AutoMotive Gears Ltd manufactures precision gears and transmission components for passenger and commercial vehicle OEMs, leveraging decades long relationships and automated machining lines. Exposure to export markets plus rising EV drivetrain programs provide growth avenues beyond cyclical domestic demand. IPO proceeds upgraded forging capacity, robotics, and working capital to support platform launches. Risks include raw material swings, labor availability, and OEM pricing pressure, yet technological know how and quality certifications offer differentiation. Investors evaluate how the company balances capex with dividends while pursuing higher margin aftermarket and industrial gear opportunities.',
     strengths: ['Established OEM relationships', 'Capacity expansion'],
     risks: ['Cyclical auto industry', 'Raw material costs'],
-    financials: { revenue: '₹1,200 Cr', profit: '₹150 Cr', margin: '12.5%' }
+    financials: { revenue: '₹1,200 Cr', profit: '₹150 Cr', margin: '12.5%' },
+    issueDetails: { freshIssue: '60%', offerForSale: '40%', faceValue: '₹10 per share' }
   },
   {
     id: '19',
@@ -671,7 +791,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2022-08-15',
     closeDate: '2022-08-18',
     listingDate: '2022-08-27',
-    priceBand: '₹120 - ₹130',
+    priceBand: { min: 120, max: 130 },
     lotSize: 110,
     issueSize: '400 Cr',
     gmp: 10,
@@ -680,9 +800,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 135,
     currentPrice: 125,
     description: 'Chain of gourmet grocery stores in metropolitan areas.',
+    summary: 'FreshFoods Retail curates gourmet grocery, bakery, and ready to cook assortments in metropolitan stores, targeting affluent consumers seeking discovery led experiences. Central kitchens, cold chain investments, and private labels help sustain margins despite perishable inventory. IPO funds expanded omnichannel delivery, store refurbishments, and supplier financing programs. Risks stem from supply disruptions, competition from big box and online grocers, and high rental commitments. Management leans on membership models, culinary workshops, and localized sourcing to build loyalty. Post listing share drift reflects execution challenges, but operational tweaks aim to restore growth and profitability.',
     strengths: ['Premium brand positioning', 'High margins'],
     risks: ['Supply chain disruptions', 'Perishable inventory'],
-    financials: { revenue: '₹550 Cr', profit: '₹30 Cr', margin: '5.5%' }
+    financials: { revenue: '₹550 Cr', profit: '₹30 Cr', margin: '5.5%' },
+    issueDetails: { freshIssue: '50%', offerForSale: '50%', faceValue: '₹5 per share' }
   },
   {
     id: '20',
@@ -692,7 +814,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2022-07-05',
     closeDate: '2022-07-08',
     listingDate: '2022-07-16',
-    priceBand: '₹240 - ₹250',
+    priceBand: { min: 240, max: 250 },
     lotSize: 60,
     issueSize: '950 Cr',
     gmp: 40,
@@ -701,9 +823,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 295,
     currentPrice: 380,
     description: 'Construction and infrastructure development company.',
+    summary: 'BuildInfra Ltd executes large civil projects across transportation, water, and industrial segments, pairing engineering depth with cluster based execution teams. A robust order book anchored by government contracts offers revenue visibility, while focus on mechanization and procurement control supports margins. IPO proceeds reduced debt, funded equipment purchases, and provided working capital for hybrid annuity projects. Risks include execution delays, arbitration cycles, and labor shortages, yet the company mitigates through disciplined bid selection and joint ventures. Investors monitor cash conversion and the ramp up of asset monetization plans to gauge future shareholder returns.',
     strengths: ['Strong order book', 'Government contracts'],
     risks: ['Execution delays', 'Labor shortages'],
-    financials: { revenue: '₹2,100 Cr', profit: '₹180 Cr', margin: '8.6%' }
+    financials: { revenue: '₹2,100 Cr', profit: '₹180 Cr', margin: '8.6%' },
+    issueDetails: { freshIssue: '55%', offerForSale: '45%', faceValue: '₹10 per share' }
   },
   {
     id: '21',
@@ -713,7 +837,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2022-06-10',
     closeDate: '2022-06-13',
     listingDate: '2022-06-22',
-    priceBand: '₹750 - ₹800',
+    priceBand: { min: 750, max: 800 },
     lotSize: 18,
     issueSize: '2,500 Cr',
     gmp: 180,
@@ -722,9 +846,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 990,
     currentPrice: 1150,
     description: 'Leading digital payments gateway and fintech solutions.',
+    summary: 'DigitalPayments Corp runs a scaled payment gateway and fintech stack, enabling merchants to accept omnichannel transactions while offering value added services like risk analytics, BNPL orchestration, and working capital loans. Network effects, deep bank partnerships, and developer friendly APIs entrench the platform despite intense competition. IPO capital extended market reach into offline categories, funded acquisitions in compliance tooling, and strengthened the balance sheet. Risks span regulatory interventions, interchange revisions, and cybersecurity threats, yet the company benefits from tokenization capabilities and diversified monetization. Investors expect continued margin expansion as newer lending and subscription products mature.',
     strengths: ['Market leadership', 'Network effects'],
     risks: ['Regulatory changes', 'Competition'],
-    financials: { revenue: '₹3,500 Cr', profit: '₹420 Cr', margin: '12.0%' }
+    financials: { revenue: '₹3,500 Cr', profit: '₹420 Cr', margin: '12.0%' },
+    issueDetails: { freshIssue: '45%', offerForSale: '55%', faceValue: '₹1 per share' }
   },
   {
     id: '22',
@@ -734,7 +860,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2022-05-20',
     closeDate: '2022-05-23',
     listingDate: '2022-06-01',
-    priceBand: '₹90 - ₹100',
+    priceBand: { min: 90, max: 100 },
     lotSize: 150,
     issueSize: '1,800 Cr',
     gmp: 5,
@@ -743,9 +869,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 102,
     currentPrice: 145,
     description: 'Renewable energy producer focusing on wind farms.',
+    summary: 'GreenPower Gen develops and operates wind farms under long term PPAs, focusing on stable annuity style cash flows. The portfolio spans multiple states, reducing wind variability, and the company is piloting hybrid storage to improve capacity utilization. IPO proceeds repaid debt, funded repowering, and supported new site acquisition. Challenges include weather dependency, grid curtailment, and regulatory changes. Nonetheless, predictable tariffs, experienced O&M teams, and government incentives help sustain returns. Investors view the business as a steady yield play tied to India energy transition.',
     strengths: ['Green energy incentives', 'Long-term PPAs'],
     risks: ['Weather dependency', 'Grid connectivity issues'],
-    financials: { revenue: '₹1,500 Cr', profit: '₹110 Cr', margin: '7.3%' }
+    financials: { revenue: '₹1,500 Cr', profit: '₹110 Cr', margin: '7.3%' },
+    issueDetails: { freshIssue: '65%', offerForSale: '35%', faceValue: '₹10 per share' }
   },
   {
     id: '23',
@@ -755,7 +883,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2022-04-15',
     closeDate: '2022-04-18',
     listingDate: '2022-04-27',
-    priceBand: '₹400 - ₹420',
+    priceBand: { min: 400, max: 420 },
     lotSize: 35,
     issueSize: '800 Cr',
     gmp: 60,
@@ -764,9 +892,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 485,
     currentPrice: 510,
     description: 'Diagnostic chain and pathology labs network.',
+    summary: 'HealthCare Plus operates an asset light network of diagnostic labs and collection centers, leveraging franchise partners and digital booking journeys to scale quickly. Rising preventive health awareness and insurance coverage support demand, while automation improves turnaround times. IPO proceeds expanded reference labs, technology platforms, and potential tuck in acquisitions in radiology. Risks include pricing pressure from hospitals, quality control, and competitive intensity. Even so, strong brand trust, home sample logistics, and focus on tier two expansion underpin expectations of steady EBITDA growth post listing.',
     strengths: ['Growing health awareness', 'Asset-light expansion'],
     risks: ['Pricing pressure', 'Quality control risks'],
-    financials: { revenue: '₹900 Cr', profit: '₹160 Cr', margin: '17.8%' }
+    financials: { revenue: '₹900 Cr', profit: '₹160 Cr', margin: '17.8%' },
+    issueDetails: { freshIssue: '75%', offerForSale: '25%', faceValue: '₹5 per share' }
   },
   {
     id: '24',
@@ -776,7 +906,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2022-03-10',
     closeDate: '2022-03-13',
     listingDate: '2022-03-22',
-    priceBand: '₹150 - ₹160',
+    priceBand: { min: 150, max: 160 },
     lotSize: 90,
     issueSize: '300 Cr',
     gmp: -10,
@@ -785,9 +915,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 145,
     currentPrice: 130,
     description: 'Online test preparation and skill development platform.',
+    summary: 'EduTech Learning built an online test prep and skills marketplace that scaled quickly during pandemic years but now contends with normalization of offline coaching. The company combines live classes, recorded modules, and outcome tracking dashboards, supplemented by corporate upskilling programs. IPO proceeds were earmarked for content localization, marketing, and acquisitions, yet muted subscription underscored profitability concerns. Management is recalibrating toward blended centers, cohort based courses, and disciplined customer acquisition spend. Investors await evidence of sustainable cash flows and clearer differentiation before re-rating the lagging stock.',
     strengths: ['Scalable content', 'Large addressable market'],
     risks: ['Customer acquisition costs', 'Return to offline education'],
-    financials: { revenue: '₹250 Cr', profit: '-₹40 Cr', margin: '-16.0%' }
+    financials: { revenue: '₹250 Cr', profit: '-₹40 Cr', margin: '-16.0%' },
+    issueDetails: { freshIssue: '100%', offerForSale: '0%', faceValue: '₹1 per share' }
   },
   {
     id: '25',
@@ -797,7 +929,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2022-02-05',
     closeDate: '2022-02-08',
     listingDate: '2022-02-17',
-    priceBand: '₹600 - ₹630',
+    priceBand: { min: 600, max: 630 },
     lotSize: 22,
     issueSize: '650 Cr',
     gmp: 150,
@@ -806,9 +938,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 790,
     currentPrice: 950,
     description: 'Specialty chemicals manufacturer for pharma and agro industries.',
+    summary: 'ChemSynth Organics produces specialty intermediates for pharma and agro customers, benefiting from multi year supply agreements and stringent compliance records. Backward integration in key solvents plus process innovation drive superior margins and cash conversion. IPO proceeds funded debottlenecking, environmental upgrades, and expansion into high margin CDMO engagements. Risks include environmental regulations, raw material volatility, and client concentration, yet diversified export mix and strong R&D mitigate. Investors continue to watch execution of the CDMO pipeline and capital allocation toward global expansion.',
     strengths: ['Niche product portfolio', 'Export driven'],
     risks: ['Environmental compliance', 'Raw material volatility'],
-    financials: { revenue: '₹800 Cr', profit: '₹140 Cr', margin: '17.5%' }
+    financials: { revenue: '₹800 Cr', profit: '₹140 Cr', margin: '17.5%' },
+    issueDetails: { freshIssue: '70%', offerForSale: '30%', faceValue: '₹10 per share' }
   },
   {
     id: '26',
@@ -818,7 +952,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2022-01-05',
     closeDate: '2022-01-07',
     listingDate: '2022-01-17',
-    priceBand: '₹180 - ₹190',
+    priceBand: { min: 180, max: 190 },
     lotSize: 80,
     issueSize: '420 Cr',
     gmp: 35,
@@ -827,9 +961,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 215,
     currentPrice: 230,
     description: 'Pan-India logistics company focused on multimodal freight.',
+    summary: 'Skyline Logistics manages multimodal freight across road, rail, and coastal routes, combining asset light partnerships with owned hubs to offer nationwide coverage. Technology enabled tracking and route optimization tools differentiate service levels for enterprise customers. IPO proceeds funded warehouse automation, fleet upgrades, and working capital to support rapid growth in e-commerce and industrial freight. Risks include fuel volatility, intense competition, and working capital needs, yet diversified industry exposure and long term contracts soften shocks. Investors watch operating leverage progression as the company scales ancillary services like customs brokerage and cold chain.',
     strengths: ['Nationwide network', 'Tech-enabled tracking'],
     risks: ['Fuel cost volatility', 'Working capital needs'],
-    financials: { revenue: '₹1,050 Cr', profit: '₹95 Cr', margin: '9.0%' }
+    financials: { revenue: '₹1,050 Cr', profit: '₹95 Cr', margin: '9.0%' },
+    issueDetails: { freshIssue: '55%', offerForSale: '45%', faceValue: '₹5 per share' }
   },
   {
     id: '27',
@@ -839,7 +975,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2021-12-12',
     closeDate: '2021-12-15',
     listingDate: '2021-12-24',
-    priceBand: '₹260 - ₹275',
+    priceBand: { min: 260, max: 275 },
     lotSize: 55,
     issueSize: '1,100 Cr',
     gmp: 65,
@@ -848,9 +984,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 330,
     currentPrice: 360,
     description: 'Renewable energy platform with hybrid solar-wind parks.',
+    summary: 'Polaris Renewables owns hybrid solar wind parks with long term PPAs, providing predictable cash flows while optimizing dispatch between assets. The company focuses on grid stability, predictive maintenance, and disciplined capital allocation to sustain double digit returns. IPO funds supported new projects, refinancing, and storage pilots. Risks include weather variability, grid curtailment, and evolving regulations, but geographical diversification and a strong O&M toolkit mitigate. Investors expect continued deleveraging and potential yield vehicles as the portfolio matures. GMP performance reflects appetite for renewable platforms delivering inflation linked escalation.',
     strengths: ['Long-term PPAs', 'Diverse asset mix'],
     risks: ['Grid curtailment', 'Weather dependency'],
-    financials: { revenue: '₹1,900 Cr', profit: '₹210 Cr', margin: '11.1%' }
+    financials: { revenue: '₹1,900 Cr', profit: '₹210 Cr', margin: '11.1%' },
+    issueDetails: { freshIssue: '60%', offerForSale: '40%', faceValue: '₹10 per share' }
   },
   {
     id: '28',
@@ -860,7 +998,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2021-11-20',
     closeDate: '2021-11-23',
     listingDate: '2021-12-02',
-    priceBand: '₹540 - ₹560',
+    priceBand: { min: 540, max: 560 },
     lotSize: 24,
     issueSize: '850 Cr',
     gmp: 110,
@@ -869,9 +1007,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 720,
     currentPrice: 690,
     description: 'Advanced analytics SaaS for BFSI risk modeling.',
+    summary: 'Vertex Analytics provides cloud native risk modeling and decisioning SaaS for BFSI clients, embedding its models directly within lending, underwriting, and fraud workflows. High gross margins stem from multi year subscriptions and premium support. IPO proceeds scaled go to market teams, expanded US presence, and fueled R&D for regulatory explainability modules. Risks involve dollar exposure, competition from global software majors, and talent retention, yet sticky enterprise relationships and mission critical integrations drive low churn. Investors continue to track ARR growth and margin sustainability following the strong but volatile listing trajectory.',
     strengths: ['Sticky enterprise clients', 'High gross margins'],
     risks: ['US dollar exposure', 'Talent retention'],
-    financials: { revenue: '₹980 Cr', profit: '₹220 Cr', margin: '22.5%' }
+    financials: { revenue: '₹980 Cr', profit: '₹220 Cr', margin: '22.5%' },
+    issueDetails: { freshIssue: '85%', offerForSale: '15%', faceValue: '₹5 per share' }
   },
   {
     id: '29',
@@ -881,7 +1021,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2021-10-10',
     closeDate: '2021-10-13',
     listingDate: '2021-10-21',
-    priceBand: '₹310 - ₹325',
+    priceBand: { min: 310, max: 325 },
     lotSize: 60,
     issueSize: '600 Cr',
     gmp: 20,
@@ -890,9 +1030,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 345,
     currentPrice: 320,
     description: 'Port maintenance and marine engineering specialist.',
+    summary: 'Harbor Marine Services provides port maintenance, dredging, and marine engineering, supporting government and private terminals with specialized crews and equipment. Multi year contracts offer revenue predictability, though activity still correlates with global trade trends. IPO proceeds funded new vessels, remote monitoring tech, and debt reduction. Risks include currency swings, project delays, and exposure to commodity cycles, but diversification across ports and defense work helps smooth utilization. Investors watch margin discipline and fleet modernization progress to assess long term competitiveness.',
     strengths: ['Long-term contracts', 'Specialized crew'],
     risks: ['Global trade downturn', 'Currency swings'],
-    financials: { revenue: '₹1,250 Cr', profit: '₹105 Cr', margin: '8.4%' }
+    financials: { revenue: '₹1,250 Cr', profit: '₹105 Cr', margin: '8.4%' },
+    issueDetails: { freshIssue: '50%', offerForSale: '50%', faceValue: '₹10 per share' }
   },
   {
     id: '30',
@@ -902,7 +1044,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2021-09-18',
     closeDate: '2021-09-21',
     listingDate: '2021-09-30',
-    priceBand: '₹140 - ₹150',
+    priceBand: { min: 140, max: 150 },
     lotSize: 95,
     issueSize: '500 Cr',
     gmp: 18,
@@ -911,9 +1053,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 158,
     currentPrice: 172,
     description: 'EPC contractor with focus on industrial parks.',
+    summary: 'TerraBuild Infra focuses on industrial park EPC and urban infrastructure, combining design capabilities with on site execution teams to deliver turnkey projects. The company emphasizes cash flow discipline, modular construction, and supplier partnerships to navigate commodity inflation. IPO proceeds bolstered working capital, equipment leasing, and digital project controls. Risks include client concentration, permitting timelines, and price competition, but experience in multi phase developments aids repeat business. Investors evaluate order inflow momentum and the shift toward higher margin design build contracts after listing.',
     strengths: ['Order book visibility', 'Experienced execution'],
     risks: ['Commodity prices', 'Client concentration'],
-    financials: { revenue: '₹1,400 Cr', profit: '₹115 Cr', margin: '8.2%' }
+    financials: { revenue: '₹1,400 Cr', profit: '₹115 Cr', margin: '8.2%' },
+    issueDetails: { freshIssue: '65%', offerForSale: '35%', faceValue: '₹10 per share' }
   },
   {
     id: '31',
@@ -923,7 +1067,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2021-08-22',
     closeDate: '2021-08-25',
     listingDate: '2021-09-03',
-    priceBand: '₹600 - ₹640',
+    priceBand: { min: 600, max: 640 },
     lotSize: 20,
     issueSize: '1,200 Cr',
     gmp: 140,
@@ -932,9 +1076,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 860,
     currentPrice: 905,
     description: 'Cloud-native ERP provider for manufacturing SMEs.',
+    summary: 'Nimbus Software delivers cloud native ERP tailored to manufacturing SMEs, bundling supply chain, finance, and shop floor modules within a subscription model. Global channel partners and ISV marketplace integrations accelerate adoption, while recurring SaaS revenue drives high gross margins. IPO proceeds expanded R&D, funded acquisitions in vertical specific solutions, and strengthened global support centers. Risks include pricing pressure, cybersecurity threats, and reliance on dollar denominated contracts, yet low churn, strong NPS, and deep industry templates reinforce leadership. Investors monitor ARR growth and disciplined capital allocation as the stock trades near post listing highs.',
     strengths: ['Recurring SaaS revenue', 'Global partners'],
     risks: ['Pricing pressure', 'Cyber threats'],
-    financials: { revenue: '₹1,350 Cr', profit: '₹260 Cr', margin: '19.3%' }
+    financials: { revenue: '₹1,350 Cr', profit: '₹260 Cr', margin: '19.3%' },
+    issueDetails: { freshIssue: '80%', offerForSale: '20%', faceValue: '₹2 per share' }
   },
   {
     id: '32',
@@ -944,7 +1090,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2021-07-12',
     closeDate: '2021-07-15',
     listingDate: '2021-07-23',
-    priceBand: '₹220 - ₹235',
+    priceBand: { min: 220, max: 235 },
     lotSize: 70,
     issueSize: '650 Cr',
     gmp: 12,
@@ -953,9 +1099,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 248,
     currentPrice: 238,
     description: 'Packaged foods company with frozen ready-to-eat line.',
+    summary: 'Summit Foods manufactures frozen and ready to eat meals, exporting to diaspora markets while expanding domestic retail presence. Product innovation in plant based proteins and premium snacks differentiates the portfolio. IPO proceeds enhanced cold storage, marketing, and automation to improve margins. Risks include commodity inflation, brand competition, and currency swings, but diversified channels and private label partnerships help. Investors evaluate demand resilience and international expansion progress after a modest listing premium. Management is piloting direct to consumer delivery and chef collaborations to unlock incremental growth.',
     strengths: ['Export channels', 'Product innovation'],
     risks: ['Commodity inflation', 'Brand competition'],
-    financials: { revenue: '₹1,150 Cr', profit: '₹88 Cr', margin: '7.6%' }
+    financials: { revenue: '₹1,150 Cr', profit: '₹88 Cr', margin: '7.6%' },
+    issueDetails: { freshIssue: '55%', offerForSale: '45%', faceValue: '₹5 per share' }
   },
   {
     id: '33',
@@ -965,7 +1113,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2021-06-05',
     closeDate: '2021-06-08',
     listingDate: '2021-06-17',
-    priceBand: '₹420 - ₹440',
+    priceBand: { min: 420, max: 440 },
     lotSize: 32,
     issueSize: '720 Cr',
     gmp: 95,
@@ -974,9 +1122,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 585,
     currentPrice: 610,
     description: 'Medical technology OEM manufacturing imaging devices.',
+    summary: 'Radiant MedTech designs and manufactures imaging devices and critical care equipment for hospitals worldwide, backed by USFDA approvals and high entry barriers. The company invests heavily in R&D and precision manufacturing, enabling premium pricing and export opportunities. IPO proceeds funded new product development, automation, and working capital to meet global demand. Risks include supply chain disruptions, foreign exchange volatility, and long certification cycles, yet diversified markets and service contracts provide resilience. Investors watch execution on the innovation roadmap and potential partnerships with global medtech majors.',
     strengths: ['USFDA approvals', 'High entry barriers'],
     risks: ['Supply chain disruptions', 'Fx exposure'],
-    financials: { revenue: '₹900 Cr', profit: '₹170 Cr', margin: '18.9%' }
+    financials: { revenue: '₹900 Cr', profit: '₹170 Cr', margin: '18.9%' },
+    issueDetails: { freshIssue: '70%', offerForSale: '30%', faceValue: '₹10 per share' }
   },
   {
     id: '34',
@@ -986,7 +1136,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2021-05-10',
     closeDate: '2021-05-13',
     listingDate: '2021-05-21',
-    priceBand: '₹90 - ₹95',
+    priceBand: { min: 90, max: 95 },
     lotSize: 150,
     issueSize: '750 Cr',
     gmp: -8,
@@ -995,9 +1145,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 88,
     currentPrice: 92,
     description: 'Value retail format with focus on apparel basics.',
+    summary: 'Falcon Retail operates value apparel stores targeting budget conscious shoppers in smaller cities, balancing rapid assortment refresh with disciplined inventory control. Thin margins and sluggish demand weighed on the IPO, yet management continues to optimize sourcing and private labels. Proceeds were used to open new stores, invest in technology, and reduce debt. Risks encompass consumer slowdown, working capital strain, and e-commerce competition. Investors await proof that operational tweaks, supply chain digitization, and loyalty initiatives can restore growth and lift profitability above pre listing levels.',
     strengths: ['Lean supply chain', 'Tier-3 expansion'],
     risks: ['Working capital strain', 'Consumer slowdown'],
-    financials: { revenue: '₹1,600 Cr', profit: '₹60 Cr', margin: '3.8%' }
+    financials: { revenue: '₹1,600 Cr', profit: '₹60 Cr', margin: '3.8%' },
+    issueDetails: { freshIssue: '40%', offerForSale: '60%', faceValue: '₹2 per share' }
   },
   {
     id: '35',
@@ -1007,7 +1159,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2021-04-12',
     closeDate: '2021-04-15',
     listingDate: '2021-04-23',
-    priceBand: '₹150 - ₹160',
+    priceBand: { min: 150, max: 160 },
     lotSize: 95,
     issueSize: '480 Cr',
     gmp: 28,
@@ -1016,9 +1168,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 185,
     currentPrice: 178,
     description: 'Integrated textile mill exporting home furnishings.',
+    summary: 'Horizon Textiles runs integrated spinning, weaving, and finishing operations supplying home furnishings to global retailers. Export incentives and design capabilities support steady orders, while investments in sustainable processes cater to ESG conscious clients. IPO proceeds funded capacity upgrades, working capital, and energy efficiency projects. Risks include cotton price volatility, forex swings, and demand softness in key markets, but diversification and hedging strategies offer buffers. Investors monitor margin stability and progress on premium collections introduced post listing. Management is also exploring technical textile adjacencies to unlock higher value contracts.',
     strengths: ['Integrated operations', 'Export incentives'],
     risks: ['Cotton price swings', 'FX fluctuation'],
-    financials: { revenue: '₹900 Cr', profit: '₹70 Cr', margin: '7.8%' }
+    financials: { revenue: '₹900 Cr', profit: '₹70 Cr', margin: '7.8%' },
+    issueDetails: { freshIssue: '60%', offerForSale: '40%', faceValue: '₹5 per share' }
   },
   {
     id: '36',
@@ -1028,7 +1182,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2021-03-08',
     closeDate: '2021-03-11',
     listingDate: '2021-03-19',
-    priceBand: '₹260 - ₹270',
+    priceBand: { min: 260, max: 270 },
     lotSize: 65,
     issueSize: '900 Cr',
     gmp: 55,
@@ -1037,9 +1191,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 340,
     currentPrice: 322,
     description: 'Electric-mobility component maker for OEMs.',
+    summary: 'Vector Mobility supplies components for electric mobility platforms, including battery enclosures, drivetrain assemblies, and power electronics. Partnerships with leading OEMs and participation in government incentive schemes position the company to ride EV adoption. IPO proceeds funded capacity expansion, automation, and R&D for next generation platforms. Risks include technology obsolescence, capital intensity, and dependence on regulatory subsidies, yet diversified customer programs and export opportunities offer upside. Investors focus on execution speed and ability to maintain margins as volumes scale. Long term contracts and localized supply chains aim to mitigate raw material swings.',
     strengths: ['EV tailwinds', 'OEM partnerships'],
     risks: ['Technology obsolescence', 'Capex heavy'],
-    financials: { revenue: '₹1,200 Cr', profit: '₹150 Cr', margin: '12.5%' }
+    financials: { revenue: '₹1,200 Cr', profit: '₹150 Cr', margin: '12.5%' },
+    issueDetails: { freshIssue: '75%', offerForSale: '25%', faceValue: '₹10 per share' }
   },
   {
     id: '37',
@@ -1049,7 +1205,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2021-02-10',
     closeDate: '2021-02-13',
     listingDate: '2021-02-22',
-    priceBand: '₹310 - ₹320',
+    priceBand: { min: 310, max: 320 },
     lotSize: 70,
     issueSize: '400 Cr',
     gmp: 15,
@@ -1058,9 +1214,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 335,
     currentPrice: 318,
     description: 'Hybrid learning platform with test-prep focus.',
+    summary: 'Aurora Education blends digital content with physical coaching centers for test preparation, leveraging proprietary curriculum and mentor networks. Revenue growth remains moderate as the sector normalizes, but hybrid cohorts and subscription plans support retention. IPO proceeds expanded regional centers, technology platforms, and marketing partnerships. Risks include high customer acquisition costs, offline competition, and regulatory scrutiny of education marketing. Management is sharpening student outcome analytics and enterprise collaborations to differentiate offerings, while investors wait for margin recovery. Scholarship programs and outcome guarantees aim to rebuild demand confidence.',
     strengths: ['Content IP', 'PAN-India centers'],
     risks: ['High CAC', 'Offline competition'],
-    financials: { revenue: '₹520 Cr', profit: '₹48 Cr', margin: '9.2%' }
+    financials: { revenue: '₹520 Cr', profit: '₹48 Cr', margin: '9.2%' },
+    issueDetails: { freshIssue: '85%', offerForSale: '15%', faceValue: '₹5 per share' }
   },
   {
     id: '38',
@@ -1070,7 +1228,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2021-01-05',
     closeDate: '2021-01-08',
     listingDate: '2021-01-18',
-    priceBand: '₹130 - ₹140',
+    priceBand: { min: 130, max: 140 },
     lotSize: 110,
     issueSize: '550 Cr',
     gmp: 22,
@@ -1079,9 +1237,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 165,
     currentPrice: 180,
     description: 'Industrial warehousing and park operator.',
+    summary: 'Prime Warehousing develops and manages industrial parks for e-commerce, automotive, and FMCG tenants, offering built to suit facilities with long leases. Sticky tenants and inflation linked rentals create predictable income, while the company explores REIT readiness. IPO proceeds funded land acquisition, park expansion, and debt reduction. Risks include leasing cycles, interest rate movements, and client consolidation, yet diversified tenant mix and focus on Grade A assets mitigate. Investors watch occupancy levels and progress on sustainability certifications to gauge future valuation uplift.',
     strengths: ['Tenant stickiness', 'REIT-ready assets'],
     risks: ['Leasing cycles', 'Interest rate risk'],
-    financials: { revenue: '₹780 Cr', profit: '₹90 Cr', margin: '11.5%' }
+    financials: { revenue: '₹780 Cr', profit: '₹90 Cr', margin: '11.5%' },
+    issueDetails: { freshIssue: '50%', offerForSale: '50%', faceValue: '₹10 per share' }
   },
   {
     id: '39',
@@ -1091,7 +1251,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2020-12-07',
     closeDate: '2020-12-10',
     listingDate: '2020-12-18',
-    priceBand: '₹200 - ₹210',
+    priceBand: { min: 200, max: 210 },
     lotSize: 80,
     issueSize: '650 Cr',
     gmp: 45,
@@ -1100,9 +1260,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 275,
     currentPrice: 260,
     description: 'Live events and OTT content studio.',
+    summary: 'Stellar Entertainment produces live events, films, and OTT series, monetizing IP across theatrical, streaming, and licensing channels. The company benefits from a deep content library and relationships with artists plus platforms. IPO proceeds funded content slate expansion, studio upgrades, and working capital. Risks include cyclical advertising spends, production delays, and competition, but diversified revenue streams and digital distribution mitigate volatility. Investors monitor project execution cadence and monetization of new franchises to sustain growth. International licensing and live IP tours provide additional buffers during domestic slowdowns.',
     strengths: ['IP library', 'Multiple distribution channels'],
     risks: ['Cyclic ad spends', 'Production delays'],
-    financials: { revenue: '₹1,050 Cr', profit: '₹130 Cr', margin: '12.4%' }
+    financials: { revenue: '₹1,050 Cr', profit: '₹130 Cr', margin: '12.4%' },
+    issueDetails: { freshIssue: '65%', offerForSale: '35%', faceValue: '₹5 per share' }
   },
   {
     id: '40',
@@ -1112,7 +1274,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2020-11-05',
     closeDate: '2020-11-09',
     listingDate: '2020-11-18',
-    priceBand: '₹480 - ₹500',
+    priceBand: { min: 480, max: 500 },
     lotSize: 30,
     issueSize: '1,300 Cr',
     gmp: 160,
@@ -1121,9 +1283,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 750,
     currentPrice: 810,
     description: 'Specialty pharma company focused on oncology generics.',
+    summary: 'Crest Pharma focuses on oncology generics, leveraging US filings, backward integration, and strong compliance history to win share in regulated markets. High margins stem from complex injectables and contract manufacturing. IPO proceeds expanded sterile plants, funded R&D, and reduced debt. Risks include regulatory inspections, price erosion, and currency movements, yet diversified geography and pipeline depth offer resilience. Investors assess how quickly new launches and partnerships translate into sustained earnings growth. Strong GMP premiums underscore confidence in management governance and capital allocation.',
     strengths: ['US filings pipeline', 'High margins'],
     risks: ['Regulatory inspections', 'Pricing pressure'],
-    financials: { revenue: '₹2,400 Cr', profit: '₹420 Cr', margin: '17.5%' }
+    financials: { revenue: '₹2,400 Cr', profit: '₹420 Cr', margin: '17.5%' },
+    issueDetails: { freshIssue: '55%', offerForSale: '45%', faceValue: '₹10 per share' }
   },
   {
     id: '41',
@@ -1133,7 +1297,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2020-10-12',
     closeDate: '2020-10-15',
     listingDate: '2020-10-23',
-    priceBand: '₹210 - ₹225',
+    priceBand: { min: 210, max: 225 },
     lotSize: 85,
     issueSize: '550 Cr',
     gmp: 30,
@@ -1142,9 +1306,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 265,
     currentPrice: 250,
     description: 'Agro chemical company with export focus.',
+    summary: 'Titan AgroChem formulates crop protection chemicals and exports to multiple continents, leveraging a diversified product mix spanning herbicides, fungicides, and insecticides. Distribution reach across India plus partnerships abroad drive steady growth. IPO proceeds scaled manufacturing automation, working capital, and regulatory filings. Risks include monsoon dependency, compliance requirements, and price swings, but strong R&D and farmer education programs provide differentiation. Investors track capacity utilization and margin trajectories as new export contracts ramp up. The company also hedges key intermediates to stabilize cash flows post listing.',
     strengths: ['Diversified product mix', 'Distribution reach'],
     risks: ['Monsoon dependency', 'Regulatory approvals'],
-    financials: { revenue: '₹1,000 Cr', profit: '₹120 Cr', margin: '12.0%' }
+    financials: { revenue: '₹1,000 Cr', profit: '₹120 Cr', margin: '12.0%' },
+    issueDetails: { freshIssue: '70%', offerForSale: '30%', faceValue: '₹10 per share' }
   },
   {
     id: '42',
@@ -1154,7 +1320,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2020-09-05',
     closeDate: '2020-09-08',
     listingDate: '2020-09-17',
-    priceBand: '₹360 - ₹380',
+    priceBand: { min: 360, max: 380 },
     lotSize: 40,
     issueSize: '1,000 Cr',
     gmp: 42,
@@ -1163,9 +1329,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 430,
     currentPrice: 445,
     description: 'Tech-led insurance company with omnichannel distribution.',
+    summary: 'Beacon Insurance combines digital acquisition with agency distribution to offer health, motor, and micro insurance across India. Strong solvency ratios and disciplined underwriting underpin credibility, while proprietary analytics refine pricing. IPO proceeds enhanced capital base, technology platforms, and product innovation including embedded insurance partnerships. Risks include underwriting cycles, regulatory changes, and competitive pricing pressure, yet diversified lines and reinsurance programs limit volatility. Investors expect continued growth from cross selling, bancassurance deals, and customer experience investments.',
     strengths: ['Strong solvency ratios', 'Digital acquisition'],
     risks: ['Underwriting cycles', 'Competitive pricing'],
-    financials: { revenue: '₹3,200 Cr', profit: '₹260 Cr', margin: '8.1%' }
+    financials: { revenue: '₹3,200 Cr', profit: '₹260 Cr', margin: '8.1%' },
+    issueDetails: { freshIssue: '45%', offerForSale: '55%', faceValue: '₹10 per share' }
   },
   {
     id: '43',
@@ -1175,7 +1343,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2020-08-10',
     closeDate: '2020-08-13',
     listingDate: '2020-08-21',
-    priceBand: '₹120 - ₹130',
+    priceBand: { min: 120, max: 130 },
     lotSize: 115,
     issueSize: '700 Cr',
     gmp: 8,
@@ -1184,9 +1352,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 135,
     currentPrice: 140,
     description: 'Mini-hydel and captive power operator.',
+    summary: 'Nova Utilities operates mini hydel plants and captive power assets for industrial clients, providing stable output through long term contracts. The company leverages government incentives but must manage seasonal river flows and tariff revisions. IPO proceeds funded refurbishment, grid upgrades, and feasibility studies for hybrid solar additions. Risks involve hydrology variability, regulatory approvals, and limited scale, yet disciplined cost control and niche focus keep cash flows predictable. Investors monitor diversification into ancillary services to unlock further growth.',
     strengths: ['Stable cash flows', 'Government incentives'],
     risks: ['Seasonal output', 'Tariff revisions'],
-    financials: { revenue: '₹620 Cr', profit: '₹55 Cr', margin: '8.9%' }
+    financials: { revenue: '₹620 Cr', profit: '₹55 Cr', margin: '8.9%' },
+    issueDetails: { freshIssue: '60%', offerForSale: '40%', faceValue: '₹10 per share' }
   },
   {
     id: '44',
@@ -1196,7 +1366,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2020-07-05',
     closeDate: '2020-07-08',
     listingDate: '2020-07-17',
-    priceBand: '₹410 - ₹430',
+    priceBand: { min: 410, max: 430 },
     lotSize: 28,
     issueSize: '920 Cr',
     gmp: 70,
@@ -1205,9 +1375,11 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 580,
     currentPrice: 600,
     description: 'Consumer electronics and wearables manufacturer.',
+    summary: 'Vanguard Devices designs consumer electronics and wearables, partnering with ODMs while maintaining in house industrial design and software teams. Growth is driven by fitness trackers, audio accessories, and smart home devices sold through omnichannel retail. IPO proceeds funded R&D, brand marketing, and working capital to support product launches. Risks include import dependency, rapid tech cycles, and pricing pressure, but expanding domestic manufacturing and ecosystem services provide differentiation. Investors evaluate how quickly new categories contribute to margins after the strong IPO debut.',
     strengths: ['ODM partnerships', 'Strong brand recall'],
     risks: ['Import dependency', 'Rapid tech cycles'],
-    financials: { revenue: '₹1,650 Cr', profit: '₹200 Cr', margin: '12.1%' }
+    financials: { revenue: '₹1,650 Cr', profit: '₹200 Cr', margin: '12.1%' },
+    issueDetails: { freshIssue: '75%', offerForSale: '25%', faceValue: '₹5 per share' }
   },
   {
     id: '45',
@@ -1217,7 +1389,7 @@ export const MOCK_IPOS: IPO[] = [
     openDate: '2020-06-12',
     closeDate: '2020-06-15',
     listingDate: '2020-06-24',
-    priceBand: '₹150 - ₹160',
+    priceBand: { min: 150, max: 160 },
     lotSize: 100,
     issueSize: '420 Cr',
     gmp: 5,
@@ -1226,8 +1398,10 @@ export const MOCK_IPOS: IPO[] = [
     listingPrice: 162,
     currentPrice: 150,
     description: 'Fast fashion apparel exporter for global brands.',
+    summary: 'Eclipse Fashion supplies fast fashion apparel to global brands, executing quick design cycles and flexible manufacturing in India. The company benefits from diversified buyers yet remains exposed to demand volatility and compliance costs. IPO proceeds were used for working capital, automation, and ESG initiatives. Risks include currency swings, supply chain disruptions, and shifting retailer strategies, but investment in digital sampling and vendor managed inventory aims to improve responsiveness. Investors watch order book health and margin recovery following the muted listing.',
     strengths: ['Quick design cycles', 'Diversified buyers'],
     risks: ['Demand volatility', 'Compliance costs'],
-    financials: { revenue: '₹780 Cr', profit: '₹52 Cr', margin: '6.7%' }
+    financials: { revenue: '₹780 Cr', profit: '₹52 Cr', margin: '6.7%' },
+    issueDetails: { freshIssue: '50%', offerForSale: '50%', faceValue: '₹2 per share' }
   }
 ];

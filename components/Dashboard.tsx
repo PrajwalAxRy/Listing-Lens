@@ -76,9 +76,8 @@ const parseIssueSize = (value: string) => {
   return numeric;
 };
 
-const getIssuePrice = (band: string) => {
-  const number = band.split('-').pop()?.replace(/[^0-9]/g, '') || '0';
-  return Number(number);
+const getIssuePrice = (priceBand: { min: number; max: number }) => {
+  return priceBand.max;
 };
 
 const matchesSearch = (ipo: IPO, normalizedQuery: string) => {
@@ -447,7 +446,7 @@ const IPOCard: React.FC<IPOCardProps> = ({ ipo, onSelect, onToggleWatchlist, isW
         </div>
         <div className="flex items-center justify-between">
           <span>Price band</span>
-          <span className="font-semibold text-slate-800">{ipo.priceBand}</span>
+          <span className="font-semibold text-slate-800">₹{ipo.priceBand.min} - ₹{ipo.priceBand.max}</span>
         </div>
         <div className="flex items-center justify-between">
           <span>Issue size</span>

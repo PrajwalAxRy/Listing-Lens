@@ -158,13 +158,16 @@ export const Layout: React.FC<LayoutProps> = ({ children, onHomeClick }) => {
                 <h1 className="text-2xl font-bold tracking-tight text-slate-900">
                   Listing<span className="text-blue-600">Lens</span>
                 </h1>
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                <p className="hidden md:block text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
                   IPO Intelligence
+                </p>
+                <p className="md:hidden text-[12px] font-medium text-slate-500">
+                  Chittergarh is fine. We're <span className="font-semibold text-blue-600">better</span>.
                 </p>
               </div>
               <div className="hidden md:block h-8 w-px bg-slate-200"></div>
               <p className="hidden md:block text-xl text-slate-600">
-                Chittergarr is fine. We’re <span className="font-semibold text-blue-600">better</span>.
+                Chittergarh is fine. We're <span className="font-semibold text-blue-600">better</span>.
               </p>
             </div>
 

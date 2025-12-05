@@ -9,7 +9,10 @@ export interface IPO {
   openDate: string;
   closeDate: string;
   listingDate: string;
-  priceBand: string;
+  priceBand: {
+    min: number;
+    max: number;
+  };
   lotSize: number;
   issueSize: string; // e.g., "1200 Cr"
   gmp: number; // Grey Market Premium
@@ -21,12 +24,18 @@ export interface IPO {
     total: number;
   };
   description: string;
+  summary: string; // ~100-word narrative for summary card
   strengths: string[];
   risks: string[];
   financials: {
     revenue: string;
     profit: string;
     margin: string;
+  };
+  issueDetails: {
+    freshIssue: string;
+    offerForSale: string;
+    faceValue: string;
   };
   listingPrice?: number;
   listingClosePrice?: number;
