@@ -1,5 +1,11 @@
 export type IPOStatus = 'Active' | 'Upcoming' | 'Closed';
 
+export interface ApplicationDetailRow {
+  category: string;
+  lots: number;
+  shares: number;
+}
+
 export interface IPO {
   id: string;
   name: string;
@@ -14,6 +20,7 @@ export interface IPO {
     max: number;
   };
   lotSize: number;
+  applicationDetails?: ApplicationDetailRow[];
   issueSize: string; // e.g., "1200 Cr"
   gmp: number; // Grey Market Premium
   gmpUpdateDate: string;

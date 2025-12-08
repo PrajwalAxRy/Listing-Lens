@@ -41,7 +41,14 @@ export const MOCK_IPOS: IPO[] = [
       freshIssue: '60%',
       offerForSale: '40%',
       faceValue: '₹10 per share',
-    }
+    },
+    applicationDetails: [
+      { category: 'Retail (Min)', lots: 1, shares: 30 },
+      { category: 'Retail (Max)', lots: 13, shares: 390 },
+      { category: 'S-HNI (Min)', lots: 14, shares: 420 },
+      { category: 'S-HNI (Max)', lots: 69, shares: 2070 },
+      { category: 'B-HNI (Min)', lots: 70, shares: 2100 },
+    ]
   },
   {
     id: '2',
@@ -81,7 +88,14 @@ export const MOCK_IPOS: IPO[] = [
       freshIssue: '70%',
       offerForSale: '30%',
       faceValue: '₹5 per share',
-    }
+    },
+    applicationDetails: [
+      { category: 'Retail (Min)', lots: 1, shares: 120 },
+      { category: 'Retail (Max)', lots: 13, shares: 1560 },
+      { category: 'S-HNI (Min)', lots: 14, shares: 1680 },
+      { category: 'S-HNI (Max)', lots: 66, shares: 7920 },
+      { category: 'B-HNI (Min)', lots: 67, shares: 8040 },
+    ]
   },
   {
     id: '3',
@@ -115,7 +129,14 @@ export const MOCK_IPOS: IPO[] = [
       freshIssue: '55%',
       offerForSale: '45%',
       faceValue: '₹2 per share',
-    }
+    },
+    applicationDetails: [
+      { category: 'Retail (Min)', lots: 1, shares: 65 },
+      { category: 'Retail (Max)', lots: 14, shares: 910 },
+      { category: 'S-HNI (Min)', lots: 15, shares: 975 },
+      { category: 'S-HNI (Max)', lots: 71, shares: 4615 },
+      { category: 'B-HNI (Min)', lots: 72, shares: 4680 },
+    ]
   },
   // Upcoming IPOs (today < openDate)
   {
@@ -157,7 +178,14 @@ export const MOCK_IPOS: IPO[] = [
       freshIssue: '65%',
       offerForSale: '35%',
       faceValue: '₹10 per share',
-    }
+    },
+    applicationDetails: [
+      { category: 'Retail (Min)', lots: 1, shares: 25 },
+      { category: 'Retail (Max)', lots: 13, shares: 325 },
+      { category: 'S-HNI (Min)', lots: 14, shares: 350 },
+      { category: 'S-HNI (Max)', lots: 68, shares: 1700 },
+      { category: 'B-HNI (Min)', lots: 69, shares: 1725 },
+    ]
   },
   {
     id: '1002',
@@ -198,7 +226,14 @@ export const MOCK_IPOS: IPO[] = [
       freshIssue: '80%',
       offerForSale: '20%',
       faceValue: '₹5 per share',
-    }
+    },
+    applicationDetails: [
+      { category: 'Retail (Min)', lots: 1, shares: 45 },
+      { category: 'Retail (Max)', lots: 14, shares: 630 },
+      { category: 'S-HNI (Min)', lots: 15, shares: 675 },
+      { category: 'S-HNI (Max)', lots: 71, shares: 3195 },
+      { category: 'B-HNI (Min)', lots: 72, shares: 3240 },
+    ]
   },
   {
     id: '1003',
@@ -239,7 +274,14 @@ export const MOCK_IPOS: IPO[] = [
       freshIssue: '50%',
       offerForSale: '50%',
       faceValue: '₹10 per share',
-    }
+    },
+    applicationDetails: [
+      { category: 'Retail (Min)', lots: 1, shares: 75 },
+      { category: 'Retail (Max)', lots: 13, shares: 975 },
+      { category: 'S-HNI (Min)', lots: 14, shares: 1050 },
+      { category: 'S-HNI (Max)', lots: 66, shares: 4950 },
+      { category: 'B-HNI (Min)', lots: 67, shares: 5025 },
+    ]
   },
   {
     id: '1004',
@@ -280,7 +322,14 @@ export const MOCK_IPOS: IPO[] = [
       freshIssue: '75%',
       offerForSale: '25%',
       faceValue: '₹2 per share',
-    }
+    },
+    applicationDetails: [
+      { category: 'Retail (Min)', lots: 1, shares: 20 },
+      { category: 'Retail (Max)', lots: 13, shares: 260 },
+      { category: 'S-HNI (Min)', lots: 14, shares: 280 },
+      { category: 'S-HNI (Max)', lots: 66, shares: 1320 },
+      { category: 'B-HNI (Min)', lots: 67, shares: 1340 },
+    ]
   },
   // Closed IPOs (already listed)
   {

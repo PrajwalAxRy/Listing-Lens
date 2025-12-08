@@ -19,23 +19,16 @@ const formatIndianCurrency = (amount: number): string => {
   return `₹${formatted}`;
 };
 
-// Generate application details dynamically based on lot size and price
-const generateApplicationDetails = (lotSize: number, maxPrice: number) => {
-  if (!lotSize || !maxPrice) return null;
+// Generate application details with calculated amount
+const getApplicationDetailsWithAmount = (details: { category: string; lots: number; shares: number }[] | undefined, maxPrice: number) => {
+  if (!details || details.length === 0 || !maxPrice) return null;
   
-  const categories = [
-    { category: 'Retail (Min)', lots: 1 },
-    { category: 'Retail (Max)', lots: 13 },
-    { category: 'S-HNI (Min)', lots: 14 },
-    { category: 'S-HNI (Max)', lots: 66 },
-    { category: 'B-HNI (Min)', lots: 67 },
-  ];
-  
-  return categories.map(({ category, lots }) => {
-    const shares = lots * lotSize;
-    const amount = shares * maxPrice;
-    return { category, lots, shares, amount };
-  });
+  return details.map(({ category, lots, shares }) => ({
+    category,
+    lots,
+    shares,
+    amount: shares * maxPrice,
+  }));
 };
 
 export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
@@ -201,12 +194,12 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 animate-fade-in">
                  
                 <div className="sm:col-span-2">
-                  <DetailCard title="Summary" icon={<BookOpen className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-500" />}>
-                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{companySummary}</p>
+                  <DetailCard title="Summary" icon={<BookOpen className="w-5 h-5 sm:w-6 sm:h-6 text-indigo-500" />}>
+                   <p className="text-sm sm:text-base text-b-600 leading-relaxed">{companySummary}</p>
                   </DetailCard>
                 </div>
                  
-                 <DetailCard title="Issue Details" icon={<FileText className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500" />}>
+                 <DetailCard title="Issue Details">
                     <DetailRow label="Issue Size" value={ipo.issueSize} />
                     <DetailRow label="Fresh Issue" value={ipo.issueDetails.freshIssue} />
                     <DetailRow label="Offer for Sale" value={ipo.issueDetails.offerForSale} />
@@ -229,30 +222,91 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
                    </button>
                  </div>
 
-                 <DetailCard title="Application Details" icon={<Calculator className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-500" />}>
+                 <DetailCard title="Valuation (Upper Band)">
+                    <DetailRow label="Market Cap (Rs. Cr)" value="50,096" />
+                    <DetailRow label="EPS*" value="-3.11" />
+                    <DetailRow label="PE*" value="-35.75" />
+                    <DetailRow label="EV/EBITDA" value="-360" />
+                    <DetailRow label="Enterprise Value (Rs. Cr)" value="49,784 Cr" />
+                 </DetailCard>
+
+                 <div className="bg-white p-5 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200 shadow-sm">
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-sm sm:text-base">
+                        <thead>
+                          <tr className="border-b-2 border-slate-200 bg-slate-50">
+                            <th className="text-left py-3 px-3 text-black-800 font-semibold">Objects of the Issue</th>
+                            <th className="text-right py-3 px-3 text-black-800 font-semibold whitespace-nowrap">Amount (Rs Cr)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr className="bg-white border-b border-slate-100 hover:bg-slate-100/50 transition-colors">
+                            <td className="py-3 px-3 text-black-800 font-semibold leading-relaxed">Capex towards set-up of new CoCo stores in India</td>
+                            <td className="py-3 px-3 text-right font-semibold text-slate-900">272.62</td>
+                          </tr>
+                          <tr className="bg-slate-50/50 border-b border-slate-100 hover:bg-slate-100/50 transition-colors">
+                            <td className="py-3 px-3 text-black-800 font-semibold leading-relaxed">Expenditure for lease/rent/license agreements related payments for CoCo stores</td>
+                            <td className="py-3 px-3 text-right font-semibold text-slate-900">591.44</td>
+                          </tr>
+                          <tr className="bg-white hover:bg-slate-100/50 transition-colors">
+                            <td className="py-3 px-3 text-black-800 font-semibold leading-relaxed">Investing in technology and cloud infrastructure</td>
+                            <td className="py-3 px-3 text-right font-semibold text-slate-900">213.38</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                 </div>
+
+                <div className="bg-white p-5 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200 shadow-sm">
+                   <div className="overflow-x-auto">
+                     <table className="w-full text-sm sm:text-base">
+                       <thead>
+                         <tr className="border-b-2 border-slate-200 bg-slate-50">
+                           <th className="text-left py-3 px-3 text-black-800 font-semibold">Particulars</th>
+                           <th className="text-right py-3 px-3 text-black-800 font-semibold">Pre-Offer</th>
+                           <th className="text-right py-3 px-3 text-black-800 font-semibold">Post-Offer</th>
+                         </tr>
+                       </thead>
+                       <tbody>
+                         <tr className="bg-white border-b border-slate-100 hover:bg-slate-100/50 transition-colors">
+                           <td className="py-3 px-3 text-slate-700 font-medium">Promoter Group</td>
+                           <td className="py-3 px-3 text-right font-semibold text-slate-900">18.51%</td>
+                           <td className="py-3 px-3 text-right font-semibold text-slate-900">14.6%</td>
+                         </tr>
+                         <tr className="bg-slate-50/50 hover:bg-slate-100/50 transition-colors">
+                           <td className="py-3 px-3 text-slate-700 font-medium">Public-Others</td>
+                           <td className="py-3 px-3 text-right font-semibold text-slate-900">81.85%</td>
+                           <td className="py-3 px-3 text-right font-semibold text-slate-900">85.4%</td>
+                         </tr>
+                       </tbody>
+                     </table>
+                   </div>
+                </div>
+
+                 <div className="bg-white p-5 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200 shadow-sm">
                     {(() => {
-                      const details = generateApplicationDetails(ipo.lotSize, ipo.priceBand.max);
+                      const details = getApplicationDetailsWithAmount(ipo.applicationDetails, ipo.priceBand.max);
                       if (!details) {
-                        return <p className="text-xs sm:text-sm text-slate-500">Application details not available for this IPO.</p>;
+                        return <p className="text-sm text-slate-500">Application details not available for this IPO.</p>;
                       }
                       return (
-                        <div className="overflow-x-auto -mx-1">
-                          <table className="w-full text-xs sm:text-sm">
+                        <div className="overflow-x-auto">
+                          <table className="w-full text-sm sm:text-base">
                             <thead>
-                              <tr className="border-b border-slate-100">
-                                <th className="text-left py-2 px-1 text-slate-500 font-medium">Application</th>
-                                <th className="text-right py-2 px-1 text-slate-500 font-medium">Lots</th>
-                                <th className="text-right py-2 px-1 text-slate-500 font-medium">Shares</th>
-                                <th className="text-right py-2 px-1 text-slate-500 font-medium">Amount</th>
+                              <tr className="border-b-2 border-slate-200 bg-slate-50">
+                                <th className="text-left py-3 px-3 text-black-800 font-semibold">Application</th>
+                                <th className="text-right py-3 px-3 text-black-800 font-semibold">Lots</th>
+                                <th className="text-right py-3 px-3 text-black-800 font-semibold">Shares</th>
+                                <th className="text-right py-3 px-3 text-black-800 font-semibold">Amount</th>
                               </tr>
                             </thead>
                             <tbody>
                               {details.map((row, idx) => (
-                                <tr key={idx} className={idx < details.length - 1 ? 'border-b border-slate-50' : ''}>
-                                  <td className="py-2 px-1 text-slate-700">{row.category}</td>
-                                  <td className="py-2 px-1 text-right font-medium text-slate-900">{row.lots}</td>
-                                  <td className="py-2 px-1 text-right font-medium text-slate-900">{row.shares.toLocaleString('en-IN')}</td>
-                                  <td className="py-2 px-1 text-right font-medium text-slate-900">{formatIndianCurrency(row.amount)}</td>
+                                <tr key={idx} className={`${idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'} ${idx < details.length - 1 ? 'border-b border-slate-100' : ''} hover:bg-slate-100/50 transition-colors`}>
+                                  <td className="py-3 px-3 text-slate-700 font-medium">{row.category}</td>
+                                  <td className="py-3 px-3 text-right font-semibold text-slate-900">{row.lots}</td>
+                                  <td className="py-3 px-3 text-right font-semibold text-slate-900">{row.shares.toLocaleString('en-IN')}</td>
+                                  <td className="py-3 px-3 text-right font-semibold text-slate-900">{formatIndianCurrency(row.amount)}</td>
                                 </tr>
                               ))}
                             </tbody>
@@ -260,30 +314,30 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
                         </div>
                       );
                     })()}
-                 </DetailCard>
+                 </div>
 
                  
-                 <div className="sm:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                    <div className="bg-emerald-50 rounded-xl p-4 sm:p-5 border border-emerald-100">
-                       <h4 className="flex items-center text-emerald-800 font-bold mb-3 text-sm sm:text-base">
-                         <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 mr-2" /> Strengths
+                 <div className="sm:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                    <div className="bg-emerald-50 rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-emerald-200 shadow-sm">
+                       <h4 className="flex items-center text-emerald-800 font-bold mb-4 text-base sm:text-lg">
+                         <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 mr-2.5" /> Strengths
                        </h4>
-                       <ul className="space-y-1.5 sm:space-y-2">
+                       <ul className="space-y-2.5 sm:space-y-3">
                          {ipo.strengths.map((s, i) => (
-                           <li key={i} className="flex items-start text-xs sm:text-sm text-emerald-900/80">
-                             <span className="mr-2">•</span> {s}
+                           <li key={i} className="flex items-start text-sm sm:text-base text-emerald-900/90 leading-relaxed">
+                             <span className="mr-2.5 text-emerald-600 font-bold">•</span> {s}
                            </li>
                          ))}
                        </ul>
                     </div>
-                    <div className="bg-amber-50 rounded-xl p-4 sm:p-5 border border-amber-100">
-                       <h4 className="flex items-center text-amber-800 font-bold mb-3 text-sm sm:text-base">
-                         <AlertTriangle className="w-4 h-4 sm:w-5 sm:h-5 mr-2" /> Risks
+                    <div className="bg-amber-50 rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-amber-200 shadow-sm">
+                       <h4 className="flex items-center text-amber-800 font-bold mb-4 text-base sm:text-lg">
+                         <AlertTriangle className="w-5 h-5 sm:w-6 sm:h-6 mr-2.5" /> Risks
                        </h4>
-                       <ul className="space-y-1.5 sm:space-y-2">
+                       <ul className="space-y-2.5 sm:space-y-3">
                          {ipo.risks.map((r, i) => (
-                           <li key={i} className="flex items-start text-xs sm:text-sm text-amber-900/80">
-                             <span className="mr-2">•</span> {r}
+                           <li key={i} className="flex items-start text-sm sm:text-base text-amber-900/90 leading-relaxed">
+                             <span className="mr-2.5 text-amber-600 font-bold">•</span> {r}
                            </li>
                          ))}
                        </ul>
@@ -390,28 +444,28 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
   );
 };
 
-const DetailCard: React.FC<{ title: string; icon: React.ReactNode; children: React.ReactNode }> = ({ title, icon, children }) => (
-  <div className="bg-white p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-slate-200">
-     <div className="flex items-center gap-2 mb-3 sm:mb-4 pb-2 border-b border-slate-100">
+const DetailCard: React.FC<{ title: string; icon?: React.ReactNode; children: React.ReactNode }> = ({ title, icon, children }) => (
+  <div className="bg-white p-5 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+     <div className="flex items-center gap-2.5 mb-4 sm:mb-5 pb-3 border-b border-slate-100">
        {icon}
-       <h3 className="font-bold text-slate-800 text-sm sm:text-base">{title}</h3>
+       <h3 className="font-bold text-slate-800 text-base sm:text-lg">{title}</h3>
      </div>
-     <div className="space-y-2 sm:space-y-3">
+     <div className="space-y-3 sm:space-y-4">
        {children}
      </div>
   </div>
 );
 
 const DetailRow: React.FC<{ label: string; value: string }> = ({ label, value }) => (
-  <div className="flex justify-between items-center text-xs sm:text-sm">
-    <span className="text-slate-500">{label}</span>
-    <span className="font-medium text-slate-900 text-right">{value}</span>
+  <div className="flex justify-between items-center text-sm sm:text-base py-1">
+    <span className="text-black font-semibold">{label}</span>
+    <span className="font-semibold text-slate-900 text-right">{value}</span>
   </div>
 );
 
 const SubscriptionStat: React.FC<{ label: string; value: string; color: string }> = ({ label, value, color }) => (
-  <div className="bg-slate-50 p-3 sm:p-4 rounded-xl text-center border border-slate-200">
-    <p className="text-xs text-slate-500 mb-1">{label}</p>
-    <p className={`text-lg sm:text-xl font-bold ${color}`}>{value}</p>
+  <div className="bg-slate-50 p-4 sm:p-5 rounded-xl text-center border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+    <p className="text-sm text-slate-600 mb-1.5 font-medium">{label}</p>
+    <p className={`text-xl sm:text-2xl font-bold ${color}`}>{value}</p>
   </div>
 );
