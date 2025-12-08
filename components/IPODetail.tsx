@@ -403,9 +403,9 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
         </div>
 
         {/* Right Side: Quick Info (Sticky on Desktop) */}
-        <div className="lg:w-80 space-y-4 sm:space-y-6">
+        <div className="lg:w-80 lg:sticky lg:top-24 lg:self-start space-y-4 sm:space-y-6">
            {/* Ask AI Card - Desktop Only */}
-           <div className="hidden lg:block bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-4 sm:p-5 border border-slate-300">
+           <div className="hidden mt-2 lg:block bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-4 sm:p-5 border border-slate-300">
              <p className="font-bold text-slate-900 text-sm sm:text-base mb-2">Have a question?</p>
              <p className="text-xs sm:text-sm text-slate-600 mb-1">"What does GMP indicate?"</p>
              <p className="text-xs sm:text-sm text-slate-600 mb-1">"Analyze RHP for competition risk"</p>
@@ -419,7 +419,7 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
              </button>
            </div>
 
-           <div className="bg-indigo-900 rounded-2xl p-4 sm:p-6 text-white shadow-xl lg:sticky lg:top-24">
+           <div className="bg-indigo-900 rounded-2xl p-4 sm:p-6 text-white shadow-xl">
              <h3 className="font-bold text-base sm:text-lg mb-4">Investment Calculator</h3>
              <div className="space-y-3 sm:space-y-4">
                 <div>
