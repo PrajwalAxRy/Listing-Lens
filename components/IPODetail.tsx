@@ -223,64 +223,69 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
                  </div>
 
                  <DetailCard title="Valuation (Upper Band)">
-                    <DetailRow label="Market Cap (Rs. Cr)" value="50,096" />
-                    <DetailRow label="EPS*" value="-3.11" />
-                    <DetailRow label="PE*" value="-35.75" />
-                    <DetailRow label="EV/EBITDA" value="-360" />
-                    <DetailRow label="Enterprise Value (Rs. Cr)" value="49,784 Cr" />
+                    {ipo.valuation ? (
+                      <>
+                        <DetailRow label="Market Cap (Rs. Cr)" value={ipo.valuation.marketCap} />
+                        <DetailRow label="EPS*" value={ipo.valuation.eps} />
+                        <DetailRow label="PE*" value={ipo.valuation.pe} />
+                        <DetailRow label="EV/EBITDA" value={ipo.valuation.evEbitda} />
+                        <DetailRow label="Enterprise Value (Rs. Cr)" value={ipo.valuation.enterpriseValue} />
+                      </>
+                    ) : (
+                      <p className="text-sm text-slate-500">Valuation details not available for this IPO.</p>
+                    )}
                  </DetailCard>
 
                  <div className="bg-white p-5 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200 shadow-sm">
-                    <div className="overflow-x-auto">
-                      <table className="w-full text-sm sm:text-base">
-                        <thead>
-                          <tr className="border-b-2 border-slate-200 bg-slate-50">
-                            <th className="text-left py-3 px-3 text-black-800 font-semibold">Objects of the Issue</th>
-                            <th className="text-right py-3 px-3 text-black-800 font-semibold whitespace-nowrap">Amount (Rs Cr)</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr className="bg-white border-b border-slate-100 hover:bg-slate-100/50 transition-colors">
-                            <td className="py-3 px-3 text-black-800 font-semibold leading-relaxed">Capex towards set-up of new CoCo stores in India</td>
-                            <td className="py-3 px-3 text-right font-semibold text-slate-900">272.62</td>
-                          </tr>
-                          <tr className="bg-slate-50/50 border-b border-slate-100 hover:bg-slate-100/50 transition-colors">
-                            <td className="py-3 px-3 text-black-800 font-semibold leading-relaxed">Expenditure for lease/rent/license agreements related payments for CoCo stores</td>
-                            <td className="py-3 px-3 text-right font-semibold text-slate-900">591.44</td>
-                          </tr>
-                          <tr className="bg-white hover:bg-slate-100/50 transition-colors">
-                            <td className="py-3 px-3 text-black-800 font-semibold leading-relaxed">Investing in technology and cloud infrastructure</td>
-                            <td className="py-3 px-3 text-right font-semibold text-slate-900">213.38</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
+                    {ipo.objectsOfIssue && ipo.objectsOfIssue.length > 0 ? (
+                      <div className="overflow-x-auto">
+                        <table className="w-full text-sm sm:text-base">
+                          <thead>
+                            <tr className="border-b-2 border-slate-200 bg-slate-50">
+                              <th className="text-left py-3 px-3 text-black-800 font-semibold">Objects of the Issue</th>
+                              <th className="text-right py-3 px-3 text-black-800 font-semibold whitespace-nowrap">Amount (Rs Cr)</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {ipo.objectsOfIssue.map((obj, idx) => (
+                              <tr key={idx} className={`${idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'} ${idx < ipo.objectsOfIssue!.length - 1 ? 'border-b border-slate-100' : ''} hover:bg-slate-100/50 transition-colors`}>
+                                <td className="py-3 px-3 text-black-800 font-semibold leading-relaxed">{obj.purpose}</td>
+                                <td className="py-3 px-3 text-right font-semibold text-slate-900">{obj.amount}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    ) : (
+                      <p className="text-sm text-slate-500">Objects of the issue not available for this IPO.</p>
+                    )}
                  </div>
 
                 <div className="bg-white p-5 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200 shadow-sm">
-                   <div className="overflow-x-auto">
-                     <table className="w-full text-sm sm:text-base">
-                       <thead>
-                         <tr className="border-b-2 border-slate-200 bg-slate-50">
-                           <th className="text-left py-3 px-3 text-black-800 font-semibold">Particulars</th>
-                           <th className="text-right py-3 px-3 text-black-800 font-semibold">Pre-Offer</th>
-                           <th className="text-right py-3 px-3 text-black-800 font-semibold">Post-Offer</th>
-                         </tr>
-                       </thead>
-                       <tbody>
-                         <tr className="bg-white border-b border-slate-100 hover:bg-slate-100/50 transition-colors">
-                           <td className="py-3 px-3 text-slate-700 font-medium">Promoter Group</td>
-                           <td className="py-3 px-3 text-right font-semibold text-slate-900">18.51%</td>
-                           <td className="py-3 px-3 text-right font-semibold text-slate-900">14.6%</td>
-                         </tr>
-                         <tr className="bg-slate-50/50 hover:bg-slate-100/50 transition-colors">
-                           <td className="py-3 px-3 text-slate-700 font-medium">Public-Others</td>
-                           <td className="py-3 px-3 text-right font-semibold text-slate-900">81.85%</td>
-                           <td className="py-3 px-3 text-right font-semibold text-slate-900">85.4%</td>
-                         </tr>
-                       </tbody>
-                     </table>
-                   </div>
+                   {ipo.promoterHoldings && ipo.promoterHoldings.length > 0 ? (
+                     <div className="overflow-x-auto">
+                       <table className="w-full text-sm sm:text-base">
+                         <thead>
+                           <tr className="border-b-2 border-slate-200 bg-slate-50">
+                             <th className="text-left py-3 px-3 text-black-800 font-semibold">Particulars</th>
+                             <th className="text-right py-3 px-3 text-black-800 font-semibold">Pre-Offer</th>
+                             <th className="text-right py-3 px-3 text-black-800 font-semibold">Post-Offer</th>
+                           </tr>
+                         </thead>
+                         <tbody>
+                           {ipo.promoterHoldings.map((holding, idx) => (
+                             <tr key={idx} className={`${idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'} ${idx < ipo.promoterHoldings!.length - 1 ? 'border-b border-slate-100' : ''} hover:bg-slate-100/50 transition-colors`}>
+                               <td className="py-3 px-3 text-slate-700 font-medium">{holding.category}</td>
+                               <td className="py-3 px-3 text-right font-semibold text-slate-900">{holding.preOffer}</td>
+                               <td className="py-3 px-3 text-right font-semibold text-slate-900">{holding.postOffer}</td>
+                             </tr>
+                           ))}
+                         </tbody>
+                       </table>
+                     </div>
+                   ) : (
+                     <p className="text-sm text-slate-500">Promoter holdings not available for this IPO.</p>
+                   )}
                 </div>
 
                  <div className="bg-white p-5 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200 shadow-sm">

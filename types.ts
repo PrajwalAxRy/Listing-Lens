@@ -44,6 +44,22 @@ export interface IPO {
     offerForSale: string;
     faceValue: string;
   };
+  valuation?: {
+    marketCap: string;
+    eps: string;
+    pe: string;
+    evEbitda: string;
+    enterpriseValue: string;
+  };
+  objectsOfIssue?: {
+    purpose: string;
+    amount: string;
+  }[];
+  promoterHoldings?: {
+    category: string;
+    preOffer: string;
+    postOffer: string;
+  }[];
   listingPrice?: number;
   listingClosePrice?: number;
   currentPrice?: number;
