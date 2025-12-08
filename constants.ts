@@ -48,6 +48,23 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'S-HNI (Min)', lots: 14, shares: 420 },
       { category: 'S-HNI (Max)', lots: 69, shares: 2070 },
       { category: 'B-HNI (Min)', lots: 70, shares: 2100 },
+    ],
+    valuation: {
+      marketCap: '4,080',
+      eps: '12.50',
+      pe: '38.4',
+      evEbitda: '28.5',
+      enterpriseValue: '3,920 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Expansion of cloud infrastructure', amount: '280.00' },
+      { purpose: 'Research and development', amount: '150.00' },
+      { purpose: 'Working capital requirements', amount: '120.00' },
+      { purpose: 'General corporate purposes', amount: '50.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '65.20%', postOffer: '52.16%' },
+      { category: 'Public', preOffer: '34.80%', postOffer: '47.84%' }
     ]
   },
   {
@@ -95,6 +112,24 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'S-HNI (Min)', lots: 14, shares: 1680 },
       { category: 'S-HNI (Max)', lots: 66, shares: 7920 },
       { category: 'B-HNI (Min)', lots: 67, shares: 8040 },
+    ],
+    valuation: {
+      marketCap: '19,200',
+      eps: '1.83',
+      pe: '68.3',
+      evEbitda: '42.1',
+      enterpriseValue: '22,500 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Setting up new solar parks', amount: '850.00' },
+      { purpose: 'Wind turbine procurement', amount: '620.00' },
+      { purpose: 'Debt repayment', amount: '480.00' },
+      { purpose: 'General corporate purposes', amount: '150.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '72.50%', postOffer: '58.00%' },
+      { category: 'Institutional Investors', preOffer: '18.30%', postOffer: '28.64%' },
+      { category: 'Public', preOffer: '9.20%', postOffer: '13.36%' }
     ]
   },
   {
@@ -136,6 +171,24 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'S-HNI (Min)', lots: 15, shares: 975 },
       { category: 'S-HNI (Max)', lots: 71, shares: 4615 },
       { category: 'B-HNI (Min)', lots: 72, shares: 4680 },
+    ],
+    valuation: {
+      marketCap: '2,790',
+      eps: '1.61',
+      pe: '133.5',
+      evEbitda: '85.2',
+      enterpriseValue: '2,650 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Fleet expansion and EV adoption', amount: '180.00' },
+      { purpose: 'Warehouse automation', amount: '120.00' },
+      { purpose: 'Technology upgrades', amount: '95.00' },
+      { purpose: 'Working capital', amount: '75.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '58.40%', postOffer: '45.12%' },
+      { category: 'PE/VC Investors', preOffer: '32.60%', postOffer: '38.68%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '16.20%' }
     ]
   },
   // Upcoming IPOs (today < openDate)
@@ -185,6 +238,24 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'S-HNI (Min)', lots: 14, shares: 350 },
       { category: 'S-HNI (Max)', lots: 68, shares: 1700 },
       { category: 'B-HNI (Min)', lots: 69, shares: 1725 },
+    ],
+    valuation: {
+      marketCap: '6,380',
+      eps: '14.25',
+      pe: '40.7',
+      evEbitda: '25.8',
+      enterpriseValue: '6,100 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Manufacturing capacity expansion', amount: '380.00' },
+      { purpose: 'R&D for new drug molecules', amount: '250.00' },
+      { purpose: 'Regulatory filings (US/EU)', amount: '180.00' },
+      { purpose: 'Working capital', amount: '140.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '68.50%', postOffer: '54.80%' },
+      { category: 'Institutional Investors', preOffer: '22.30%', postOffer: '31.04%' },
+      { category: 'Public', preOffer: '9.20%', postOffer: '14.16%' }
     ]
   },
   {
@@ -233,6 +304,24 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'S-HNI (Min)', lots: 15, shares: 675 },
       { category: 'S-HNI (Max)', lots: 71, shares: 3195 },
       { category: 'B-HNI (Min)', lots: 72, shares: 3240 },
+    ],
+    valuation: {
+      marketCap: '2,096',
+      eps: '9.35',
+      pe: '33.2',
+      evEbitda: '22.5',
+      enterpriseValue: '1,980 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Setting up new delivery centers', amount: '220.00' },
+      { purpose: 'Technology platform upgrades', amount: '150.00' },
+      { purpose: 'Strategic acquisitions', amount: '180.00' },
+      { purpose: 'General corporate purposes', amount: '50.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '55.80%', postOffer: '44.64%' },
+      { category: 'PE/VC Investors', preOffer: '35.20%', postOffer: '42.16%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '13.20%' }
     ]
   },
   {
@@ -281,6 +370,24 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'S-HNI (Min)', lots: 14, shares: 1050 },
       { category: 'S-HNI (Max)', lots: 66, shares: 4950 },
       { category: 'B-HNI (Min)', lots: 67, shares: 5025 },
+    ],
+    valuation: {
+      marketCap: '4,450',
+      eps: '5.60',
+      pe: '35.7',
+      evEbitda: '18.4',
+      enterpriseValue: '5,200 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'New hotel development', amount: '320.00' },
+      { purpose: 'Renovation of existing properties', amount: '180.00' },
+      { purpose: 'Debt repayment', amount: '250.00' },
+      { purpose: 'Technology investments', amount: '90.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '62.40%', postOffer: '49.92%' },
+      { category: 'PE Investors', preOffer: '28.60%', postOffer: '35.88%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '14.20%' }
     ]
   },
   {
@@ -329,6 +436,24 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'S-HNI (Min)', lots: 14, shares: 280 },
       { category: 'S-HNI (Max)', lots: 66, shares: 1320 },
       { category: 'B-HNI (Min)', lots: 67, shares: 1340 },
+    ],
+    valuation: {
+      marketCap: '18,500',
+      eps: '25.80',
+      pe: '29.1',
+      evEbitda: '18.6',
+      enterpriseValue: '17,800 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Clean room and fab upgrades', amount: '680.00' },
+      { purpose: 'R&D in automotive chips', amount: '420.00' },
+      { purpose: 'Strategic equity investments', amount: '350.00' },
+      { purpose: 'Working capital', amount: '250.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '58.20%', postOffer: '46.56%' },
+      { category: 'Strategic Investors', preOffer: '32.80%', postOffer: '39.04%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '14.40%' }
     ]
   },
   // Closed IPOs (already listed)
@@ -366,7 +491,24 @@ export const MOCK_IPOS: IPO[] = [
       freshIssue: '40%',
       offerForSale: '60%',
       faceValue: '₹10 per share',
-    }
+    },
+    valuation: {
+      marketCap: '12,750',
+      eps: '42.50',
+      pe: '20.0',
+      evEbitda: '12.5',
+      enterpriseValue: '11,800 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Capital adequacy requirements', amount: '600.00' },
+      { purpose: 'Branch network expansion', amount: '350.00' },
+      { purpose: 'Technology and digital initiatives', amount: '200.00' },
+      { purpose: 'General corporate purposes', amount: '150.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '75.20%', postOffer: '45.12%' },
+      { category: 'Public', preOffer: '24.80%', postOffer: '54.88%' }
+    ]
   },
   {
     id: '5',
@@ -400,7 +542,24 @@ export const MOCK_IPOS: IPO[] = [
       freshIssue: '85%',
       offerForSale: '15%',
       faceValue: '₹5 per share',
-    }
+    },
+    valuation: {
+      marketCap: '1,500',
+      eps: '8.50',
+      pe: '40.0',
+      evEbitda: '28.2',
+      enterpriseValue: '1,420 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Sterile manufacturing expansion', amount: '180.00' },
+      { purpose: 'R&D pipeline development', amount: '120.00' },
+      { purpose: 'Regulatory filings', amount: '80.00' },
+      { purpose: 'Working capital', amount: '70.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '82.50%', postOffer: '70.13%' },
+      { category: 'Public', preOffer: '17.50%', postOffer: '29.87%' }
+    ]
   },
   {
     id: '6',
@@ -436,7 +595,24 @@ export const MOCK_IPOS: IPO[] = [
       freshIssue: '60%',
       offerForSale: '40%',
       faceValue: '₹10 per share',
-    }
+    },
+    valuation: {
+      marketCap: '2,380',
+      eps: '8.00',
+      pe: '26.3',
+      evEbitda: '14.8',
+      enterpriseValue: '2,650 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Equipment procurement', amount: '180.00' },
+      { purpose: 'Working capital for projects', amount: '150.00' },
+      { purpose: 'Debt repayment', amount: '120.00' },
+      { purpose: 'General corporate purposes', amount: '50.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '72.80%', postOffer: '58.24%' },
+      { category: 'Public', preOffer: '27.20%', postOffer: '41.76%' }
+    ]
   },
   {
     id: '7',
@@ -472,7 +648,25 @@ export const MOCK_IPOS: IPO[] = [
       freshIssue: '55%',
       offerForSale: '45%',
       faceValue: '₹10 per share',
-    }
+    },
+    valuation: {
+      marketCap: '5,760',
+      eps: '7.08',
+      pe: '67.8',
+      evEbitda: '32.5',
+      enterpriseValue: '6,200 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Hospital expansion', amount: '450.00' },
+      { purpose: 'Medical equipment upgrades', amount: '280.00' },
+      { purpose: 'Technology infrastructure', amount: '150.00' },
+      { purpose: 'Working capital', amount: '120.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '68.50%', postOffer: '54.80%' },
+      { category: 'PE Investors', preOffer: '22.50%', postOffer: '31.50%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '13.70%' }
+    ]
   },
   {
     id: '8',
@@ -508,7 +702,25 @@ export const MOCK_IPOS: IPO[] = [
       freshIssue: '100%',
       offerForSale: '0%',
       faceValue: '₹1 per share',
-    }
+    },
+    valuation: {
+      marketCap: '3,500',
+      eps: '-1.47',
+      pe: 'N/A',
+      evEbitda: 'N/A',
+      enterpriseValue: '3,200 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Dark store expansion', amount: '120.00' },
+      { purpose: 'Technology platform development', amount: '80.00' },
+      { purpose: 'Working capital', amount: '60.00' },
+      { purpose: 'General corporate purposes', amount: '40.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '45.20%', postOffer: '36.16%' },
+      { category: 'VC/PE Investors', preOffer: '48.80%', postOffer: '55.04%' },
+      { category: 'Public', preOffer: '6.00%', postOffer: '8.80%' }
+    ]
   },
   {
     id: '9',
@@ -544,7 +756,24 @@ export const MOCK_IPOS: IPO[] = [
       freshIssue: '70%',
       offerForSale: '30%',
       faceValue: '₹5 per share',
-    }
+    },
+    valuation: {
+      marketCap: '6,150',
+      eps: '3.25',
+      pe: '40.0',
+      evEbitda: '25.6',
+      enterpriseValue: '6,800 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Module manufacturing capacity', amount: '380.00' },
+      { purpose: 'R&D for TOPCon technology', amount: '150.00' },
+      { purpose: 'Working capital', amount: '180.00' },
+      { purpose: 'General corporate purposes', amount: '90.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '78.50%', postOffer: '62.80%' },
+      { category: 'Public', preOffer: '21.50%', postOffer: '37.20%' }
+    ]
   },
   {
     id: '10',
@@ -580,7 +809,25 @@ export const MOCK_IPOS: IPO[] = [
       freshIssue: '50%',
       offerForSale: '50%',
       faceValue: '₹10 per share',
-    }
+    },
+    valuation: {
+      marketCap: '14,560',
+      eps: '32.50',
+      pe: '16.0',
+      evEbitda: '10.8',
+      enterpriseValue: '13,200 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Technology platform enhancement', amount: '520.00' },
+      { purpose: 'Geographic expansion', amount: '380.00' },
+      { purpose: 'Reserve buffer for lending', amount: '650.00' },
+      { purpose: 'General corporate purposes', amount: '250.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '52.80%', postOffer: '42.24%' },
+      { category: 'PE Investors', preOffer: '38.20%', postOffer: '45.84%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '11.92%' }
+    ]
   },
   {
     id: '11',
@@ -616,7 +863,24 @@ export const MOCK_IPOS: IPO[] = [
       freshIssue: '30%',
       offerForSale: '70%',
       faceValue: '₹10 per share',
-    }
+    },
+    valuation: {
+      marketCap: '11,100',
+      eps: '18.00',
+      pe: '17.5',
+      evEbitda: '11.2',
+      enterpriseValue: '14,500 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Dredging and mechanization', amount: '980.00' },
+      { purpose: 'Rail siding expansion', amount: '620.00' },
+      { purpose: 'Debt repayment', amount: '1,200.00' },
+      { purpose: 'General corporate purposes', amount: '350.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '85.20%', postOffer: '51.12%' },
+      { category: 'Public', preOffer: '14.80%', postOffer: '48.88%' }
+    ]
   },
   {
     id: '12',
@@ -652,7 +916,25 @@ export const MOCK_IPOS: IPO[] = [
       freshIssue: '75%',
       offerForSale: '25%',
       faceValue: '₹5 per share',
-    }
+    },
+    valuation: {
+      marketCap: '3,900',
+      eps: '22.50',
+      pe: '28.9',
+      evEbitda: '18.2',
+      enterpriseValue: '3,650 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'R&D in OT security', amount: '180.00' },
+      { purpose: 'Global delivery centers', amount: '150.00' },
+      { purpose: 'Strategic acquisitions', amount: '120.00' },
+      { purpose: 'Working capital', amount: '100.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '62.50%', postOffer: '50.00%' },
+      { category: 'PE/VC Investors', preOffer: '28.50%', postOffer: '35.63%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '14.37%' }
+    ]
   },
   {
     id: '13',
@@ -688,7 +970,24 @@ export const MOCK_IPOS: IPO[] = [
       freshIssue: '65%',
       offerForSale: '35%',
       faceValue: '₹10 per share',
-    }
+    },
+    valuation: {
+      marketCap: '2,500',
+      eps: '4.40',
+      pe: '36.4',
+      evEbitda: '22.8',
+      enterpriseValue: '2,750 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Manufacturing automation', amount: '120.00' },
+      { purpose: 'Precision agriculture R&D', amount: '80.00' },
+      { purpose: 'Dealer network expansion', amount: '100.00' },
+      { purpose: 'Working capital', amount: '60.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '75.80%', postOffer: '60.64%' },
+      { category: 'Public', preOffer: '24.20%', postOffer: '39.36%' }
+    ]
   },
   {
     id: '14',
@@ -724,7 +1023,25 @@ export const MOCK_IPOS: IPO[] = [
       freshIssue: '45%',
       offerForSale: '55%',
       faceValue: '₹2 per share',
-    }
+    },
+    valuation: {
+      marketCap: '10,500',
+      eps: '0.19',
+      pe: '500.0',
+      evEbitda: '85.5',
+      enterpriseValue: '11,200 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Warehouse automation', amount: '280.00' },
+      { purpose: 'New store rollout', amount: '350.00' },
+      { purpose: 'Debt reduction', amount: '250.00' },
+      { purpose: 'Working capital', amount: '120.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '68.50%', postOffer: '54.80%' },
+      { category: 'PE Investors', preOffer: '22.50%', postOffer: '32.78%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '12.42%' }
+    ]
   },
   {
     id: '15',
@@ -760,7 +1077,25 @@ export const MOCK_IPOS: IPO[] = [
       freshIssue: '55%',
       offerForSale: '45%',
       faceValue: '₹10 per share',
-    }
+    },
+    valuation: {
+      marketCap: '3,330',
+      eps: '15.00',
+      pe: '18.0',
+      evEbitda: '12.5',
+      enterpriseValue: '3,850 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Property refurbishment', amount: '280.00' },
+      { purpose: 'Debt repayment', amount: '320.00' },
+      { purpose: 'New managed properties', amount: '180.00' },
+      { purpose: 'Technology upgrades', amount: '120.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '72.50%', postOffer: '58.00%' },
+      { category: 'PE Investors', preOffer: '18.50%', postOffer: '28.30%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '13.70%' }
+    ]
   },
   // 10 NEW DUMMY CLOSED IPOS
   {
@@ -784,7 +1119,25 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Scalable SaaS model', 'Global client base'],
     risks: ['Data privacy regulations', 'High churn rate'],
     financials: { revenue: '₹600 Cr', profit: '₹90 Cr', margin: '15.0%' },
-    issueDetails: { freshIssue: '70%', offerForSale: '30%', faceValue: '₹5 per share' }
+    issueDetails: { freshIssue: '70%', offerForSale: '30%', faceValue: '₹5 per share' },
+    valuation: {
+      marketCap: '2,750',
+      eps: '9.00',
+      pe: '22.2',
+      evEbitda: '15.5',
+      enterpriseValue: '2,580 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Data center expansion', amount: '180.00' },
+      { purpose: 'Security hardening', amount: '120.00' },
+      { purpose: 'Product localization', amount: '150.00' },
+      { purpose: 'Working capital', amount: '100.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '58.50%', postOffer: '46.80%' },
+      { category: 'VC Investors', preOffer: '32.50%', postOffer: '39.00%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '14.20%' }
+    ]
   },
   {
     id: '17',
@@ -807,7 +1160,25 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Patented technology', 'Growing organic market'],
     risks: ['Regulatory hurdles', 'Seasonality'],
     financials: { revenue: '₹850 Cr', profit: '₹120 Cr', margin: '14.1%' },
-    issueDetails: { freshIssue: '80%', offerForSale: '20%', faceValue: '₹10 per share' }
+    issueDetails: { freshIssue: '80%', offerForSale: '20%', faceValue: '₹10 per share' },
+    valuation: {
+      marketCap: '5,800',
+      eps: '12.00',
+      pe: '48.3',
+      evEbitda: '32.5',
+      enterpriseValue: '5,450 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Manufacturing automation', amount: '350.00' },
+      { purpose: 'Regulatory registrations', amount: '280.00' },
+      { purpose: 'Farmer advisory platforms', amount: '180.00' },
+      { purpose: 'Working capital', amount: '190.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '68.50%', postOffer: '54.80%' },
+      { category: 'PE Investors', preOffer: '22.50%', postOffer: '32.60%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '12.60%' }
+    ]
   },
   {
     id: '18',
@@ -830,7 +1201,24 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Established OEM relationships', 'Capacity expansion'],
     risks: ['Cyclical auto industry', 'Raw material costs'],
     financials: { revenue: '₹1,200 Cr', profit: '₹150 Cr', margin: '12.5%' },
-    issueDetails: { freshIssue: '60%', offerForSale: '40%', faceValue: '₹10 per share' }
+    issueDetails: { freshIssue: '60%', offerForSale: '40%', faceValue: '₹10 per share' },
+    valuation: {
+      marketCap: '3,400',
+      eps: '15.00',
+      pe: '22.7',
+      evEbitda: '14.2',
+      enterpriseValue: '3,680 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Forging capacity upgrade', amount: '280.00' },
+      { purpose: 'Robotics and automation', amount: '180.00' },
+      { purpose: 'Working capital', amount: '190.00' },
+      { purpose: 'General corporate purposes', amount: '100.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '78.50%', postOffer: '62.80%' },
+      { category: 'Public', preOffer: '21.50%', postOffer: '37.20%' }
+    ]
   },
   {
     id: '19',
@@ -853,7 +1241,25 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Premium brand positioning', 'High margins'],
     risks: ['Supply chain disruptions', 'Perishable inventory'],
     financials: { revenue: '₹550 Cr', profit: '₹30 Cr', margin: '5.5%' },
-    issueDetails: { freshIssue: '50%', offerForSale: '50%', faceValue: '₹5 per share' }
+    issueDetails: { freshIssue: '50%', offerForSale: '50%', faceValue: '₹5 per share' },
+    valuation: {
+      marketCap: '3,080',
+      eps: '2.31',
+      pe: '56.3',
+      evEbitda: '38.5',
+      enterpriseValue: '3,250 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Omnichannel delivery expansion', amount: '120.00' },
+      { purpose: 'Store refurbishments', amount: '100.00' },
+      { purpose: 'Supplier financing programs', amount: '80.00' },
+      { purpose: 'Working capital', amount: '100.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '65.50%', postOffer: '52.40%' },
+      { category: 'PE Investors', preOffer: '25.50%', postOffer: '35.35%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '12.25%' }
+    ]
   },
   {
     id: '20',
@@ -876,7 +1282,24 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Strong order book', 'Government contracts'],
     risks: ['Execution delays', 'Labor shortages'],
     financials: { revenue: '₹2,100 Cr', profit: '₹180 Cr', margin: '8.6%' },
-    issueDetails: { freshIssue: '55%', offerForSale: '45%', faceValue: '₹10 per share' }
+    issueDetails: { freshIssue: '55%', offerForSale: '45%', faceValue: '₹10 per share' },
+    valuation: {
+      marketCap: '3,800',
+      eps: '12.00',
+      pe: '20.8',
+      evEbitda: '12.5',
+      enterpriseValue: '4,500 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Equipment purchases', amount: '320.00' },
+      { purpose: 'Debt reduction', amount: '280.00' },
+      { purpose: 'Working capital for HAM projects', amount: '250.00' },
+      { purpose: 'General corporate purposes', amount: '100.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '72.80%', postOffer: '58.24%' },
+      { category: 'Public', preOffer: '27.20%', postOffer: '41.76%' }
+    ]
   },
   {
     id: '21',
@@ -899,7 +1322,25 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Market leadership', 'Network effects'],
     risks: ['Regulatory changes', 'Competition'],
     financials: { revenue: '₹3,500 Cr', profit: '₹420 Cr', margin: '12.0%' },
-    issueDetails: { freshIssue: '45%', offerForSale: '55%', faceValue: '₹1 per share' }
+    issueDetails: { freshIssue: '45%', offerForSale: '55%', faceValue: '₹1 per share' },
+    valuation: {
+      marketCap: '31,250',
+      eps: '13.50',
+      pe: '59.3',
+      evEbitda: '42.5',
+      enterpriseValue: '29,800 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Offline merchant acquisition', amount: '650.00' },
+      { purpose: 'Compliance tooling acquisitions', amount: '480.00' },
+      { purpose: 'Technology infrastructure', amount: '520.00' },
+      { purpose: 'Balance sheet strengthening', amount: '600.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '42.50%', postOffer: '34.00%' },
+      { category: 'VC/PE Investors', preOffer: '48.50%', postOffer: '54.28%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '11.72%' }
+    ]
   },
   {
     id: '22',
@@ -922,7 +1363,25 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Green energy incentives', 'Long-term PPAs'],
     risks: ['Weather dependency', 'Grid connectivity issues'],
     financials: { revenue: '₹1,500 Cr', profit: '₹110 Cr', margin: '7.3%' },
-    issueDetails: { freshIssue: '65%', offerForSale: '35%', faceValue: '₹10 per share' }
+    issueDetails: { freshIssue: '65%', offerForSale: '35%', faceValue: '₹10 per share' },
+    valuation: {
+      marketCap: '18,000',
+      eps: '0.73',
+      pe: '136.5',
+      evEbitda: '85.2',
+      enterpriseValue: '22,500 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Debt repayment', amount: '650.00' },
+      { purpose: 'Wind farm repowering', amount: '480.00' },
+      { purpose: 'New site acquisition', amount: '420.00' },
+      { purpose: 'Working capital', amount: '250.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '65.80%', postOffer: '52.64%' },
+      { category: 'Infrastructure Funds', preOffer: '25.20%', postOffer: '33.51%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '13.85%' }
+    ]
   },
   {
     id: '23',
@@ -945,7 +1404,25 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Growing health awareness', 'Asset-light expansion'],
     risks: ['Pricing pressure', 'Quality control risks'],
     financials: { revenue: '₹900 Cr', profit: '₹160 Cr', margin: '17.8%' },
-    issueDetails: { freshIssue: '75%', offerForSale: '25%', faceValue: '₹5 per share' }
+    issueDetails: { freshIssue: '75%', offerForSale: '25%', faceValue: '₹5 per share' },
+    valuation: {
+      marketCap: '4,700',
+      eps: '16.00',
+      pe: '26.3',
+      evEbitda: '18.5',
+      enterpriseValue: '4,450 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Reference lab expansion', amount: '280.00' },
+      { purpose: 'Technology platform development', amount: '180.00' },
+      { purpose: 'Radiology acquisitions', amount: '220.00' },
+      { purpose: 'Working capital', amount: '120.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '62.50%', postOffer: '50.00%' },
+      { category: 'PE Investors', preOffer: '28.50%', postOffer: '35.63%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '14.37%' }
+    ]
   },
   {
     id: '24',
@@ -968,7 +1445,25 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Scalable content', 'Large addressable market'],
     risks: ['Customer acquisition costs', 'Return to offline education'],
     financials: { revenue: '₹250 Cr', profit: '-₹40 Cr', margin: '-16.0%' },
-    issueDetails: { freshIssue: '100%', offerForSale: '0%', faceValue: '₹1 per share' }
+    issueDetails: { freshIssue: '100%', offerForSale: '0%', faceValue: '₹1 per share' },
+    valuation: {
+      marketCap: '2,880',
+      eps: '-2.67',
+      pe: 'N/A',
+      evEbitda: 'N/A',
+      enterpriseValue: '2,650 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Content localization', amount: '90.00' },
+      { purpose: 'Marketing and brand building', amount: '100.00' },
+      { purpose: 'Technology upgrades', amount: '60.00' },
+      { purpose: 'General corporate purposes', amount: '50.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '35.50%', postOffer: '28.40%' },
+      { category: 'VC Investors', preOffer: '55.50%', postOffer: '61.20%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '10.40%' }
+    ]
   },
   {
     id: '25',
@@ -991,7 +1486,24 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Niche product portfolio', 'Export driven'],
     risks: ['Environmental compliance', 'Raw material volatility'],
     financials: { revenue: '₹800 Cr', profit: '₹140 Cr', margin: '17.5%' },
-    issueDetails: { freshIssue: '70%', offerForSale: '30%', faceValue: '₹10 per share' }
+    issueDetails: { freshIssue: '70%', offerForSale: '30%', faceValue: '₹10 per share' },
+    valuation: {
+      marketCap: '3,150',
+      eps: '28.00',
+      pe: '22.5',
+      evEbitda: '14.8',
+      enterpriseValue: '3,020 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Capacity debottlenecking', amount: '220.00' },
+      { purpose: 'Environmental upgrades', amount: '150.00' },
+      { purpose: 'CDMO facility expansion', amount: '180.00' },
+      { purpose: 'Working capital', amount: '100.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '72.50%', postOffer: '58.00%' },
+      { category: 'Public', preOffer: '27.50%', postOffer: '42.00%' }
+    ]
   },
   {
     id: '26',
@@ -1014,7 +1526,25 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Nationwide network', 'Tech-enabled tracking'],
     risks: ['Fuel cost volatility', 'Working capital needs'],
     financials: { revenue: '₹1,050 Cr', profit: '₹95 Cr', margin: '9.0%' },
-    issueDetails: { freshIssue: '55%', offerForSale: '45%', faceValue: '₹5 per share' }
+    issueDetails: { freshIssue: '55%', offerForSale: '45%', faceValue: '₹5 per share' },
+    valuation: {
+      marketCap: '2,210',
+      eps: '7.60',
+      pe: '25.0',
+      evEbitda: '16.8',
+      enterpriseValue: '2,450 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Warehouse automation', amount: '140.00' },
+      { purpose: 'Fleet upgrades', amount: '110.00' },
+      { purpose: 'Working capital', amount: '120.00' },
+      { purpose: 'General corporate purposes', amount: '50.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '68.50%', postOffer: '54.80%' },
+      { category: 'PE Investors', preOffer: '22.50%', postOffer: '31.50%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '13.70%' }
+    ]
   },
   {
     id: '27',
@@ -1037,7 +1567,25 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Long-term PPAs', 'Diverse asset mix'],
     risks: ['Grid curtailment', 'Weather dependency'],
     financials: { revenue: '₹1,900 Cr', profit: '₹210 Cr', margin: '11.1%' },
-    issueDetails: { freshIssue: '60%', offerForSale: '40%', faceValue: '₹10 per share' }
+    issueDetails: { freshIssue: '60%', offerForSale: '40%', faceValue: '₹10 per share' },
+    valuation: {
+      marketCap: '4,000',
+      eps: '10.50',
+      pe: '26.2',
+      evEbitda: '15.8',
+      enterpriseValue: '4,850 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'New hybrid projects', amount: '380.00' },
+      { purpose: 'Debt refinancing', amount: '320.00' },
+      { purpose: 'Storage pilots', amount: '250.00' },
+      { purpose: 'Working capital', amount: '150.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '58.80%', postOffer: '47.04%' },
+      { category: 'Infrastructure Funds', preOffer: '32.20%', postOffer: '39.28%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '13.68%' }
+    ]
   },
   {
     id: '28',
@@ -1060,7 +1608,25 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Sticky enterprise clients', 'High gross margins'],
     risks: ['US dollar exposure', 'Talent retention'],
     financials: { revenue: '₹980 Cr', profit: '₹220 Cr', margin: '22.5%' },
-    issueDetails: { freshIssue: '85%', offerForSale: '15%', faceValue: '₹5 per share' }
+    issueDetails: { freshIssue: '85%', offerForSale: '15%', faceValue: '₹5 per share' },
+    valuation: {
+      marketCap: '5,600',
+      eps: '22.00',
+      pe: '25.5',
+      evEbitda: '16.2',
+      enterpriseValue: '5,280 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Go-to-market expansion', amount: '280.00' },
+      { purpose: 'US market presence', amount: '220.00' },
+      { purpose: 'R&D for regulatory modules', amount: '200.00' },
+      { purpose: 'Working capital', amount: '150.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '55.50%', postOffer: '44.40%' },
+      { category: 'VC/PE Investors', preOffer: '35.50%', postOffer: '42.35%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '13.25%' }
+    ]
   },
   {
     id: '29',
@@ -1083,7 +1649,24 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Long-term contracts', 'Specialized crew'],
     risks: ['Global trade downturn', 'Currency swings'],
     financials: { revenue: '₹1,250 Cr', profit: '₹105 Cr', margin: '8.4%' },
-    issueDetails: { freshIssue: '50%', offerForSale: '50%', faceValue: '₹10 per share' }
+    issueDetails: { freshIssue: '50%', offerForSale: '50%', faceValue: '₹10 per share' },
+    valuation: {
+      marketCap: '1,950',
+      eps: '8.40',
+      pe: '38.7',
+      evEbitda: '22.5',
+      enterpriseValue: '2,280 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'New vessel acquisition', amount: '180.00' },
+      { purpose: 'Remote monitoring tech', amount: '120.00' },
+      { purpose: 'Debt reduction', amount: '200.00' },
+      { purpose: 'Working capital', amount: '100.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '78.50%', postOffer: '62.80%' },
+      { category: 'Public', preOffer: '21.50%', postOffer: '37.20%' }
+    ]
   },
   {
     id: '30',
@@ -1106,7 +1689,24 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Order book visibility', 'Experienced execution'],
     risks: ['Commodity prices', 'Client concentration'],
     financials: { revenue: '₹1,400 Cr', profit: '₹115 Cr', margin: '8.2%' },
-    issueDetails: { freshIssue: '65%', offerForSale: '35%', faceValue: '₹10 per share' }
+    issueDetails: { freshIssue: '65%', offerForSale: '35%', faceValue: '₹10 per share' },
+    valuation: {
+      marketCap: '1,425',
+      eps: '7.67',
+      pe: '19.6',
+      evEbitda: '12.5',
+      enterpriseValue: '1,680 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Working capital expansion', amount: '180.00' },
+      { purpose: 'Equipment leasing', amount: '120.00' },
+      { purpose: 'Digital project controls', amount: '100.00' },
+      { purpose: 'General corporate purposes', amount: '100.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '72.80%', postOffer: '58.24%' },
+      { category: 'Public', preOffer: '27.20%', postOffer: '41.76%' }
+    ]
   },
   {
     id: '31',
@@ -1129,7 +1729,25 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Recurring SaaS revenue', 'Global partners'],
     risks: ['Pricing pressure', 'Cyber threats'],
     financials: { revenue: '₹1,350 Cr', profit: '₹260 Cr', margin: '19.3%' },
-    issueDetails: { freshIssue: '80%', offerForSale: '20%', faceValue: '₹2 per share' }
+    issueDetails: { freshIssue: '80%', offerForSale: '20%', faceValue: '₹2 per share' },
+    valuation: {
+      marketCap: '7,680',
+      eps: '13.00',
+      pe: '49.2',
+      evEbitda: '32.5',
+      enterpriseValue: '7,250 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'R&D expansion', amount: '380.00' },
+      { purpose: 'Vertical acquisitions', amount: '320.00' },
+      { purpose: 'Global support centers', amount: '280.00' },
+      { purpose: 'Working capital', amount: '220.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '52.50%', postOffer: '42.00%' },
+      { category: 'VC/PE Investors', preOffer: '38.50%', postOffer: '45.20%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '12.80%' }
+    ]
   },
   {
     id: '32',
@@ -1152,7 +1770,25 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Export channels', 'Product innovation'],
     risks: ['Commodity inflation', 'Brand competition'],
     financials: { revenue: '₹1,150 Cr', profit: '₹88 Cr', margin: '7.6%' },
-    issueDetails: { freshIssue: '55%', offerForSale: '45%', faceValue: '₹5 per share' }
+    issueDetails: { freshIssue: '55%', offerForSale: '45%', faceValue: '₹5 per share' },
+    valuation: {
+      marketCap: '2,760',
+      eps: '5.28',
+      pe: '44.5',
+      evEbitda: '28.2',
+      enterpriseValue: '2,950 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Cold storage enhancement', amount: '200.00' },
+      { purpose: 'Marketing campaigns', amount: '150.00' },
+      { purpose: 'Automation upgrades', amount: '180.00' },
+      { purpose: 'Working capital', amount: '120.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '68.50%', postOffer: '54.80%' },
+      { category: 'PE Investors', preOffer: '22.50%', postOffer: '31.50%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '13.70%' }
+    ]
   },
   {
     id: '33',
@@ -1175,7 +1811,24 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['USFDA approvals', 'High entry barriers'],
     risks: ['Supply chain disruptions', 'Fx exposure'],
     financials: { revenue: '₹900 Cr', profit: '₹170 Cr', margin: '18.9%' },
-    issueDetails: { freshIssue: '70%', offerForSale: '30%', faceValue: '₹10 per share' }
+    issueDetails: { freshIssue: '70%', offerForSale: '30%', faceValue: '₹10 per share' },
+    valuation: {
+      marketCap: '4,400',
+      eps: '17.00',
+      pe: '25.9',
+      evEbitda: '16.8',
+      enterpriseValue: '4,150 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'New product development', amount: '280.00' },
+      { purpose: 'Manufacturing automation', amount: '180.00' },
+      { purpose: 'Working capital', amount: '160.00' },
+      { purpose: 'General corporate purposes', amount: '100.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '72.50%', postOffer: '58.00%' },
+      { category: 'Public', preOffer: '27.50%', postOffer: '42.00%' }
+    ]
   },
   {
     id: '34',
@@ -1198,7 +1851,24 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Lean supply chain', 'Tier-3 expansion'],
     risks: ['Working capital strain', 'Consumer slowdown'],
     financials: { revenue: '₹1,600 Cr', profit: '₹60 Cr', margin: '3.8%' },
-    issueDetails: { freshIssue: '40%', offerForSale: '60%', faceValue: '₹2 per share' }
+    issueDetails: { freshIssue: '40%', offerForSale: '60%', faceValue: '₹2 per share' },
+    valuation: {
+      marketCap: '7,125',
+      eps: '0.80',
+      pe: '118.8',
+      evEbitda: '72.5',
+      enterpriseValue: '7,800 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'New store openings', amount: '280.00' },
+      { purpose: 'Technology investments', amount: '180.00' },
+      { purpose: 'Debt reduction', amount: '200.00' },
+      { purpose: 'Working capital', amount: '90.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '72.50%', postOffer: '43.50%' },
+      { category: 'Public', preOffer: '27.50%', postOffer: '56.50%' }
+    ]
   },
   {
     id: '35',
@@ -1221,7 +1891,24 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Integrated operations', 'Export incentives'],
     risks: ['Cotton price swings', 'FX fluctuation'],
     financials: { revenue: '₹900 Cr', profit: '₹70 Cr', margin: '7.8%' },
-    issueDetails: { freshIssue: '60%', offerForSale: '40%', faceValue: '₹5 per share' }
+    issueDetails: { freshIssue: '60%', offerForSale: '40%', faceValue: '₹5 per share' },
+    valuation: {
+      marketCap: '1,520',
+      eps: '7.00',
+      pe: '22.9',
+      evEbitda: '14.8',
+      enterpriseValue: '1,750 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Capacity upgrades', amount: '150.00' },
+      { purpose: 'Working capital', amount: '140.00' },
+      { purpose: 'Energy efficiency projects', amount: '110.00' },
+      { purpose: 'General corporate purposes', amount: '80.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '78.50%', postOffer: '62.80%' },
+      { category: 'Public', preOffer: '21.50%', postOffer: '37.20%' }
+    ]
   },
   {
     id: '36',
@@ -1244,7 +1931,25 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['EV tailwinds', 'OEM partnerships'],
     risks: ['Technology obsolescence', 'Capex heavy'],
     financials: { revenue: '₹1,200 Cr', profit: '₹150 Cr', margin: '12.5%' },
-    issueDetails: { freshIssue: '75%', offerForSale: '25%', faceValue: '₹10 per share' }
+    issueDetails: { freshIssue: '75%', offerForSale: '25%', faceValue: '₹10 per share' },
+    valuation: {
+      marketCap: '3,330',
+      eps: '15.00',
+      pe: '18.0',
+      evEbitda: '12.5',
+      enterpriseValue: '3,580 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Capacity expansion', amount: '320.00' },
+      { purpose: 'Automation investments', amount: '220.00' },
+      { purpose: 'R&D for next-gen platforms', amount: '200.00' },
+      { purpose: 'Working capital', amount: '160.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '62.50%', postOffer: '50.00%' },
+      { category: 'PE Investors', preOffer: '28.50%', postOffer: '35.63%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '14.37%' }
+    ]
   },
   {
     id: '37',
@@ -1267,7 +1972,25 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Content IP', 'PAN-India centers'],
     risks: ['High CAC', 'Offline competition'],
     financials: { revenue: '₹520 Cr', profit: '₹48 Cr', margin: '9.2%' },
-    issueDetails: { freshIssue: '85%', offerForSale: '15%', faceValue: '₹5 per share' }
+    issueDetails: { freshIssue: '85%', offerForSale: '15%', faceValue: '₹5 per share' },
+    valuation: {
+      marketCap: '1,280',
+      eps: '4.80',
+      pe: '66.7',
+      evEbitda: '42.5',
+      enterpriseValue: '1,180 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Regional center expansion', amount: '140.00' },
+      { purpose: 'Technology platform development', amount: '100.00' },
+      { purpose: 'Marketing partnerships', amount: '80.00' },
+      { purpose: 'Working capital', amount: '80.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '55.50%', postOffer: '44.40%' },
+      { category: 'VC Investors', preOffer: '35.50%', postOffer: '43.25%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '12.35%' }
+    ]
   },
   {
     id: '38',
@@ -1290,7 +2013,24 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Tenant stickiness', 'REIT-ready assets'],
     risks: ['Leasing cycles', 'Interest rate risk'],
     financials: { revenue: '₹780 Cr', profit: '₹90 Cr', margin: '11.5%' },
-    issueDetails: { freshIssue: '50%', offerForSale: '50%', faceValue: '₹10 per share' }
+    issueDetails: { freshIssue: '50%', offerForSale: '50%', faceValue: '₹10 per share' },
+    valuation: {
+      marketCap: '1,540',
+      eps: '9.00',
+      pe: '15.6',
+      evEbitda: '10.8',
+      enterpriseValue: '1,780 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Land acquisition', amount: '180.00' },
+      { purpose: 'Park expansion', amount: '150.00' },
+      { purpose: 'Debt reduction', amount: '140.00' },
+      { purpose: 'Working capital', amount: '80.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '72.50%', postOffer: '58.00%' },
+      { category: 'Public', preOffer: '27.50%', postOffer: '42.00%' }
+    ]
   },
   {
     id: '39',
@@ -1313,7 +2053,25 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['IP library', 'Multiple distribution channels'],
     risks: ['Cyclic ad spends', 'Production delays'],
     financials: { revenue: '₹1,050 Cr', profit: '₹130 Cr', margin: '12.4%' },
-    issueDetails: { freshIssue: '65%', offerForSale: '35%', faceValue: '₹5 per share' }
+    issueDetails: { freshIssue: '65%', offerForSale: '35%', faceValue: '₹5 per share' },
+    valuation: {
+      marketCap: '3,095',
+      eps: '8.67',
+      pe: '24.2',
+      evEbitda: '16.5',
+      enterpriseValue: '2,880 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Content slate expansion', amount: '220.00' },
+      { purpose: 'Studio upgrades', amount: '150.00' },
+      { purpose: 'Working capital', amount: '180.00' },
+      { purpose: 'General corporate purposes', amount: '100.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '58.50%', postOffer: '46.80%' },
+      { category: 'PE Investors', preOffer: '32.50%', postOffer: '40.55%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '12.65%' }
+    ]
   },
   {
     id: '40',
@@ -1336,7 +2094,25 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['US filings pipeline', 'High margins'],
     risks: ['Regulatory inspections', 'Pricing pressure'],
     financials: { revenue: '₹2,400 Cr', profit: '₹420 Cr', margin: '17.5%' },
-    issueDetails: { freshIssue: '55%', offerForSale: '45%', faceValue: '₹10 per share' }
+    issueDetails: { freshIssue: '55%', offerForSale: '45%', faceValue: '₹10 per share' },
+    valuation: {
+      marketCap: '13,000',
+      eps: '42.00',
+      pe: '17.9',
+      evEbitda: '12.2',
+      enterpriseValue: '12,200 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Sterile plant expansion', amount: '480.00' },
+      { purpose: 'R&D investments', amount: '320.00' },
+      { purpose: 'Debt reduction', amount: '350.00' },
+      { purpose: 'Working capital', amount: '150.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '68.50%', postOffer: '54.80%' },
+      { category: 'PE Investors', preOffer: '22.50%', postOffer: '31.95%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '13.25%' }
+    ]
   },
   {
     id: '41',
@@ -1359,7 +2135,24 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Diversified product mix', 'Distribution reach'],
     risks: ['Monsoon dependency', 'Regulatory approvals'],
     financials: { revenue: '₹1,000 Cr', profit: '₹120 Cr', margin: '12.0%' },
-    issueDetails: { freshIssue: '70%', offerForSale: '30%', faceValue: '₹10 per share' }
+    issueDetails: { freshIssue: '70%', offerForSale: '30%', faceValue: '₹10 per share' },
+    valuation: {
+      marketCap: '2,475',
+      eps: '10.67',
+      pe: '21.1',
+      evEbitda: '14.5',
+      enterpriseValue: '2,680 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Manufacturing automation', amount: '180.00' },
+      { purpose: 'Working capital', amount: '150.00' },
+      { purpose: 'Regulatory filings', amount: '120.00' },
+      { purpose: 'General corporate purposes', amount: '100.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '78.50%', postOffer: '62.80%' },
+      { category: 'Public', preOffer: '21.50%', postOffer: '37.20%' }
+    ]
   },
   {
     id: '42',
@@ -1382,7 +2175,25 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Strong solvency ratios', 'Digital acquisition'],
     risks: ['Underwriting cycles', 'Competitive pricing'],
     financials: { revenue: '₹3,200 Cr', profit: '₹260 Cr', margin: '8.1%' },
-    issueDetails: { freshIssue: '45%', offerForSale: '55%', faceValue: '₹10 per share' }
+    issueDetails: { freshIssue: '45%', offerForSale: '55%', faceValue: '₹10 per share' },
+    valuation: {
+      marketCap: '4,180',
+      eps: '9.75',
+      pe: '39.0',
+      evEbitda: '22.8',
+      enterpriseValue: '3,950 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Capital base enhancement', amount: '320.00' },
+      { purpose: 'Technology platform development', amount: '250.00' },
+      { purpose: 'Product innovation', amount: '280.00' },
+      { purpose: 'General corporate purposes', amount: '150.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '62.50%', postOffer: '50.00%' },
+      { category: 'Strategic Investors', preOffer: '28.50%', postOffer: '37.25%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '12.75%' }
+    ]
   },
   {
     id: '43',
@@ -1405,7 +2216,24 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Stable cash flows', 'Government incentives'],
     risks: ['Seasonal output', 'Tariff revisions'],
     financials: { revenue: '₹620 Cr', profit: '₹55 Cr', margin: '8.9%' },
-    issueDetails: { freshIssue: '60%', offerForSale: '40%', faceValue: '₹10 per share' }
+    issueDetails: { freshIssue: '60%', offerForSale: '40%', faceValue: '₹10 per share' },
+    valuation: {
+      marketCap: '910',
+      eps: '5.50',
+      pe: '23.6',
+      evEbitda: '15.2',
+      enterpriseValue: '1,080 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Plant refurbishment', amount: '180.00' },
+      { purpose: 'Grid upgrades', amount: '150.00' },
+      { purpose: 'Hybrid solar feasibility', amount: '200.00' },
+      { purpose: 'Working capital', amount: '170.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '72.50%', postOffer: '58.00%' },
+      { category: 'Public', preOffer: '27.50%', postOffer: '42.00%' }
+    ]
   },
   {
     id: '44',
@@ -1428,7 +2256,25 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['ODM partnerships', 'Strong brand recall'],
     risks: ['Import dependency', 'Rapid tech cycles'],
     financials: { revenue: '₹1,650 Cr', profit: '₹200 Cr', margin: '12.1%' },
-    issueDetails: { freshIssue: '75%', offerForSale: '25%', faceValue: '₹5 per share' }
+    issueDetails: { freshIssue: '75%', offerForSale: '25%', faceValue: '₹5 per share' },
+    valuation: {
+      marketCap: '5,160',
+      eps: '16.67',
+      pe: '25.8',
+      evEbitda: '17.2',
+      enterpriseValue: '4,920 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'R&D investments', amount: '320.00' },
+      { purpose: 'Brand marketing', amount: '250.00' },
+      { purpose: 'Working capital', amount: '220.00' },
+      { purpose: 'General corporate purposes', amount: '130.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '55.50%', postOffer: '44.40%' },
+      { category: 'PE/VC Investors', preOffer: '35.50%', postOffer: '42.35%' },
+      { category: 'Public', preOffer: '9.00%', postOffer: '13.25%' }
+    ]
   },
   {
     id: '45',
@@ -1451,6 +2297,23 @@ export const MOCK_IPOS: IPO[] = [
     strengths: ['Quick design cycles', 'Diversified buyers'],
     risks: ['Demand volatility', 'Compliance costs'],
     financials: { revenue: '₹780 Cr', profit: '₹52 Cr', margin: '6.7%' },
-    issueDetails: { freshIssue: '50%', offerForSale: '50%', faceValue: '₹2 per share' }
+    issueDetails: { freshIssue: '50%', offerForSale: '50%', faceValue: '₹2 per share' },
+    valuation: {
+      marketCap: '2,625',
+      eps: '3.25',
+      pe: '49.2',
+      evEbitda: '32.5',
+      enterpriseValue: '2,780 Cr'
+    },
+    objectsOfIssue: [
+      { purpose: 'Working capital', amount: '140.00' },
+      { purpose: 'Manufacturing automation', amount: '120.00' },
+      { purpose: 'ESG initiatives', amount: '80.00' },
+      { purpose: 'General corporate purposes', amount: '80.00' }
+    ],
+    promoterHoldings: [
+      { category: 'Promoter Group', preOffer: '78.50%', postOffer: '62.80%' },
+      { category: 'Public', preOffer: '21.50%', postOffer: '37.20%' }
+    ]
   }
 ];
