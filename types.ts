@@ -1,5 +1,3 @@
-export type IPOStatus = 'Active' | 'Upcoming' | 'Closed';
-
 export interface ApplicationDetailRow {
   category: string;
   lots: number;
@@ -11,6 +9,16 @@ export interface IPOReservation {
   sharesOfferedPercent: string;
   sharesOfferedRaw: string;
   children?: IPOReservation[];
+}
+
+export interface SubscriptionTrendRow {
+  date: string;
+  qibExAnchor: number;
+  nii: number;
+  niiAbove10L: number;
+  niiBelow10L: number;
+  retail: number;
+  total: number;
 }
 
 export interface IPO {
@@ -68,6 +76,7 @@ export interface IPO {
     postOffer: string;
   }[];
   ipoReservation?: IPOReservation[];
+  subscriptionTrend?: SubscriptionTrendRow[];
   listingPrice?: number;
   listingClosePrice?: number;
   currentPrice?: number;

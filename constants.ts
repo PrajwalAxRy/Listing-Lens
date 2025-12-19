@@ -87,6 +87,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '61,97,917' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nDec 3, 2025', qibExAnchor: 2.18, nii: 1.90, niiAbove10L: 1.61, niiBelow10L: 2.47, retail: 4.13, total: 2.46 },
+      { date: 'Day 2\nDec 4, 2025', qibExAnchor: 7.15, nii: 9.63, niiAbove10L: 8.82, niiBelow10L: 11.25, retail: 9.65, total: 8.28 },
+      { date: 'Day 3\nDec 5, 2025', qibExAnchor: 123.34, nii: 39.85, niiAbove10L: 43.64, niiBelow10L: 32.28, retail: 19.89, total: 81.76 }
     ]
   },
   {
@@ -174,10 +179,14 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '6,72,00,000' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nNov 28, 2025', qibExAnchor: 1.5, nii: 1.2, niiAbove10L: 1.1, niiBelow10L: 1.4, retail: 2.8, total: 1.8 },
+      { date: 'Day 2\nNov 29, 2025', qibExAnchor: 3.2, nii: 2.5, niiAbove10L: 2.3, niiBelow10L: 2.8, retail: 4.1, total: 3.1 },
+      { date: 'Day 3\nNov 30, 2025', qibExAnchor: 5.8, nii: 4.7, niiAbove10L: 4.2, niiBelow10L: 5.3, retail: 6.2, total: 5.4 }
     ]
   },
   {
-    id: '3',
     name: 'Urban Logistics',
     symbol: 'URBANLOG',
     status: 'Active',
@@ -255,6 +264,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '97,67,442' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nNov 26, 2025', qibExAnchor: 4.2, nii: 6.1, niiAbove10L: 5.8, niiBelow10L: 6.5, retail: 3.9, total: 5.2 },
+      { date: 'Day 2\nNov 27, 2025', qibExAnchor: 8.7, nii: 11.4, niiAbove10L: 10.2, niiBelow10L: 12.8, retail: 7.3, total: 9.8 },
+      { date: 'Day 3\nNov 28, 2025', qibExAnchor: 15.3, nii: 22.6, niiAbove10L: 20.1, niiBelow10L: 25.4, retail: 12.7, total: 18.9 }
     ]
   },
   // Upcoming IPOs (today < openDate)
@@ -344,6 +358,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '73,68,421' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nDec 5, 2025', qibExAnchor: 3.1, nii: 2.8, niiAbove10L: 2.5, niiBelow10L: 3.2, retail: 5.4, total: 3.5 },
+      { date: 'Day 2\nDec 6, 2025', qibExAnchor: 6.8, nii: 5.9, niiAbove10L: 5.4, niiBelow10L: 6.5, retail: 8.7, total: 6.9 },
+      { date: 'Day 3\nDec 7, 2025', qibExAnchor: 12.4, nii: 10.3, niiAbove10L: 9.8, niiBelow10L: 11.2, retail: 14.6, total: 12.1 }
     ]
   },
   {
@@ -432,6 +451,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '73,38,710' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nDec 10, 2025', qibExAnchor: 2.9, nii: 3.1, niiAbove10L: 2.8, niiBelow10L: 3.4, retail: 4.8, total: 3.4 },
+      { date: 'Day 2\nDec 11, 2025', qibExAnchor: 5.7, nii: 6.2, niiAbove10L: 5.9, niiBelow10L: 6.6, retail: 8.1, total: 6.3 },
+      { date: 'Day 3\nDec 12, 2025', qibExAnchor: 9.8, nii: 11.5, niiAbove10L: 10.7, niiBelow10L: 12.4, retail: 13.2, total: 10.9 }
     ]
   },
   {
@@ -520,6 +544,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,55,75,000' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nDec 15, 2025', qibExAnchor: 4.5, nii: 3.8, niiAbove10L: 3.5, niiBelow10L: 4.2, retail: 6.1, total: 4.7 },
+      { date: 'Day 2\nDec 16, 2025', qibExAnchor: 8.9, nii: 7.6, niiAbove10L: 7.1, niiBelow10L: 8.3, retail: 10.4, total: 8.8 },
+      { date: 'Day 3\nDec 17, 2025', qibExAnchor: 14.2, nii: 13.4, niiAbove10L: 12.8, niiBelow10L: 14.1, retail: 16.7, total: 14.5 }
     ]
   },
   {
@@ -608,6 +637,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '86,33,334' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nDec 20, 2025', qibExAnchor: 3.7, nii: 4.2, niiAbove10L: 3.9, niiBelow10L: 4.6, retail: 5.8, total: 4.3 },
+      { date: 'Day 2\nDec 21, 2025', qibExAnchor: 7.4, nii: 8.1, niiAbove10L: 7.6, niiBelow10L: 8.7, retail: 9.5, total: 8.0 },
+      { date: 'Day 3\nDec 22, 2025', qibExAnchor: 11.9, nii: 13.8, niiAbove10L: 13.2, niiBelow10L: 14.5, retail: 15.3, total: 13.1 }
     ]
   },
   // Closed IPOs (already listed)
@@ -684,6 +718,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '61,76,471' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nDec 1, 2025', qibExAnchor: 2.1, nii: 1.8, niiAbove10L: 1.6, niiBelow10L: 2.1, retail: 3.5, total: 2.3 },
+      { date: 'Day 2\nDec 2, 2025', qibExAnchor: 4.8, nii: 4.2, niiAbove10L: 3.9, niiBelow10L: 4.6, retail: 6.1, total: 4.9 },
+      { date: 'Day 3\nDec 3, 2025', qibExAnchor: 9.3, nii: 8.7, niiAbove10L: 8.1, niiBelow10L: 9.4, retail: 10.8, total: 9.2 }
     ]
   },
   {
@@ -757,6 +796,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '46,32,353' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nDec 8, 2025', qibExAnchor: 3.4, nii: 2.9, niiAbove10L: 2.6, niiBelow10L: 3.3, retail: 4.7, total: 3.5 },
+      { date: 'Day 2\nDec 9, 2025', qibExAnchor: 6.9, nii: 5.8, niiAbove10L: 5.4, niiBelow10L: 6.3, retail: 8.2, total: 6.8 },
+      { date: 'Day 3\nDec 10, 2025', qibExAnchor: 12.1, nii: 10.6, niiAbove10L: 9.8, niiBelow10L: 11.5, retail: 13.9, total: 11.7 }
     ]
   },
   {
@@ -832,6 +876,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '83,33,333' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nDec 13, 2025', qibExAnchor: 4.1, nii: 3.7, niiAbove10L: 3.4, niiBelow10L: 4.1, retail: 5.9, total: 4.3 },
+      { date: 'Day 2\nDec 14, 2025', qibExAnchor: 8.2, nii: 7.4, niiAbove10L: 6.9, niiBelow10L: 8.0, retail: 9.8, total: 8.1 },
+      { date: 'Day 3\nDec 15, 2025', qibExAnchor: 13.7, nii: 12.8, niiAbove10L: 12.1, niiBelow10L: 13.6, retail: 15.4, total: 13.9 }
     ]
   },
   {
@@ -908,6 +957,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '87,50,000' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nDec 18, 2025', qibExAnchor: 2.8, nii: 3.2, niiAbove10L: 2.9, niiBelow10L: 3.6, retail: 4.5, total: 3.3 },
+      { date: 'Day 2\nDec 19, 2025', qibExAnchor: 5.6, nii: 6.1, niiAbove10L: 5.8, niiBelow10L: 6.5, retail: 7.8, total: 6.2 },
+      { date: 'Day 3\nDec 20, 2025', qibExAnchor: 9.4, nii: 10.9, niiAbove10L: 10.3, niiBelow10L: 11.6, retail: 12.7, total: 10.5 }
     ]
   },
   {
@@ -984,6 +1038,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,23,52,941' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nDec 23, 2025', qibExAnchor: 3.9, nii: 4.1, niiAbove10L: 3.8, niiBelow10L: 4.5, retail: 5.7, total: 4.4 },
+      { date: 'Day 2\nDec 24, 2025', qibExAnchor: 7.8, nii: 8.2, niiAbove10L: 7.6, niiBelow10L: 8.9, retail: 9.4, total: 8.3 },
+      { date: 'Day 3\nDec 25, 2025', qibExAnchor: 12.6, nii: 14.1, niiAbove10L: 13.4, niiBelow10L: 15.0, retail: 15.8, total: 13.9 }
     ]
   },
   {
@@ -1059,6 +1118,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '2,15,38,462' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nDec 28, 2025', qibExAnchor: 4.7, nii: 4.3, niiAbove10L: 4.0, niiBelow10L: 4.7, retail: 6.2, total: 4.9 },
+      { date: 'Day 2\nDec 29, 2025', qibExAnchor: 9.1, nii: 8.6, niiAbove10L: 8.1, niiBelow10L: 9.2, retail: 10.9, total: 9.3 },
+      { date: 'Day 3\nDec 30, 2025', qibExAnchor: 15.4, nii: 14.8, niiAbove10L: 14.1, niiBelow10L: 15.6, retail: 17.3, total: 15.7 }
     ]
   },
   {
@@ -1135,6 +1199,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,34,61,538' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nJan 2, 2026', qibExAnchor: 3.2, nii: 2.8, niiAbove10L: 2.5, niiBelow10L: 3.2, retail: 4.6, total: 3.4 },
+      { date: 'Day 2\nJan 3, 2026', qibExAnchor: 6.5, nii: 5.7, niiAbove10L: 5.3, niiBelow10L: 6.2, retail: 8.1, total: 6.6 },
+      { date: 'Day 3\nJan 4, 2026', qibExAnchor: 10.8, nii: 9.9, niiAbove10L: 9.4, niiBelow10L: 10.5, retail: 13.2, total: 11.1 }
     ]
   },
   {
@@ -1210,6 +1279,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '3,88,88,888' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nJan 7, 2026', qibExAnchor: 4.4, nii: 3.9, niiAbove10L: 3.6, niiBelow10L: 4.3, retail: 5.8, total: 4.6 },
+      { date: 'Day 2\nJan 8, 2026', qibExAnchor: 8.7, nii: 7.8, niiAbove10L: 7.3, niiBelow10L: 8.4, retail: 9.7, total: 8.6 },
+      { date: 'Day 3\nJan 9, 2026', qibExAnchor: 14.2, nii: 13.1, niiAbove10L: 12.5, niiBelow10L: 13.8, retail: 15.9, total: 14.4 }
     ]
   },
   {
@@ -1286,6 +1360,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '32,30,769' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nJan 12, 2026', qibExAnchor: 2.6, nii: 2.3, niiAbove10L: 2.1, niiBelow10L: 2.6, retail: 3.9, total: 2.8 },
+      { date: 'Day 2\nJan 13, 2026', qibExAnchor: 5.2, nii: 4.7, niiAbove10L: 4.4, niiBelow10L: 5.1, retail: 6.8, total: 5.4 },
+      { date: 'Day 3\nJan 14, 2026', qibExAnchor: 8.9, nii: 8.1, niiAbove10L: 7.6, niiBelow10L: 8.7, retail: 11.2, total: 9.1 }
     ]
   },
   {
@@ -1361,6 +1440,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '87,50,000' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nJan 17, 2026', qibExAnchor: 3.8, nii: 3.4, niiAbove10L: 3.1, niiBelow10L: 3.8, retail: 5.2, total: 4.0 },
+      { date: 'Day 2\nJan 18, 2026', qibExAnchor: 7.5, nii: 6.8, niiAbove10L: 6.4, niiBelow10L: 7.3, retail: 8.9, total: 7.6 },
+      { date: 'Day 3\nJan 19, 2026', qibExAnchor: 12.3, nii: 11.7, niiAbove10L: 11.1, niiBelow10L: 12.4, retail: 14.6, total: 12.8 }
     ]
   },
   {
@@ -1437,6 +1521,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '3,68,42,105' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nJan 22, 2026', qibExAnchor: 4.2, nii: 3.8, niiAbove10L: 3.5, niiBelow10L: 4.2, retail: 5.7, total: 4.4 },
+      { date: 'Day 2\nJan 23, 2026', qibExAnchor: 8.4, nii: 7.6, niiAbove10L: 7.1, niiBelow10L: 8.2, retail: 9.8, total: 8.5 },
+      { date: 'Day 3\nJan 24, 2026', qibExAnchor: 13.9, nii: 12.9, niiAbove10L: 12.3, niiBelow10L: 13.6, retail: 16.1, total: 14.2 }
     ]
   },
   {
@@ -1513,6 +1602,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,16,66,667' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nJan 27, 2026', qibExAnchor: 3.1, nii: 2.7, niiAbove10L: 2.4, niiBelow10L: 3.1, retail: 4.3, total: 3.3 },
+      { date: 'Day 2\nJan 28, 2026', qibExAnchor: 6.2, nii: 5.4, niiAbove10L: 5.0, niiBelow10L: 5.9, retail: 7.6, total: 6.4 },
+      { date: 'Day 3\nJan 29, 2026', qibExAnchor: 10.1, nii: 9.2, niiAbove10L: 8.7, niiBelow10L: 9.8, retail: 12.4, total: 10.3 }
     ]
   },
   // 10 NEW DUMMY CLOSED IPOS
@@ -1577,6 +1671,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '96,25,000' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nFeb 1, 2026', qibExAnchor: 4.0, nii: 3.6, niiAbove10L: 3.3, niiBelow10L: 4.0, retail: 5.5, total: 4.2 },
+      { date: 'Day 2\nFeb 2, 2026', qibExAnchor: 8.0, nii: 7.2, niiAbove10L: 6.7, niiBelow10L: 7.8, retail: 9.3, total: 8.1 },
+      { date: 'Day 3\nFeb 3, 2026', qibExAnchor: 13.2, nii: 12.1, niiAbove10L: 11.5, niiBelow10L: 12.8, retail: 15.1, total: 13.5 }
     ]
   },
   {
@@ -1640,6 +1739,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '66,37,931' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nFeb 6, 2026', qibExAnchor: 2.9, nii: 2.5, niiAbove10L: 2.2, niiBelow10L: 2.9, retail: 4.1, total: 3.1 },
+      { date: 'Day 2\nFeb 7, 2026', qibExAnchor: 5.8, nii: 5.0, niiAbove10L: 4.6, niiBelow10L: 5.5, retail: 7.2, total: 6.0 },
+      { date: 'Day 3\nFeb 8, 2026', qibExAnchor: 9.7, nii: 8.6, niiAbove10L: 8.0, niiBelow10L: 9.3, retail: 11.8, total: 9.9 }
     ]
   },
   {
@@ -1702,6 +1806,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '77,20,588' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nFeb 11, 2026', qibExAnchor: 3.5, nii: 3.1, niiAbove10L: 2.8, niiBelow10L: 3.5, retail: 4.9, total: 3.7 },
+      { date: 'Day 2\nFeb 12, 2026', qibExAnchor: 7.0, nii: 6.2, niiAbove10L: 5.7, niiBelow10L: 6.8, retail: 8.4, total: 7.1 },
+      { date: 'Day 3\nFeb 13, 2026', qibExAnchor: 11.6, nii: 10.5, niiAbove10L: 9.9, niiBelow10L: 11.2, retail: 13.7, total: 11.8 }
     ]
   },
   {
@@ -1765,6 +1874,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,07,69,231' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nFeb 16, 2026', qibExAnchor: 4.1, nii: 3.7, niiAbove10L: 3.4, niiBelow10L: 4.1, retail: 5.6, total: 4.3 },
+      { date: 'Day 2\nFeb 17, 2026', qibExAnchor: 8.2, nii: 7.4, niiAbove10L: 6.9, niiBelow10L: 7.9, retail: 9.5, total: 8.3 },
+      { date: 'Day 3\nFeb 18, 2026', qibExAnchor: 13.5, nii: 12.3, niiAbove10L: 11.7, niiBelow10L: 13.0, retail: 15.4, total: 13.7 }
     ]
   },
   {
@@ -1827,6 +1941,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,33,00,000' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nFeb 21, 2026', qibExAnchor: 3.3, nii: 2.9, niiAbove10L: 2.6, niiBelow10L: 3.3, retail: 4.7, total: 3.5 },
+      { date: 'Day 2\nFeb 22, 2026', qibExAnchor: 6.6, nii: 5.8, niiAbove10L: 5.4, niiBelow10L: 6.3, retail: 8.1, total: 6.7 },
+      { date: 'Day 3\nFeb 23, 2026', qibExAnchor: 10.9, nii: 9.8, niiAbove10L: 9.2, niiBelow10L: 10.5, retail: 13.2, total: 11.1 }
     ]
   },
   {
@@ -1890,6 +2009,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '98,43,750' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nFeb 26, 2026', qibExAnchor: 4.3, nii: 3.9, niiAbove10L: 3.6, niiBelow10L: 4.3, retail: 5.8, total: 4.5 },
+      { date: 'Day 2\nFeb 27, 2026', qibExAnchor: 8.6, nii: 7.8, niiAbove10L: 7.3, niiBelow10L: 8.4, retail: 9.7, total: 8.7 },
+      { date: 'Day 3\nFeb 28, 2026', qibExAnchor: 14.1, nii: 13.0, niiAbove10L: 12.4, niiBelow10L: 13.7, retail: 15.9, total: 14.3 }
     ]
   },
   {
@@ -1953,6 +2077,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '6,30,00,000' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nMar 3, 2026', qibExAnchor: 2.7, nii: 2.4, niiAbove10L: 2.1, niiBelow10L: 2.7, retail: 3.8, total: 2.9 },
+      { date: 'Day 2\nMar 4, 2026', qibExAnchor: 5.4, nii: 4.8, niiAbove10L: 4.4, niiBelow10L: 5.2, retail: 6.7, total: 5.6 },
+      { date: 'Day 3\nMar 5, 2026', qibExAnchor: 9.1, nii: 8.2, niiAbove10L: 7.6, niiBelow10L: 8.9, retail: 11.1, total: 9.3 }
     ]
   },
   {
@@ -2016,6 +2145,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '66,66,667' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nMar 8, 2026', qibExAnchor: 3.9, nii: 3.5, niiAbove10L: 3.2, niiBelow10L: 3.9, retail: 5.3, total: 4.1 },
+      { date: 'Day 2\nMar 9, 2026', qibExAnchor: 7.8, nii: 7.0, niiAbove10L: 6.5, niiBelow10L: 7.6, retail: 9.1, total: 8.0 },
+      { date: 'Day 3\nMar 10, 2026', qibExAnchor: 12.9, nii: 11.8, niiAbove10L: 11.2, niiBelow10L: 12.5, retail: 14.8, total: 13.1 }
     ]
   },
   {
@@ -2079,6 +2213,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '65,62,500' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nMar 13, 2026', qibExAnchor: 4.5, nii: 4.0, niiAbove10L: 3.7, niiBelow10L: 4.4, retail: 6.0, total: 4.7 },
+      { date: 'Day 2\nMar 14, 2026', qibExAnchor: 9.0, nii: 8.0, niiAbove10L: 7.4, niiBelow10L: 8.7, retail: 10.3, total: 9.2 },
+      { date: 'Day 3\nMar 15, 2026', qibExAnchor: 14.8, nii: 13.5, niiAbove10L: 12.8, niiBelow10L: 14.3, retail: 16.9, total: 15.0 }
     ]
   },
   {
@@ -2141,6 +2280,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '36,11,111' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nMar 18, 2026', qibExAnchor: 3.1, nii: 2.7, niiAbove10L: 2.4, niiBelow10L: 3.1, retail: 4.4, total: 3.3 },
+      { date: 'Day 2\nMar 19, 2026', qibExAnchor: 6.2, nii: 5.4, niiAbove10L: 5.0, niiBelow10L: 5.9, retail: 7.5, total: 6.4 },
+      { date: 'Day 3\nMar 20, 2026', qibExAnchor: 10.3, nii: 9.1, niiAbove10L: 8.5, niiBelow10L: 9.8, retail: 12.2, total: 10.5 }
     ]
   },
   {
@@ -2204,6 +2348,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '77,36,842' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nMar 23, 2026', qibExAnchor: 4.2, nii: 3.8, niiAbove10L: 3.5, niiBelow10L: 4.2, retail: 5.7, total: 4.4 },
+      { date: 'Day 2\nMar 24, 2026', qibExAnchor: 8.4, nii: 7.6, niiAbove10L: 7.1, niiBelow10L: 8.2, retail: 9.6, total: 8.5 },
+      { date: 'Day 3\nMar 25, 2026', qibExAnchor: 13.9, nii: 12.7, niiAbove10L: 12.1, niiBelow10L: 13.4, retail: 15.8, total: 14.1 }
     ]
   },
   {
@@ -2267,6 +2416,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,40,00,000' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nMar 28, 2026', qibExAnchor: 2.8, nii: 2.5, niiAbove10L: 2.2, niiBelow10L: 2.8, retail: 3.9, total: 3.0 },
+      { date: 'Day 2\nMar 29, 2026', qibExAnchor: 5.6, nii: 5.0, niiAbove10L: 4.6, niiBelow10L: 5.4, retail: 6.8, total: 5.8 },
+      { date: 'Day 3\nMar 30, 2026', qibExAnchor: 9.4, nii: 8.5, niiAbove10L: 7.9, niiBelow10L: 9.2, retail: 11.3, total: 9.6 }
     ]
   },
   {
@@ -2330,6 +2484,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '53,00,000' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nApr 2, 2026', qibExAnchor: 3.7, nii: 3.3, niiAbove10L: 3.0, niiBelow10L: 3.7, retail: 5.1, total: 3.9 },
+      { date: 'Day 2\nApr 3, 2026', qibExAnchor: 7.4, nii: 6.6, niiAbove10L: 6.1, niiBelow10L: 7.2, retail: 8.7, total: 7.6 },
+      { date: 'Day 3\nApr 4, 2026', qibExAnchor: 12.2, nii: 11.1, niiAbove10L: 10.5, niiBelow10L: 11.8, retail: 14.3, total: 12.4 }
     ]
   },
   {
@@ -2432,6 +2591,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,16,66,667' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nApr 7, 2026', qibExAnchor: 4.0, nii: 3.6, niiAbove10L: 3.3, niiBelow10L: 4.0, retail: 5.5, total: 4.2 },
+      { date: 'Day 2\nApr 8, 2026', qibExAnchor: 8.0, nii: 7.2, niiAbove10L: 6.7, niiBelow10L: 7.8, retail: 9.3, total: 8.1 },
+      { date: 'Day 3\nApr 9, 2026', qibExAnchor: 13.2, nii: 12.1, niiAbove10L: 11.5, niiBelow10L: 12.8, retail: 15.1, total: 13.5 }
     ]
   },
   {
@@ -2495,6 +2659,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '65,69,231' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nApr 12, 2026', qibExAnchor: 3.4, nii: 3.0, niiAbove10L: 2.7, niiBelow10L: 3.4, retail: 4.6, total: 3.6 },
+      { date: 'Day 2\nApr 13, 2026', qibExAnchor: 6.8, nii: 6.0, niiAbove10L: 5.5, niiBelow10L: 6.6, retail: 7.9, total: 7.0 },
+      { date: 'Day 3\nApr 14, 2026', qibExAnchor: 11.3, nii: 10.1, niiAbove10L: 9.5, niiBelow10L: 10.8, retail: 13.1, total: 11.5 }
     ]
   },
   {
@@ -2558,6 +2727,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '96,80,851' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nApr 17, 2026', qibExAnchor: 4.1, nii: 3.7, niiAbove10L: 3.4, niiBelow10L: 4.1, retail: 5.6, total: 4.3 },
+      { date: 'Day 2\nApr 18, 2026', qibExAnchor: 8.2, nii: 7.4, niiAbove10L: 6.9, niiBelow10L: 7.9, retail: 9.5, total: 8.3 },
+      { date: 'Day 3\nApr 19, 2026', qibExAnchor: 13.5, nii: 12.3, niiAbove10L: 11.7, niiBelow10L: 13.0, retail: 15.4, total: 13.7 }
     ]
   },
   {
@@ -2620,6 +2794,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '57,27,273' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nApr 22, 2026', qibExAnchor: 3.8, nii: 3.4, niiAbove10L: 3.1, niiBelow10L: 3.8, retail: 5.2, total: 4.0 },
+      { date: 'Day 2\nApr 23, 2026', qibExAnchor: 7.6, nii: 6.8, niiAbove10L: 6.3, niiBelow10L: 7.4, retail: 8.9, total: 7.7 },
+      { date: 'Day 3\nApr 24, 2026', qibExAnchor: 12.5, nii: 11.5, niiAbove10L: 10.9, niiBelow10L: 12.2, retail: 14.6, total: 12.7 }
     ]
   },
   {
@@ -2682,6 +2861,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '2,76,31,579' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nApr 27, 2026', qibExAnchor: 4.3, nii: 3.9, niiAbove10L: 3.6, niiBelow10L: 4.3, retail: 5.8, total: 4.5 },
+      { date: 'Day 2\nApr 28, 2026', qibExAnchor: 8.6, nii: 7.8, niiAbove10L: 7.3, niiBelow10L: 8.4, retail: 9.7, total: 8.7 },
+      { date: 'Day 3\nApr 29, 2026', qibExAnchor: 14.1, nii: 13.0, niiAbove10L: 12.4, niiBelow10L: 13.7, retail: 15.9, total: 14.3 }
     ]
   },
   {
@@ -2744,6 +2928,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,05,00,000' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nMay 2, 2026', qibExAnchor: 3.1, nii: 2.7, niiAbove10L: 2.4, niiBelow10L: 3.1, retail: 4.3, total: 3.3 },
+      { date: 'Day 2\nMay 3, 2026', qibExAnchor: 6.2, nii: 5.4, niiAbove10L: 5.0, niiBelow10L: 5.9, retail: 7.5, total: 6.4 },
+      { date: 'Day 3\nMay 4, 2026', qibExAnchor: 10.3, nii: 9.1, niiAbove10L: 8.5, niiBelow10L: 9.8, retail: 12.2, total: 10.5 }
     ]
   },
   {
@@ -2807,6 +2996,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,16,66,667' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nMay 7, 2026', qibExAnchor: 4.0, nii: 3.6, niiAbove10L: 3.3, niiBelow10L: 4.0, retail: 5.5, total: 4.2 },
+      { date: 'Day 2\nMay 8, 2026', qibExAnchor: 8.0, nii: 7.2, niiAbove10L: 6.7, niiBelow10L: 7.8, retail: 9.3, total: 8.1 },
+      { date: 'Day 3\nMay 9, 2026', qibExAnchor: 13.2, nii: 12.1, niiAbove10L: 11.5, niiBelow10L: 12.8, retail: 15.1, total: 13.5 }
     ]
   },
   {
@@ -2870,6 +3064,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '43,75,000' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nMay 12, 2026', qibExAnchor: 3.7, nii: 3.3, niiAbove10L: 3.0, niiBelow10L: 3.7, retail: 5.1, total: 3.9 },
+      { date: 'Day 2\nMay 13, 2026', qibExAnchor: 7.4, nii: 6.6, niiAbove10L: 6.1, niiBelow10L: 7.2, retail: 8.7, total: 7.6 },
+      { date: 'Day 3\nMay 14, 2026', qibExAnchor: 12.2, nii: 11.1, niiAbove10L: 10.5, niiBelow10L: 11.8, retail: 14.3, total: 12.4 }
     ]
   },
   {
@@ -2932,6 +3131,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,37,50,000' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nMay 17, 2026', qibExAnchor: 4.2, nii: 3.8, niiAbove10L: 3.5, niiBelow10L: 4.2, retail: 5.7, total: 4.4 },
+      { date: 'Day 2\nMay 18, 2026', qibExAnchor: 8.4, nii: 7.6, niiAbove10L: 7.1, niiBelow10L: 8.2, retail: 9.6, total: 8.5 },
+      { date: 'Day 3\nMay 19, 2026', qibExAnchor: 13.9, nii: 12.7, niiAbove10L: 12.1, niiBelow10L: 13.4, retail: 15.8, total: 14.1 }
     ]
   },
   {
@@ -2995,6 +3199,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,08,33,333' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nDec 7, 2020', qibExAnchor: 2.1, nii: 3.2, niiAbove10L: 2.8, niiBelow10L: 3.6, retail: 4.5, total: 3.1 },
+      { date: 'Day 2\nDec 8, 2020', qibExAnchor: 4.2, nii: 6.4, niiAbove10L: 5.6, niiBelow10L: 7.2, retail: 7.1, total: 5.8 },
+      { date: 'Day 3\nDec 9, 2020', qibExAnchor: 7.1, nii: 10.8, niiAbove10L: 9.5, niiBelow10L: 12.1, retail: 11.9, total: 9.7 }
     ]
   },
   {
@@ -3058,6 +3267,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '91,00,000' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nNov 5, 2020', qibExAnchor: 12.5, nii: 16.0, niiAbove10L: 14.2, niiBelow10L: 18.1, retail: 9.1, total: 12.8 },
+      { date: 'Day 2\nNov 6, 2020', qibExAnchor: 25.0, nii: 32.1, niiAbove10L: 28.4, niiBelow10L: 36.2, retail: 18.2, total: 25.7 },
+      { date: 'Day 3\nNov 7, 2020', qibExAnchor: 41.7, nii: 53.5, niiAbove10L: 47.3, niiBelow10L: 60.3, retail: 30.3, total: 42.8 }
     ]
   },
   {
@@ -3120,6 +3334,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '85,55,556' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nOct 12, 2020', qibExAnchor: 1.9, nii: 2.5, niiAbove10L: 2.2, niiBelow10L: 2.9, retail: 1.2, total: 2.0 },
+      { date: 'Day 2\nOct 13, 2020', qibExAnchor: 3.8, nii: 5.1, niiAbove10L: 4.4, niiBelow10L: 5.8, retail: 2.4, total: 3.9 },
+      { date: 'Day 3\nOct 14, 2020', qibExAnchor: 6.3, nii: 8.5, niiAbove10L: 7.3, niiBelow10L: 9.7, retail: 4.0, total: 6.5 }
     ]
   },
   {
@@ -3183,6 +3402,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '92,10,526' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nSep 5, 2020', qibExAnchor: 5.0, nii: 6.0, niiAbove10L: 5.4, niiBelow10L: 6.8, retail: 2.6, total: 4.7 },
+      { date: 'Day 2\nSep 6, 2020', qibExAnchor: 10.1, nii: 12.1, niiAbove10L: 10.8, niiBelow10L: 13.6, retail: 5.1, total: 9.4 },
+      { date: 'Day 3\nSep 7, 2020', qibExAnchor: 16.8, nii: 20.2, niiAbove10L: 18.0, niiBelow10L: 22.7, retail: 8.5, total: 15.6 }
     ]
   },
   {
@@ -3245,6 +3469,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,88,46,154' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nAug 10, 2020', qibExAnchor: 0.4, nii: 0.5, niiAbove10L: 0.4, niiBelow10L: 0.6, retail: 0.3, total: 0.4 },
+      { date: 'Day 2\nAug 11, 2020', qibExAnchor: 0.7, nii: 1.0, niiAbove10L: 0.9, niiBelow10L: 1.2, retail: 0.7, total: 0.8 },
+      { date: 'Day 3\nAug 12, 2020', qibExAnchor: 1.2, nii: 1.7, niiAbove10L: 1.5, niiBelow10L: 2.0, retail: 1.2, total: 1.3 }
     ]
   },
   {
@@ -3308,6 +3537,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '74,88,372' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nJul 5, 2020', qibExAnchor: 6.4, nii: 9.6, niiAbove10L: 8.5, niiBelow10L: 11.0, retail: 3.7, total: 6.1 },
+      { date: 'Day 2\nJul 6, 2020', qibExAnchor: 12.9, nii: 19.3, niiAbove10L: 17.1, niiBelow10L: 22.0, retail: 7.5, total: 12.2 },
+      { date: 'Day 3\nJul 7, 2020', qibExAnchor: 21.5, nii: 32.2, niiAbove10L: 28.5, niiBelow10L: 36.7, retail: 12.5, total: 20.3 }
     ]
   },
   {
@@ -3370,6 +3604,11 @@ export const MOCK_IPOS: IPO[] = [
         ]
       },
       { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '91,87,500' }
+    ],
+    subscriptionTrend: [
+      { date: 'Day 1\nJun 12, 2020', qibExAnchor: 0.2, nii: 0.3, niiAbove10L: 0.3, niiBelow10L: 0.4, retail: 0.2, total: 0.3 },
+      { date: 'Day 2\nJun 13, 2020', qibExAnchor: 0.5, nii: 0.7, niiAbove10L: 0.6, niiBelow10L: 0.8, retail: 0.5, total: 0.6 },
+      { date: 'Day 3\nJun 14, 2020', qibExAnchor: 0.8, nii: 1.1, niiAbove10L: 1.0, niiBelow10L: 1.3, retail: 0.8, total: 0.9 }
     ]
   }
 ];

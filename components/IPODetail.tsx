@@ -420,11 +420,51 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
 
             {activeTab === 'Subscription' && (
               <div className="space-y-4 sm:space-y-6 animate-fade-in">
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-4 sm:mb-6">Subscription Status (To Fix)</h3>
+                <p className="text-sm sm:text-base text-slate-700 mb-3 sm:mb-4">The <span className="font-semibold text-slate-900">{ipo.name} IPO</span> is subscribed <span className="font-semibold text-slate-900">{ipo.subscription.total}x</span> so far. The public issue (retail) is subscribed <span className="font-semibold text-slate-900">{ipo.subscription.retail}x</span>, QIB (ex-Anchor) is subscribed <span className="font-semibold text-slate-900">{ipo.subscription.qib}x</span>, and NII is subscribed <span className="font-semibold text-slate-900">{ipo.subscription.nii}x</span>. Data updated on //Time// </p>
                  <div className="grid grid-cols-3 gap-3 sm:gap-4">
                     <SubscriptionStat label="QIB" value={`${ipo.subscription.qib}x`} color="text-purple-600" />
                     <SubscriptionStat label="NII" value={`${ipo.subscription.nii}x`} color="text-blue-600" />
                     <SubscriptionStat label="Retail" value={`${ipo.subscription.retail}x`} color="text-indigo-600" />
                  </div>
+
+                 {ipo.subscriptionTrend && ipo.subscriptionTrend.length > 0 && (
+                   <div className="bg-white p-5 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200 shadow-sm">
+                     <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-4 sm:mb-6">Subscription Trend</h3>
+                     <div className="overflow-x-auto">
+                       <table className="w-full text-sm sm:text-base">
+                         <thead>
+                           <tr className="border-b-2 border-slate-200 bg-slate-50">
+                             <th className="text-left py-3 px-3 text-slate-800 font-semibold">Date</th>
+                             <th className="text-right py-3 px-3 text-slate-800 font-semibold">QIB (Ex Anchor)</th>
+                             <th className="text-right py-3 px-3 text-slate-800 font-semibold">NII</th>
+                             <th className="text-right py-3 px-3 text-slate-800 font-semibold">NII (&gt; ₹10L)</th>
+                             <th className="text-right py-3 px-3 text-slate-800 font-semibold">NII (&lt; ₹10L)</th>
+                             <th className="text-right py-3 px-3 text-slate-800 font-semibold">Retail</th>
+                             <th className="text-right py-3 px-3 text-slate-800 font-semibold">Total</th>
+                           </tr>
+                         </thead>
+                         <tbody>
+                           {ipo.subscriptionTrend.map((row, idx) => (
+                             <tr key={idx} className={`${idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'} ${idx < ipo.subscriptionTrend!.length - 1 ? 'border-b border-slate-100' : ''} hover:bg-slate-100/50 transition-colors`}>
+                               <td className="py-3 px-3 text-slate-700 font-medium">
+                                 {row.date.split('\n').map((line, i) => (
+                                   <div key={i} className={i === 0 ? 'font-semibold' : 'text-slate-500 text-sm'}>{line}</div>
+                                 ))}
+                               </td>
+                               <td className="py-3 px-3 text-right font-semibold text-slate-900">{row.qibExAnchor}x</td>
+                               <td className="py-3 px-3 text-right font-semibold text-slate-900">{row.nii}x</td>
+                               <td className="py-3 px-3 text-right font-semibold text-slate-900">{row.niiAbove10L}x</td>
+                               <td className="py-3 px-3 text-right font-semibold text-slate-900">{row.niiBelow10L}x</td>
+                               <td className="py-3 px-3 text-right font-semibold text-slate-900">{row.retail}x</td>
+                               <td className="py-3 px-3 text-right font-bold text-slate-900">{row.total}x</td>
+                             </tr>
+                           ))}
+                         </tbody>
+                       </table>
+                     </div>
+                   </div>
+                 )}
               </div>
             )}
 
