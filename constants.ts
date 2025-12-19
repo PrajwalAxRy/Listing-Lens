@@ -110,7 +110,7 @@ export const MOCK_IPOS: IPO[] = [
     subscription: {
       qib: 2.1,
       nii: 1.5,
-      retail: 3.2,
+      retail: 5,
       total: 2.4,
     },
     description: 'GreenEarth Energy specializes in renewable solar and wind power generation assets across Western India.',

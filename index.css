@@ -341,3 +341,17 @@ textarea {
     opacity: 0.3;
   }
 }
+
+/* Subtle pulse animation for allotment chances card */
+@keyframes pulse-subtle {
+  0%, 100% { 
+    transform: scale(1);
+  }
+  50% { 
+    transform: scale(1.01);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}

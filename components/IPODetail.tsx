@@ -5,7 +5,8 @@ import {
   ArrowLeft, Calendar, FileText, ShieldCheck, 
   AlertTriangle, DollarSign, PieChart as PieChartIcon, 
   TrendingUp, CheckCircle2, Clock, BookOpen, Calculator,
-  ChevronDown, ChevronRight, Plus, Minus
+  ChevronDown, ChevronRight, Plus, Minus, Flame, Zap, 
+  Star, Trophy, Users
 } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
 
@@ -30,6 +31,14 @@ const getApplicationDetailsWithAmount = (details: { category: string; lots: numb
     shares,
     amount: shares * maxPrice,
   }));
+};
+
+// Calculate allotment chances based on retail subscription
+const calculateAllotmentChances = (retailSubscription: number) => {
+  if (retailSubscription <= 0) return { percentage: 100, ratio: 1 };
+  const percentage = Math.min((1 / retailSubscription) * 100, 100);
+  const ratio = Math.round(retailSubscription);
+  return { percentage, ratio };
 };
 
 export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
@@ -422,10 +431,12 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
               <div className="space-y-4 sm:space-y-6 animate-fade-in">
                 <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-4 sm:mb-6">Subscription Status (To Fix)</h3>
                 <p className="text-sm sm:text-base text-slate-700 mb-3 sm:mb-4">The <span className="font-semibold text-slate-900">{ipo.name} IPO</span> is subscribed <span className="font-semibold text-slate-900">{ipo.subscription.total}x</span> so far. The public issue (retail) is subscribed <span className="font-semibold text-slate-900">{ipo.subscription.retail}x</span>, QIB (ex-Anchor) is subscribed <span className="font-semibold text-slate-900">{ipo.subscription.qib}x</span>, and NII is subscribed <span className="font-semibold text-slate-900">{ipo.subscription.nii}x</span>. Data updated on //Time// </p>
-                 <div className="grid grid-cols-3 gap-3 sm:gap-4">
+                 
+                 <div className="grid grid-cols-4 gap-3 sm:gap-4">
                     <SubscriptionStat label="QIB" value={`${ipo.subscription.qib}x`} color="text-purple-600" />
                     <SubscriptionStat label="NII" value={`${ipo.subscription.nii}x`} color="text-blue-600" />
                     <SubscriptionStat label="Retail" value={`${ipo.subscription.retail}x`} color="text-indigo-600" />
+                    <AllotmentChances retailSubscription={ipo.subscription.retail} />
                  </div>
 
                  {ipo.subscriptionTrend && ipo.subscriptionTrend.length > 0 && (
@@ -557,8 +568,94 @@ const DetailRow: React.FC<{ label: string; value: string }> = ({ label, value })
 );
 
 const SubscriptionStat: React.FC<{ label: string; value: string; color: string }> = ({ label, value, color }) => (
-  <div className="bg-slate-50 p-4 sm:p-5 rounded-xl text-center border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-    <p className="text-sm text-slate-600 mb-1.5 font-medium">{label}</p>
-    <p className={`text-xl sm:text-2xl font-bold ${color}`}>{value}</p>
+  <div className="bg-slate-50 p-4 sm:p-5 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow">
+    <div className="absolute -right-6 -top-6 w-24 h-24 rounded-full bg-white/60 blur-2xl transition-transform group-hover:scale-150 duration-700"></div>
+    
+    <div className="relative z-10">
+      <div className="flex justify-between items-start mb-2">
+        <p className="text-sm font-bold text-slate-500">{label}</p>
+      </div>
+      
+      <div className="flex items-baseline gap-2 mt-1">
+        <span className={`text-3xl sm:text-4xl font-bold ${color}`}>{value}</span>
+      </div>
+    </div>
   </div>
 );
+
+const AllotmentChances: React.FC<{ retailSubscription: number }> = ({ retailSubscription }) => {
+  const { percentage } = calculateAllotmentChances(retailSubscription);
+  
+  // Determine tier based on percentage
+  let tier: 'high' | 'medium' | 'low' | 'veryLow';
+  let icon: React.ReactNode;
+
+  if (percentage > 25) {
+    tier = 'high';
+    icon = null;
+  } else if (percentage > 10) {
+    tier = 'medium';
+    icon = null;
+  } else if (percentage > 1) {
+    tier = 'low';
+    icon = <Flame className="w-5 h-5" />;
+  } else {
+    tier = 'veryLow';
+    icon = <Flame className="w-5 h-5" />;
+  }
+  
+  const config = {
+    high: {
+      bg: 'bg-gradient-to-br from-cyan-50 to-cyan-100',
+      border: 'border-cyan-200',
+      text: 'text-cyan-900',
+      subtext: 'text-cyan-700',
+      iconBg: 'bg-cyan-200',
+    },
+    medium: {
+      bg: 'bg-gradient-to-br from-indigo-50 to-indigo-100',
+      border: 'border-indigo-200',
+      text: 'text-indigo-900',
+      subtext: 'text-indigo-700',
+      iconBg: 'bg-indigo-200',
+    },
+    low: {
+      bg: 'bg-gradient-to-br from-orange-50 to-orange-100',
+      border: 'border-orange-200',
+      text: 'text-orange-900',
+      subtext: 'text-orange-700',
+      iconBg: 'bg-orange-200',
+    },
+    veryLow: {
+      bg: 'bg-gradient-to-br from-amber-50 to-amber-100',
+      border: 'border-amber-200',
+      text: 'text-amber-900',
+      subtext: 'text-amber-700',
+      iconBg: 'bg-amber-200',
+    }
+  }[tier];
+  
+  return (
+    <div className={`${config.bg} p-4 sm:p-5 rounded-xl border ${config.border} shadow-sm relative overflow-hidden group`}>
+      {/* Background Pattern/Decoration */}
+      <div className="absolute -right-6 -top-6 w-24 h-24 rounded-full bg-white/40 blur-2xl transition-transform group-hover:scale-150 duration-700"></div>
+      
+      <div className="relative z-10">
+        <div className="flex justify-between items-start mb-2">
+          <p className={`text-sm font-bold ${config.subtext}`}>Allotment Probability</p>
+          {icon && (
+            <div className={`${config.iconBg} p-1.5 rounded-lg ${config.text} shadow-sm`}>
+              {icon}
+            </div>
+          )}
+        </div>
+        
+        <div className="flex items-baseline gap-2 mt-1">
+          <span className={`text-3xl sm:text-4xl font-bold ${config.text}`}>
+            {percentage < 1 ? percentage.toFixed(2) : percentage.toFixed(0)}%
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};
