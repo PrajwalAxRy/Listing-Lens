@@ -21,9 +21,11 @@ interface DashboardProps {
   onIpoSelect: (ipoId: string) => void;
   watchlist: string[];
   onToggleWatchlist: (ipoId: string) => void;
+  activeTab: TabKey;
+  onTabChange: (tab: TabKey) => void;
 }
 
-type TabKey = IPOStatus | 'Watchlist';
+export type TabKey = IPOStatus | 'Watchlist';
 
 const searchableTabs: TabKey[] = ['Active', 'Upcoming', 'Closed'];
 const initialSearchQueries: Record<TabKey, string> = {
@@ -126,8 +128,7 @@ const getIPOStatus = (ipo: IPO): IPOStatus => {
   }
 };
 
-export const Dashboard: React.FC<DashboardProps> = ({ onIpoSelect, watchlist, onToggleWatchlist }) => {
-  const [activeTab, setActiveTab] = useState<TabKey>('Active');
+export const Dashboard: React.FC<DashboardProps> = ({ onIpoSelect, watchlist, onToggleWatchlist, activeTab, onTabChange }) => {
   const [searchQueries, setSearchQueries] = useState<Record<TabKey, string>>(initialSearchQueries);
 
   const grouped = useMemo(() => {
@@ -298,7 +299,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onIpoSelect, watchlist, on
           {tabConfig.map((tab) => (
             <button
               key={tab.key}
-              onClick={() => setActiveTab(tab.key)}
+              onClick={() => onTabChange(tab.key)}
               className={`rounded-2xl border px-4 py-2 text-sm font-semibold transition ${
                 activeTab === tab.key
                   ? 'border-[#2563EB] bg-blue-50 text-[#2563EB] shadow-sm'

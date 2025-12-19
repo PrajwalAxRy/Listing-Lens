@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Navigate, Route, Routes, useNavigate } from 'react-router-dom';
 import { Layout } from './components/Layout';
-import { Dashboard } from './components/Dashboard';
+import { Dashboard, TabKey } from './components/Dashboard';
 import { IPODetail } from './components/IPODetail';
 import { HowToApplyIPO } from './components/guides/HowToApplyIPO';
 import { CheckAllotmentStatus } from './components/guides/CheckAllotmentStatus';
@@ -15,6 +15,7 @@ const App: React.FC = () => {
   const [view, setView] = useState<ViewState>('dashboard');
   const [selectedIpoId, setSelectedIpoId] = useState<string | null>(null);
   const [watchlist, setWatchlist] = useState<string[]>([]);
+  const [activeTab, setActiveTab] = useState<TabKey>('Active');
 
   const handleIpoSelect = (ipoId: string) => {
     setSelectedIpoId(ipoId);
@@ -51,6 +52,8 @@ const App: React.FC = () => {
           onIpoSelect={handleIpoSelect} 
           watchlist={watchlist}
           onToggleWatchlist={toggleWatchlist}
+          activeTab={activeTab}
+          onTabChange={setActiveTab}
         />
       )}
       
