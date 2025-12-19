@@ -38,12 +38,6 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
   const gmpPercent = upperPriceBand > 0 ? (ipo.gmp / upperPriceBand) * 100 : null;
   const companySummary = ipo.summary ?? ipo.description;
 
-  const subscriptionData = [
-    { name: 'QIB', value: ipo.subscription.qib },
-    { name: 'NII', value: ipo.subscription.nii },
-    { name: 'Retail', value: ipo.subscription.retail },
-  ];
-
   const gmpTrendData = [
     { day: 'Day 1', price: ipo.gmp * 0.8 },
     { day: 'Day 2', price: ipo.gmp * 0.9 },
@@ -353,25 +347,6 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
 
             {activeTab === 'Subscription' && (
               <div className="space-y-4 sm:space-y-6 animate-fade-in">
-                 <div className="bg-white p-4 sm:p-6 rounded-2xl border border-slate-200">
-                    <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-4 sm:mb-6 flex items-center">
-                      <PieChartIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-indigo-500" /> Category Subscription
-                    </h3>
-                    <div className="h-[250px] sm:h-[300px] w-full">
-                      <ResponsiveContainer width="100%" height="100%">
-                        <BarChart data={subscriptionData} layout="vertical">
-                          <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} stroke="#f1f5f9" />
-                          <XAxis type="number" hide />
-                          <YAxis dataKey="name" type="category" tick={{fontSize: 12, fill: '#64748b'}} width={50} />
-                          <Tooltip 
-                            cursor={{fill: '#f8fafc'}}
-                            contentStyle={{borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)', fontSize: '12px'}}
-                          />
-                          <Bar dataKey="value" fill="#4f46e5" radius={[0, 4, 4, 0]} barSize={32} />
-                        </BarChart>
-                      </ResponsiveContainer>
-                    </div>
-                 </div>
                  <div className="grid grid-cols-3 gap-3 sm:gap-4">
                     <SubscriptionStat label="QIB" value={`${ipo.subscription.qib}x`} color="text-purple-600" />
                     <SubscriptionStat label="NII" value={`${ipo.subscription.nii}x`} color="text-blue-600" />
