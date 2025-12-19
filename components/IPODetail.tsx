@@ -4,7 +4,8 @@ import { IPO } from '../types';
 import { 
   ArrowLeft, Calendar, FileText, ShieldCheck, 
   AlertTriangle, DollarSign, PieChart as PieChartIcon, 
-  TrendingUp, CheckCircle2, Clock, BookOpen, Calculator
+  TrendingUp, CheckCircle2, Clock, BookOpen, Calculator,
+  ChevronDown, ChevronRight, Plus, Minus
 } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
 
@@ -34,6 +35,19 @@ const getApplicationDetailsWithAmount = (details: { category: string; lots: numb
 export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('Overview');
+  const [expandedReservations, setExpandedReservations] = useState<Set<string>>(new Set());
+
+  const toggleReservationExpand = (category: string) => {
+    setExpandedReservations(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(category)) {
+        newSet.delete(category);
+      } else {
+        newSet.add(category);
+      }
+      return newSet;
+    });
+  };
   const upperPriceBand = ipo.priceBand.max;
   const gmpPercent = upperPriceBand > 0 ? (ipo.gmp / upperPriceBand) * 100 : null;
   const companySummary = ipo.summary ?? ipo.description;
@@ -281,6 +295,65 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
                      <p className="text-sm text-slate-500">Promoter holdings not available for this IPO.</p>
                    )}
                 </div>
+
+                 <div className="bg-white p-5 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200 shadow-sm">
+                   {ipo.ipoReservation && ipo.ipoReservation.length > 0 ? (
+                     <div className="overflow-x-auto">
+                       <table className="w-full text-sm sm:text-base">
+                         <thead>
+                           <tr className="border-b-2 border-slate-200 bg-slate-50">
+                             <th className="text-left py-3 px-3 text-black-800 font-semibold">Investor Category</th>
+                             <th className="text-right py-3 px-3 text-black-800 font-semibold">Shares Offered (%)</th>
+                             <th className="text-right py-3 px-3 text-black-800 font-semibold">Shares Offered</th>
+                           </tr>
+                         </thead>
+                         <tbody>
+                           {ipo.ipoReservation.map((reservation, idx) => {
+                             const hasChildren = reservation.children && reservation.children.length > 0;
+                             const isExpanded = expandedReservations.has(reservation.category);
+                             return (
+                               <React.Fragment key={idx}>
+                                 <tr className={`${idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'} ${idx < ipo.ipoReservation!.length - 1 && !isExpanded ? 'border-b border-slate-100' : ''} hover:bg-slate-100/50 transition-colors`}>
+                                   <td className="py-3 px-3 text-slate-700 font-medium">
+                                     <div className="flex items-center gap-2">
+                                       {hasChildren ? (
+                                         <button
+                                           onClick={() => toggleReservationExpand(reservation.category)}
+                                           className="w-5 h-5 flex items-center justify-center rounded bg-slate-200 hover:bg-slate-300 transition-colors"
+                                         >
+                                           {isExpanded ? <Minus className="w-3 h-3 text-slate-600" /> : <Plus className="w-3 h-3 text-slate-600" />}
+                                         </button>
+                                       ) : (
+                                         <span className="w-5" />
+                                       )}
+                                       {reservation.category}
+                                     </div>
+                                   </td>
+                                   <td className="py-3 px-3 text-right font-semibold text-slate-900">{reservation.sharesOfferedPercent}</td>
+                                   <td className="py-3 px-3 text-right font-semibold text-slate-900">{reservation.sharesOfferedRaw}</td>
+                                 </tr>
+                                 {hasChildren && isExpanded && reservation.children!.map((child, childIdx) => (
+                                   <tr key={`${idx}-${childIdx}`} className={`bg-slate-50/80 ${childIdx < reservation.children!.length - 1 ? 'border-b border-slate-100' : 'border-b border-slate-200'} hover:bg-slate-100/50 transition-colors`}>
+                                     <td className="py-2.5 px-3 pl-10 text-slate-600 text-sm">
+                                       <div className="flex items-center gap-2">
+                                         <span className="w-1.5 h-1.5 rounded-full bg-slate-400" />
+                                         {child.category}
+                                       </div>
+                                     </td>
+                                     <td className="py-2.5 px-3 text-right font-medium text-slate-700 text-sm">{child.sharesOfferedPercent}</td>
+                                     <td className="py-2.5 px-3 text-right font-medium text-slate-700 text-sm">{child.sharesOfferedRaw}</td>
+                                   </tr>
+                                 ))}
+                               </React.Fragment>
+                             );
+                           })}
+                         </tbody>
+                       </table>
+                     </div>
+                   ) : (
+                     <p className="text-sm text-slate-500">IPO reservation details not available.</p>
+                   )}
+                 </div>
 
                  <div className="bg-white p-5 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200 shadow-sm">
                     {(() => {

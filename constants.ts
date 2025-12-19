@@ -65,6 +65,28 @@ export const MOCK_IPOS: IPO[] = [
     promoterHoldings: [
       { category: 'Promoter Group', preOffer: '65.20%', postOffer: '52.16%' },
       { category: 'Public', preOffer: '34.80%', postOffer: '47.84%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '1,77,08,333' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '88,54,166',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '53,12,500' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '35,41,666' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '26,56,250',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '17,70,833' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '8,85,417' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '61,97,917' }
     ]
   },
   {
@@ -130,6 +152,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '72.50%', postOffer: '58.00%' },
       { category: 'Institutional Investors', preOffer: '18.30%', postOffer: '28.64%' },
       { category: 'Public', preOffer: '9.20%', postOffer: '13.36%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '19,20,00,000' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '9,60,00,000',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '5,76,00,000' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '3,84,00,000' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '2,88,00,000',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '1,92,00,000' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '96,00,000' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '6,72,00,000' }
     ]
   },
   {
@@ -189,6 +233,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '58.40%', postOffer: '45.12%' },
       { category: 'PE/VC Investors', preOffer: '32.60%', postOffer: '38.68%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '16.20%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '2,79,06,977' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,39,53,488',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '83,72,093' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '55,81,395' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '41,86,047',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '27,90,698' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '13,95,349' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '97,67,442' }
     ]
   },
   // Upcoming IPOs (today < openDate)
@@ -256,6 +322,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '68.50%', postOffer: '54.80%' },
       { category: 'Institutional Investors', preOffer: '22.30%', postOffer: '31.04%' },
       { category: 'Public', preOffer: '9.20%', postOffer: '14.16%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '2,10,52,632' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,05,26,316',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '63,15,790' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '42,10,526' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '31,57,895',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '21,05,263' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '10,52,632' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '73,68,421' }
     ]
   },
   {
@@ -322,6 +410,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '55.80%', postOffer: '44.64%' },
       { category: 'PE/VC Investors', preOffer: '35.20%', postOffer: '42.16%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '13.20%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '2,09,67,742' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,04,83,871',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '62,90,323' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '41,93,548' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '31,45,161',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '20,96,774' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '10,48,387' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '73,38,710' }
     ]
   },
   {
@@ -388,6 +498,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '62.40%', postOffer: '49.92%' },
       { category: 'PE Investors', preOffer: '28.60%', postOffer: '35.88%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '14.20%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '4,45,00,000' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '2,22,50,000',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '1,33,50,000' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '89,00,000' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '66,75,000',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '44,50,000' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '22,25,000' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,55,75,000' }
     ]
   },
   {
@@ -454,6 +586,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '58.20%', postOffer: '46.56%' },
       { category: 'Strategic Investors', preOffer: '32.80%', postOffer: '39.04%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '14.40%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '2,46,66,667' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,23,33,333',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '74,00,000' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '49,33,333' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '37,00,000',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '24,66,667' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '12,33,333' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '86,33,334' }
     ]
   },
   // Closed IPOs (already listed)
@@ -508,6 +662,28 @@ export const MOCK_IPOS: IPO[] = [
     promoterHoldings: [
       { category: 'Promoter Group', preOffer: '75.20%', postOffer: '45.12%' },
       { category: 'Public', preOffer: '24.80%', postOffer: '54.88%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '1,76,47,059' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '88,23,529',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '52,94,118' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '35,29,411' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '26,47,059',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '17,64,706' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '8,82,353' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '61,76,471' }
     ]
   },
   {
@@ -559,6 +735,28 @@ export const MOCK_IPOS: IPO[] = [
     promoterHoldings: [
       { category: 'Promoter Group', preOffer: '82.50%', postOffer: '70.13%' },
       { category: 'Public', preOffer: '17.50%', postOffer: '29.87%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '1,32,35,294' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '66,17,647',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '39,70,588' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '26,47,059' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '19,85,294',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '13,23,529' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '6,61,765' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '46,32,353' }
     ]
   },
   {
@@ -612,6 +810,28 @@ export const MOCK_IPOS: IPO[] = [
     promoterHoldings: [
       { category: 'Promoter Group', preOffer: '72.80%', postOffer: '58.24%' },
       { category: 'Public', preOffer: '27.20%', postOffer: '41.76%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '2,38,09,524' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,19,04,762',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '71,42,857' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '47,61,905' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '35,71,429',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '23,80,952' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '11,90,476' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '83,33,333' }
     ]
   },
   {
@@ -666,6 +886,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '68.50%', postOffer: '54.80%' },
       { category: 'PE Investors', preOffer: '22.50%', postOffer: '31.50%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '13.70%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '2,50,00,000' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,25,00,000',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '75,00,000' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '50,00,000' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '37,50,000',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '25,00,000' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '12,50,000' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '87,50,000' }
     ]
   },
   {
@@ -720,6 +962,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '45.20%', postOffer: '36.16%' },
       { category: 'VC/PE Investors', preOffer: '48.80%', postOffer: '55.04%' },
       { category: 'Public', preOffer: '6.00%', postOffer: '8.80%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '3,52,94,118' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,76,47,059',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '1,05,88,235' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '70,58,824' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '52,94,118',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '35,29,412' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '17,64,706' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,23,52,941' }
     ]
   },
   {
@@ -773,6 +1037,28 @@ export const MOCK_IPOS: IPO[] = [
     promoterHoldings: [
       { category: 'Promoter Group', preOffer: '78.50%', postOffer: '62.80%' },
       { category: 'Public', preOffer: '21.50%', postOffer: '37.20%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '6,15,38,462' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '3,07,69,231',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '1,84,61,539' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '1,23,07,692' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '92,30,769',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '61,53,846' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '30,76,923' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '2,15,38,462' }
     ]
   },
   {
@@ -827,6 +1113,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '52.80%', postOffer: '42.24%' },
       { category: 'PE Investors', preOffer: '38.20%', postOffer: '45.84%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '11.92%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '3,84,61,538' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,92,30,769',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '1,15,38,462' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '76,92,307' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '57,69,231',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '38,46,154' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '19,23,077' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,34,61,538' }
     ]
   },
   {
@@ -880,6 +1188,28 @@ export const MOCK_IPOS: IPO[] = [
     promoterHoldings: [
       { category: 'Promoter Group', preOffer: '85.20%', postOffer: '51.12%' },
       { category: 'Public', preOffer: '14.80%', postOffer: '48.88%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '11,11,11,111' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '5,55,55,556',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '3,33,33,333' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '2,22,22,223' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '1,66,66,667',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '1,11,11,111' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '55,55,556' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '3,88,88,888' }
     ]
   },
   {
@@ -934,6 +1264,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '62.50%', postOffer: '50.00%' },
       { category: 'PE/VC Investors', preOffer: '28.50%', postOffer: '35.63%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '14.37%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '92,30,769' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '46,15,385',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '27,69,231' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '18,46,154' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '13,84,615',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '9,23,077' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '4,61,538' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '32,30,769' }
     ]
   },
   {
@@ -987,6 +1339,28 @@ export const MOCK_IPOS: IPO[] = [
     promoterHoldings: [
       { category: 'Promoter Group', preOffer: '75.80%', postOffer: '60.64%' },
       { category: 'Public', preOffer: '24.20%', postOffer: '39.36%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '2,50,00,000' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,25,00,000',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '75,00,000' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '50,00,000' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '37,50,000',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '25,00,000' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '12,50,000' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '87,50,000' }
     ]
   },
   {
@@ -1041,6 +1415,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '68.50%', postOffer: '54.80%' },
       { category: 'PE Investors', preOffer: '22.50%', postOffer: '32.78%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '12.42%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '10,52,63,158' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '5,26,31,579',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '3,15,78,947' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '2,10,52,632' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '1,57,89,474',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '1,05,26,316' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '52,63,158' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '3,68,42,105' }
     ]
   },
   {
@@ -1095,6 +1491,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '72.50%', postOffer: '58.00%' },
       { category: 'PE Investors', preOffer: '18.50%', postOffer: '28.30%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '13.70%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '3,33,33,333' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,66,66,667',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '1,00,00,000' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '66,66,667' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '50,00,000',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '33,33,333' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '16,66,667' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,16,66,667' }
     ]
   },
   // 10 NEW DUMMY CLOSED IPOS
@@ -1137,6 +1555,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '58.50%', postOffer: '46.80%' },
       { category: 'VC Investors', preOffer: '32.50%', postOffer: '39.00%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '14.20%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '2,75,00,000' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,37,50,000',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '82,50,000' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '55,00,000' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '41,25,000',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '27,50,000' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '13,75,000' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '96,25,000' }
     ]
   },
   {
@@ -1178,6 +1618,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '68.50%', postOffer: '54.80%' },
       { category: 'PE Investors', preOffer: '22.50%', postOffer: '32.60%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '12.60%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '1,89,65,517' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '94,82,759',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '56,89,655' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '37,93,104' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '28,44,828',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '18,96,552' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '9,48,276' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '66,37,931' }
     ]
   },
   {
@@ -1218,6 +1680,28 @@ export const MOCK_IPOS: IPO[] = [
     promoterHoldings: [
       { category: 'Promoter Group', preOffer: '78.50%', postOffer: '62.80%' },
       { category: 'Public', preOffer: '21.50%', postOffer: '37.20%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '2,20,58,824' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,10,29,412',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '66,17,647' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '44,11,765' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '33,08,824',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '22,05,882' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '11,02,942' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '77,20,588' }
     ]
   },
   {
@@ -1259,6 +1743,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '65.50%', postOffer: '52.40%' },
       { category: 'PE Investors', preOffer: '25.50%', postOffer: '35.35%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '12.25%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '3,07,69,231' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,53,84,615',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '92,30,769' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '61,53,846' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '46,15,385',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '30,76,923' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '15,38,462' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,07,69,231' }
     ]
   },
   {
@@ -1299,6 +1805,28 @@ export const MOCK_IPOS: IPO[] = [
     promoterHoldings: [
       { category: 'Promoter Group', preOffer: '72.80%', postOffer: '58.24%' },
       { category: 'Public', preOffer: '27.20%', postOffer: '41.76%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '3,80,00,000' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,90,00,000',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '1,14,00,000' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '76,00,000' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '57,00,000',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '38,00,000' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '19,00,000' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,33,00,000' }
     ]
   },
   {
@@ -1340,6 +1868,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '42.50%', postOffer: '34.00%' },
       { category: 'VC/PE Investors', preOffer: '48.50%', postOffer: '54.28%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '11.72%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '2,81,25,000' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,40,62,500',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '84,37,500' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '56,25,000' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '42,18,750',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '28,12,500' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '14,06,250' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '98,43,750' }
     ]
   },
   {
@@ -1381,6 +1931,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '65.80%', postOffer: '52.64%' },
       { category: 'Infrastructure Funds', preOffer: '25.20%', postOffer: '33.51%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '13.85%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '18,00,00,000' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '9,00,00,000',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '5,40,00,000' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '3,60,00,000' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '2,70,00,000',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '1,80,00,000' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '90,00,000' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '6,30,00,000' }
     ]
   },
   {
@@ -1422,6 +1994,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '62.50%', postOffer: '50.00%' },
       { category: 'PE Investors', preOffer: '28.50%', postOffer: '35.63%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '14.37%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '1,90,47,619' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '95,23,810',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '57,14,286' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '38,09,524' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '28,57,143',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '19,04,762' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '9,52,381' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '66,66,667' }
     ]
   },
   {
@@ -1463,6 +2057,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '35.50%', postOffer: '28.40%' },
       { category: 'VC Investors', preOffer: '55.50%', postOffer: '61.20%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '10.40%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '1,87,50,000' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '93,75,000',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '56,25,000' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '37,50,000' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '28,12,500',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '18,75,000' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '9,37,500' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '65,62,500' }
     ]
   },
   {
@@ -1503,6 +2119,28 @@ export const MOCK_IPOS: IPO[] = [
     promoterHoldings: [
       { category: 'Promoter Group', preOffer: '72.50%', postOffer: '58.00%' },
       { category: 'Public', preOffer: '27.50%', postOffer: '42.00%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '1,03,17,460' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '51,58,730',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '30,95,238' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '20,63,492' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '15,47,619',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '10,31,746' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '5,15,873' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '36,11,111' }
     ]
   },
   {
@@ -1544,6 +2182,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '68.50%', postOffer: '54.80%' },
       { category: 'PE Investors', preOffer: '22.50%', postOffer: '31.50%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '13.70%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '2,21,05,263' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,10,52,632',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '66,31,579' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '44,21,053' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '33,15,789',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '22,10,526' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '11,05,263' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '77,36,842' }
     ]
   },
   {
@@ -1585,6 +2245,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '58.80%', postOffer: '47.04%' },
       { category: 'Infrastructure Funds', preOffer: '32.20%', postOffer: '39.28%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '13.68%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '4,00,00,000' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '2,00,00,000',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '1,20,00,000' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '80,00,000' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '60,00,000',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '40,00,000' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '20,00,000' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,40,00,000' }
     ]
   },
   {
@@ -1626,6 +2308,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '55.50%', postOffer: '44.40%' },
       { category: 'VC/PE Investors', preOffer: '35.50%', postOffer: '42.35%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '13.25%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '1,51,42,857' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '75,71,429',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '45,42,857' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '30,28,572' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '22,71,429',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '15,14,286' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '7,57,143' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '53,00,000' }
     ]
   },
   {
@@ -1706,6 +2410,28 @@ export const MOCK_IPOS: IPO[] = [
     promoterHoldings: [
       { category: 'Promoter Group', preOffer: '72.80%', postOffer: '58.24%' },
       { category: 'Public', preOffer: '27.20%', postOffer: '41.76%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '3,33,33,333' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,66,66,667',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '1,00,00,000' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '66,66,667' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '50,00,000',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '33,33,333' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '16,66,667' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,16,66,667' }
     ]
   },
   {
@@ -1747,6 +2473,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '52.50%', postOffer: '42.00%' },
       { category: 'VC/PE Investors', preOffer: '38.50%', postOffer: '45.20%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '12.80%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '1,87,69,231' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '93,84,615',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '56,30,769' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '37,53,846' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '28,15,385',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '18,76,923' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '9,38,462' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '65,69,231' }
     ]
   },
   {
@@ -1788,6 +2536,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '68.50%', postOffer: '54.80%' },
       { category: 'PE Investors', preOffer: '22.50%', postOffer: '31.50%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '13.70%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '2,76,59,574' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,38,29,787',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '82,97,872' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '55,31,915' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '41,48,936',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '27,65,957' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '13,82,979' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '96,80,851' }
     ]
   },
   {
@@ -1828,6 +2598,28 @@ export const MOCK_IPOS: IPO[] = [
     promoterHoldings: [
       { category: 'Promoter Group', preOffer: '72.50%', postOffer: '58.00%' },
       { category: 'Public', preOffer: '27.50%', postOffer: '42.00%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '1,63,63,636' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '81,81,818',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '49,09,091' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '32,72,727' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '24,54,545',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '16,36,364' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '8,18,182' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '57,27,273' }
     ]
   },
   {
@@ -1868,6 +2660,28 @@ export const MOCK_IPOS: IPO[] = [
     promoterHoldings: [
       { category: 'Promoter Group', preOffer: '72.50%', postOffer: '43.50%' },
       { category: 'Public', preOffer: '27.50%', postOffer: '56.50%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '7,89,47,368' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '3,94,73,684',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '2,36,84,211' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '1,57,89,474' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '1,18,42,105',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '78,94,737' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '39,47,368' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '2,76,31,579' }
     ]
   },
   {
@@ -1908,6 +2722,28 @@ export const MOCK_IPOS: IPO[] = [
     promoterHoldings: [
       { category: 'Promoter Group', preOffer: '78.50%', postOffer: '62.80%' },
       { category: 'Public', preOffer: '21.50%', postOffer: '37.20%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '3,00,00,000' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,50,00,000',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '90,00,000' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '60,00,000' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '45,00,000',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '30,00,000' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '15,00,000' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,05,00,000' }
     ]
   },
   {
@@ -1949,6 +2785,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '62.50%', postOffer: '50.00%' },
       { category: 'PE Investors', preOffer: '28.50%', postOffer: '35.63%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '14.37%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '3,33,33,333' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,66,66,667',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '1,00,00,000' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '66,66,667' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '50,00,000',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '33,33,333' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '16,66,667' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,16,66,667' }
     ]
   },
   {
@@ -1990,6 +2848,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '55.50%', postOffer: '44.40%' },
       { category: 'VC Investors', preOffer: '35.50%', postOffer: '43.25%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '12.35%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '1,25,00,000' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '62,50,000',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '37,50,000' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '25,00,000' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '18,75,000',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '12,50,000' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '6,25,000' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '43,75,000' }
     ]
   },
   {
@@ -2030,6 +2910,28 @@ export const MOCK_IPOS: IPO[] = [
     promoterHoldings: [
       { category: 'Promoter Group', preOffer: '72.50%', postOffer: '58.00%' },
       { category: 'Public', preOffer: '27.50%', postOffer: '42.00%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '3,92,85,714' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,96,42,857',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '1,17,85,714' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '78,57,143' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '58,92,857',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '39,28,571' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '19,64,286' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,37,50,000' }
     ]
   },
   {
@@ -2071,6 +2973,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '58.50%', postOffer: '46.80%' },
       { category: 'PE Investors', preOffer: '32.50%', postOffer: '40.55%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '12.65%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '3,09,52,381' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,54,76,190',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '92,85,714' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '61,90,476' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '46,42,857',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '30,95,238' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '15,47,619' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,08,33,333' }
     ]
   },
   {
@@ -2112,6 +3036,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '68.50%', postOffer: '54.80%' },
       { category: 'PE Investors', preOffer: '22.50%', postOffer: '31.95%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '13.25%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '2,60,00,000' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,30,00,000',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '78,00,000' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '52,00,000' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '39,00,000',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '26,00,000' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '13,00,000' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '91,00,000' }
     ]
   },
   {
@@ -2152,6 +3098,28 @@ export const MOCK_IPOS: IPO[] = [
     promoterHoldings: [
       { category: 'Promoter Group', preOffer: '78.50%', postOffer: '62.80%' },
       { category: 'Public', preOffer: '21.50%', postOffer: '37.20%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '2,44,44,444' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,22,22,222',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '73,33,333' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '48,88,889' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '36,66,667',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '24,44,444' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '12,22,222' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '85,55,556' }
     ]
   },
   {
@@ -2193,6 +3161,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '62.50%', postOffer: '50.00%' },
       { category: 'Strategic Investors', preOffer: '28.50%', postOffer: '37.25%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '12.75%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '2,63,15,789' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,31,57,895',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '78,94,737' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '52,63,158' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '39,47,368',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '26,31,579' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '13,15,789' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '92,10,526' }
     ]
   },
   {
@@ -2233,6 +3223,28 @@ export const MOCK_IPOS: IPO[] = [
     promoterHoldings: [
       { category: 'Promoter Group', preOffer: '72.50%', postOffer: '58.00%' },
       { category: 'Public', preOffer: '27.50%', postOffer: '42.00%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '5,38,46,154' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '2,69,23,077',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '1,61,53,846' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '1,07,69,231' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '80,76,923',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '53,84,615' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '26,92,308' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '1,88,46,154' }
     ]
   },
   {
@@ -2274,6 +3286,28 @@ export const MOCK_IPOS: IPO[] = [
       { category: 'Promoter Group', preOffer: '55.50%', postOffer: '44.40%' },
       { category: 'PE/VC Investors', preOffer: '35.50%', postOffer: '42.35%' },
       { category: 'Public', preOffer: '9.00%', postOffer: '13.25%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '2,13,95,349' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,06,97,674',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '64,18,605' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '42,79,070' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '32,09,302',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '21,39,535' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '10,69,767' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '74,88,372' }
     ]
   },
   {
@@ -2314,6 +3348,28 @@ export const MOCK_IPOS: IPO[] = [
     promoterHoldings: [
       { category: 'Promoter Group', preOffer: '78.50%', postOffer: '62.80%' },
       { category: 'Public', preOffer: '21.50%', postOffer: '37.20%' }
+    ],
+    ipoReservation: [
+      { category: 'Total Offered Shares', sharesOfferedPercent: '100%', sharesOfferedRaw: '2,62,50,000' },
+      { 
+        category: 'QIB', 
+        sharesOfferedPercent: '50%', 
+        sharesOfferedRaw: '1,31,25,000',
+        children: [
+          { category: 'Anchor Investor', sharesOfferedPercent: '30%', sharesOfferedRaw: '78,75,000' },
+          { category: 'QIB (Ex-Anchor)', sharesOfferedPercent: '20%', sharesOfferedRaw: '52,50,000' }
+        ]
+      },
+      { 
+        category: 'NII (HNI)', 
+        sharesOfferedPercent: '15%', 
+        sharesOfferedRaw: '39,37,500',
+        children: [
+          { category: 'bNII (> ₹10L)', sharesOfferedPercent: '10%', sharesOfferedRaw: '26,25,000' },
+          { category: 'sNII (< ₹10L)', sharesOfferedPercent: '5%', sharesOfferedRaw: '13,12,500' }
+        ]
+      },
+      { category: 'Retail', sharesOfferedPercent: '35%', sharesOfferedRaw: '91,87,500' }
     ]
   }
 ];

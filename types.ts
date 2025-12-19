@@ -6,6 +6,13 @@ export interface ApplicationDetailRow {
   shares: number;
 }
 
+export interface IPOReservation {
+  category: string;
+  sharesOfferedPercent: string;
+  sharesOfferedRaw: string;
+  children?: IPOReservation[];
+}
+
 export interface IPO {
   id: string;
   name: string;
@@ -60,6 +67,7 @@ export interface IPO {
     preOffer: string;
     postOffer: string;
   }[];
+  ipoReservation?: IPOReservation[];
   listingPrice?: number;
   listingClosePrice?: number;
   currentPrice?: number;
