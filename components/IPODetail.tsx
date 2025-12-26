@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { IPO } from '../types';
+import { AIReportContent } from './AIReportContent';
 import { 
-  ArrowLeft, Calendar, FileText, ShieldCheck, 
+  ArrowLeft, Calendar, ShieldCheck, 
   AlertTriangle, DollarSign, PieChart as PieChartIcon, 
   TrendingUp, CheckCircle2, Clock, BookOpen, Calculator,
   ChevronDown, ChevronRight, Plus, Minus, Flame, Zap, 
@@ -41,10 +42,126 @@ const calculateAllotmentChances = (retailSubscription: number) => {
   return { percentage, ratio };
 };
 
+// Helper components
+const DetailCard: React.FC<{ title: string; icon?: React.ReactNode; children: React.ReactNode }> = ({ title, icon, children }) => (
+  <div className="bg-white p-5 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+     <div className="flex items-center gap-2.5 mb-4 sm:mb-5 pb-3 border-b border-slate-100">
+       {icon}
+       <h3 className="font-bold text-slate-800 text-base sm:text-lg">{title}</h3>
+     </div>
+     <div className="space-y-3 sm:space-y-4">
+       {children}
+     </div>
+  </div>
+);
+
+const DetailRow: React.FC<{ label: string; value: string }> = ({ label, value }) => (
+  <div className="flex justify-between items-center text-sm sm:text-base py-1">
+    <span className="text-black font-semibold">{label}</span>
+    <span className="font-semibold text-slate-900 text-right">{value}</span>
+  </div>
+);
+
+const SubscriptionStat: React.FC<{ label: string; value: string; color: string }> = ({ label, value, color }) => (
+  <div className="bg-slate-50 p-4 sm:p-5 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow">
+    <div className="absolute -right-6 -top-6 w-24 h-24 rounded-full bg-white/60 blur-2xl transition-transform group-hover:scale-150 duration-700"></div>
+    
+    <div className="relative z-10">
+      <div className="flex justify-between items-start mb-2">
+        <p className="text-sm font-bold text-slate-500">{label}</p>
+      </div>
+      
+      <div className="flex items-baseline gap-2 mt-1">
+        <span className={`text-3xl sm:text-4xl font-bold ${color}`}>{value}</span>
+      </div>
+    </div>
+  </div>
+);
+
+const AllotmentChances: React.FC<{ retailSubscription: number }> = ({ retailSubscription }) => {
+  const { percentage } = calculateAllotmentChances(retailSubscription);
+  
+  // Determine tier based on percentage
+  let tier: 'high' | 'medium' | 'low' | 'veryLow';
+  let icon: React.ReactNode;
+
+  if (percentage > 25) {
+    tier = 'high';
+    icon = null;
+  } else if (percentage > 10) {
+    tier = 'medium';
+    icon = null;
+  } else if (percentage > 1) {
+    tier = 'low';
+    icon = <Flame className="w-5 h-5" />;
+  } else {
+    tier = 'veryLow';
+    icon = <Flame className="w-5 h-5" />;
+  }
+  
+  const config = {
+    high: {
+      bg: 'bg-gradient-to-br from-cyan-50 to-cyan-100',
+      border: 'border-cyan-200',
+      text: 'text-cyan-900',
+      subtext: 'text-cyan-700',
+      iconBg: 'bg-cyan-200',
+    },
+    medium: {
+      bg: 'bg-gradient-to-br from-indigo-50 to-indigo-100',
+      border: 'border-indigo-200',
+      text: 'text-indigo-900',
+      subtext: 'text-indigo-700',
+      iconBg: 'bg-indigo-200',
+    },
+    low: {
+      bg: 'bg-gradient-to-br from-orange-50 to-orange-100',
+      border: 'border-orange-200',
+      text: 'text-orange-900',
+      subtext: 'text-orange-700',
+      iconBg: 'bg-orange-200',
+    },
+    veryLow: {
+      bg: 'bg-gradient-to-br from-amber-50 to-amber-100',
+      border: 'border-amber-200',
+      text: 'text-amber-900',
+      subtext: 'text-amber-700',
+      iconBg: 'bg-amber-200',
+    }
+  }[tier];
+  
+  return (
+    <div className={`${config.bg} p-4 sm:p-5 rounded-xl border ${config.border} shadow-sm relative overflow-hidden group`}>
+      {/* Background Pattern/Decoration */}
+      <div className="absolute -right-6 -top-6 w-24 h-24 rounded-full bg-white/40 blur-2xl transition-transform group-hover:scale-150 duration-700"></div>
+      
+      <div className="relative z-10">
+        <div className="flex justify-between items-start mb-2">
+          <p className={`text-sm font-bold ${config.subtext}`}>Retail Allotment Probability</p>
+          {icon && (
+            <div className={`${config.iconBg} p-1.5 rounded-lg ${config.text} shadow-sm`}>
+              {icon}
+            </div>
+          )}
+        </div>
+        
+        <div className="flex items-baseline gap-2 mt-1">
+          <span className={`text-3xl sm:text-4xl font-bold ${config.text}`}>
+            {percentage < 1 ? percentage.toFixed(2) : percentage.toFixed(0)}%
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('Overview');
   const [expandedReservations, setExpandedReservations] = useState<Set<string>>(new Set());
+  const [aiReportPage, setAiReportPage] = useState(1);
+  const [aiSearchQuery, setAiSearchQuery] = useState('');
+  const totalAiReportPages = 6;
 
   const toggleReservationExpand = (category: string) => {
     setExpandedReservations(prev => {
@@ -193,7 +310,7 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
         <div className="flex-1 space-y-4 sm:space-y-6">
           <div className="bg-white rounded-lg border-b border-slate-200 pl-4 pr-2 sm:pr-4">
              <div className="flex overflow-x-auto gap-4 sm:gap-6 px-1 hide-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">
-               {['Overview', 'Subscription', 'Analysis'].map(tab => (
+               {['Overview', 'AI Report', 'Subscription', 'Analysis'].map(tab => (
                  <button
                    key={tab}
                    onClick={() => setActiveTab(tab)}
@@ -235,7 +352,7 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
                      onClick={() => { navigate('/ask-ai'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                      className="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-2 px-4 rounded-xl transition-colors text-xs"
                    >
-                     Ask Listing Lens AI →
+                     Ask Listing Lens AI ✨
                    </button>
                  </div>
 
@@ -503,11 +620,23 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
                 </div>
               </div>
             )}
+
+            {activeTab === 'AI Report' && (
+              <AIReportContent
+                ipo={ipo}
+                currentPage={aiReportPage}
+                totalPages={totalAiReportPages}
+                onPageChange={setAiReportPage}
+                searchQuery={aiSearchQuery}
+                onSearchChange={setAiSearchQuery}
+              />
+            )}
           </div>
         </div>
 
-        {/* Right Side: Quick Info (Sticky on Desktop) */}
-        <div className="lg:w-80 lg:sticky lg:top-24 lg:self-start space-y-4 sm:space-y-6">
+        {/* Right Side: Quick Info (Sticky on Desktop) - Hidden on AI Report tab */}
+        {activeTab !== 'AI Report' && (
+          <div className="lg:w-80 lg:sticky lg:top-24 lg:self-start space-y-4 sm:space-y-6">
            {/* Ask AI Card - Desktop Only */}
            <div className="hidden mt-2 lg:block bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-4 sm:p-5 border border-slate-300">
              <p className="font-bold text-slate-900 text-sm sm:text-base mb-2">Have a question?</p>
@@ -519,7 +648,7 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
                onClick={() => { navigate('/ask-ai'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                className="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-2 sm:py-2.5 px-4 rounded-xl transition-colors text-xs sm:text-sm"
              >
-               Ask Listing Lens AI →
+               Ask Listing Lens AI ✨
              </button>
            </div>
 
@@ -542,119 +671,8 @@ export const IPODetail: React.FC<IPODetailProps> = ({ ipo, onBack }) => {
                 </div>
              </div>
            </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const DetailCard: React.FC<{ title: string; icon?: React.ReactNode; children: React.ReactNode }> = ({ title, icon, children }) => (
-  <div className="bg-white p-5 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-     <div className="flex items-center gap-2.5 mb-4 sm:mb-5 pb-3 border-b border-slate-100">
-       {icon}
-       <h3 className="font-bold text-slate-800 text-base sm:text-lg">{title}</h3>
-     </div>
-     <div className="space-y-3 sm:space-y-4">
-       {children}
-     </div>
-  </div>
-);
-
-const DetailRow: React.FC<{ label: string; value: string }> = ({ label, value }) => (
-  <div className="flex justify-between items-center text-sm sm:text-base py-1">
-    <span className="text-black font-semibold">{label}</span>
-    <span className="font-semibold text-slate-900 text-right">{value}</span>
-  </div>
-);
-
-const SubscriptionStat: React.FC<{ label: string; value: string; color: string }> = ({ label, value, color }) => (
-  <div className="bg-slate-50 p-4 sm:p-5 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow">
-    <div className="absolute -right-6 -top-6 w-24 h-24 rounded-full bg-white/60 blur-2xl transition-transform group-hover:scale-150 duration-700"></div>
-    
-    <div className="relative z-10">
-      <div className="flex justify-between items-start mb-2">
-        <p className="text-sm font-bold text-slate-500">{label}</p>
-      </div>
-      
-      <div className="flex items-baseline gap-2 mt-1">
-        <span className={`text-3xl sm:text-4xl font-bold ${color}`}>{value}</span>
-      </div>
-    </div>
-  </div>
-);
-
-const AllotmentChances: React.FC<{ retailSubscription: number }> = ({ retailSubscription }) => {
-  const { percentage } = calculateAllotmentChances(retailSubscription);
-  
-  // Determine tier based on percentage
-  let tier: 'high' | 'medium' | 'low' | 'veryLow';
-  let icon: React.ReactNode;
-
-  if (percentage > 25) {
-    tier = 'high';
-    icon = null;
-  } else if (percentage > 10) {
-    tier = 'medium';
-    icon = null;
-  } else if (percentage > 1) {
-    tier = 'low';
-    icon = <Flame className="w-5 h-5" />;
-  } else {
-    tier = 'veryLow';
-    icon = <Flame className="w-5 h-5" />;
-  }
-  
-  const config = {
-    high: {
-      bg: 'bg-gradient-to-br from-cyan-50 to-cyan-100',
-      border: 'border-cyan-200',
-      text: 'text-cyan-900',
-      subtext: 'text-cyan-700',
-      iconBg: 'bg-cyan-200',
-    },
-    medium: {
-      bg: 'bg-gradient-to-br from-indigo-50 to-indigo-100',
-      border: 'border-indigo-200',
-      text: 'text-indigo-900',
-      subtext: 'text-indigo-700',
-      iconBg: 'bg-indigo-200',
-    },
-    low: {
-      bg: 'bg-gradient-to-br from-orange-50 to-orange-100',
-      border: 'border-orange-200',
-      text: 'text-orange-900',
-      subtext: 'text-orange-700',
-      iconBg: 'bg-orange-200',
-    },
-    veryLow: {
-      bg: 'bg-gradient-to-br from-amber-50 to-amber-100',
-      border: 'border-amber-200',
-      text: 'text-amber-900',
-      subtext: 'text-amber-700',
-      iconBg: 'bg-amber-200',
-    }
-  }[tier];
-  
-  return (
-    <div className={`${config.bg} p-4 sm:p-5 rounded-xl border ${config.border} shadow-sm relative overflow-hidden group`}>
-      {/* Background Pattern/Decoration */}
-      <div className="absolute -right-6 -top-6 w-24 h-24 rounded-full bg-white/40 blur-2xl transition-transform group-hover:scale-150 duration-700"></div>
-      
-      <div className="relative z-10">
-        <div className="flex justify-between items-start mb-2">
-          <p className={`text-sm font-bold ${config.subtext}`}>Retail Allotment Probability</p>
-          {icon && (
-            <div className={`${config.iconBg} p-1.5 rounded-lg ${config.text} shadow-sm`}>
-              {icon}
-            </div>
-          )}
-        </div>
-        
-        <div className="flex items-baseline gap-2 mt-1">
-          <span className={`text-3xl sm:text-4xl font-bold ${config.text}`}>
-            {percentage < 1 ? percentage.toFixed(2) : percentage.toFixed(0)}%
-          </span>
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );
