@@ -642,7 +642,7 @@ const AllotmentChances: React.FC<{ retailSubscription: number }> = ({ retailSubs
       
       <div className="relative z-10">
         <div className="flex justify-between items-start mb-2">
-          <p className={`text-sm font-bold ${config.subtext}`}>Allotment Probability</p>
+          <p className={`text-sm font-bold ${config.subtext}`}>Retail Allotment Probability</p>
           {icon && (
             <div className={`${config.iconBg} p-1.5 rounded-lg ${config.text} shadow-sm`}>
               {icon}
